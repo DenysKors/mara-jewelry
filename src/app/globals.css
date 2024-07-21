@@ -1,4 +1,59 @@
-:root {
+@import url('./styles/normalize.css');
+@import url('./styles/variables.css');
+
+body {
+  background-color: var(--color-background, white);
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a,
+button,
+input {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* :root {
   --max-width: 1100px;
   --border-radius: 12px;
   --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
@@ -104,4 +159,4 @@ a {
   html {
     color-scheme: dark;
   }
-}
+} */
