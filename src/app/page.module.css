@@ -1,3 +1,21 @@
+.h1 {
+  font-family: var(--font-catallina-regular);
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: -0.005em;
+  font-size: 38px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.h2 {
+  font-family: var(--font-poppins-regular);
+}
+
+.h3 {
+  font-family: var(--font-nunito-regular);
+}
+
 .main {
   display: flex;
   flex-direction: column;
@@ -98,7 +116,7 @@
 
 .center::before,
 .center::after {
-  content: "";
+  content: '';
   left: 50%;
   position: absolute;
   filter: blur(45px);

@@ -4,6 +4,9 @@ import styles from './page.module.css';
 export default function Home() {
   return (
     <main className={styles.main}>
+      <h1 className={styles.h1}>MARAJEWELRY</h1>
+      <h2 className={styles.h2}>Poppins</h2>
+      <h3 className={styles.h3}>Nunito</h3>
       {/* <div className={styles.description}>
         <p>
           Get started by editing&nbsp;

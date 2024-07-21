@@ -1,7 +1,21 @@
-import { Inter } from 'next/font/google';
+import localFont from 'next/font/local';
+
 import './globals.css';
 
-const inter = Inter({ subsets: ['latin'] });
+const nunito_regular = localFont({
+  src: './styles/fonts/Nunito-Regular.ttf',
+  variable: '--font-nunito-regular',
+});
+
+const poppins_regular = localFont({
+  src: './styles/fonts/Poppins-Regular.ttf',
+  variable: '--font-poppins-regular',
+});
+
+const catallina_regular = localFont({
+  src: './styles/fonts/Catallina-Regular.ttf',
+  variable: '--font-catallina-regular',
+});
 
 export const metadata = {
   title: 'Mara Jewelry',
@@ -21,7 +35,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="uk">
-      <body className={inter.className}>{children}</body>
+      <body
+        className={`${nunito_regular.variable} ${catallina_regular.variable} ${poppins_regular.variable}`}
+      >
+        {children}
+      </body>
     </html>
   );
 }
