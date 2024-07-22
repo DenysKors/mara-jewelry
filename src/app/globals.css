@@ -2,6 +2,7 @@
 @import url('./styles/variables.css');
 
 body {
+  font-family: var(--font-catallina-regular);
   background-color: var(--color-background, white);
 }
 

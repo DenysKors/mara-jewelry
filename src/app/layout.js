@@ -17,6 +17,11 @@ const catallina_regular = localFont({
   variable: '--font-catallina-regular',
 });
 
+const tenor_regular = localFont({
+  src: './styles/fonts/TenorSans-Regular.ttf',
+  variable: '--font-tenor-regular',
+});
+
 export const metadata = {
   title: 'Mara Jewelry',
   description: 'Perfect jewelry made of natural stones',
@@ -36,7 +41,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="uk">
       <body
-        className={`${nunito_regular.variable} ${catallina_regular.variable} ${poppins_regular.variable}`}
+        className={`${nunito_regular.variable} ${catallina_regular.variable} ${poppins_regular.variable} ${tenor_regular.variable}`}
       >
         {children}
       </body>

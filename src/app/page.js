@@ -4,7 +4,10 @@ import styles from './page.module.css';
 export default function Home() {
   return (
     <main className={styles.main}>
-      <h1 className={styles.h1}>MARAJEWELRY</h1>
+      <span className={styles.span}>MARAJEWELRY</span>
+      <span>MARAJEWELRY</span>
+      <p className={styles.span}>КАТАЛОГ</p>
+      <p>КАТАЛОГ</p>
       <h2 className={styles.h2}>Poppins</h2>
       <h3 className={styles.h3}>Nunito</h3>
       {/* <div className={styles.description}>
