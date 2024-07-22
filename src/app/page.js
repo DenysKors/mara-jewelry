@@ -1,16 +1,11 @@
 // import Image from 'next/image';
-import styles from './page.module.css';
+// import Link from 'next/link';
+// import styles from './page.module.css';
 
-export default function Home() {
+export default function MainPage() {
   return (
-    <main className={styles.main}>
-      <span className={styles.span}>MARAJEWELRY</span>
-      <span>MARAJEWELRY</span>
-      <p className={styles.span}>КАТАЛОГ</p>
-      <p>КАТАЛОГ</p>
-      <h2 className={styles.h2}>Poppins</h2>
-      <h3 className={styles.h3}>Nunito</h3>
-      {/* <div className={styles.description}>
+    <h2>Main Page</h2>
+    /* <div className={styles.description}>
         <p>
           Get started by editing&nbsp;
           <code className={styles.code}>src/app/page.js</code>
@@ -95,7 +90,6 @@ export default function Home() {
             Instantly deploy your Next.js site to a shareable URL with Vercel.
           </p>
         </a>
-      </div> */}
-    </main>
+      </div> */
   );
 }

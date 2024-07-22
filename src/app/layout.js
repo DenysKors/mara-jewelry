@@ -2,6 +2,9 @@ import localFont from 'next/font/local';
 
 import './globals.css';
 
+import Header from '@/components/Header/Header';
+import Footer from '@/components/Footer/Footer';
+
 const nunito_regular = localFont({
   src: './styles/fonts/Nunito-Regular.ttf',
   variable: '--font-nunito-regular',
@@ -43,7 +46,9 @@ export default function RootLayout({ children }) {
       <body
         className={`${nunito_regular.variable} ${catallina_regular.variable} ${poppins_regular.variable} ${tenor_regular.variable}`}
       >
+        <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

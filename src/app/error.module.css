@@ -6,3 +6,14 @@
   justify-content: center;
   gap: 2rem;
 }
+
+.button {
+  font-weight: var(--font-weight-body);
+  font-size: var(--font-size-body);
+  line-height: normal;
+  color: var(--color-text);
+}
+
+.button:hover {
+  color: var(--color-accent);
+}
