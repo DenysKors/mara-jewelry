@@ -1,18 +1,31 @@
 .header {
-  display: flex;
-  justify-content: center;
+  padding: 40px 20px;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   align-items: center;
-  text-align: center;
-  margin: 0 20px;
+}
+
+.image {
+  width: 64px;
+  height: 64px;
+  justify-self: center;
 }
 
 @media screen and (min-width: 768px) {
   .header {
-    margin: 0 100px;
+    padding: 40px 100px;
+  }
+
+  .image {
+    width: 87px;
+    height: 87px;
   }
 }
 @media screen and (min-width: 1200px) {
   .header {
-    margin: 0 200px;
+    padding: 48px 200px;
   }
 }
