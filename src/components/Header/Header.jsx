@@ -10,7 +10,12 @@ export default function Header() {
     <header className={styles.header}>
       <div className={styles.wrapper}>
         <SearchBar />
-        <Image src={Logo} className={styles.image} alt="Logo" priority />
+        <Image
+          src={Logo}
+          className={styles.image}
+          alt="Mara Jewelry Logo"
+          priority
+        />
       </div>
       <Navigation />
     </header>
