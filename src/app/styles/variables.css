@@ -5,11 +5,13 @@
   --font-size-h1: 64px;
   --font-size-footer: 14px;
 
-  --font-weight-body: 400;
+  /* --font-weight-body: 400; */
   --font-weight-title: 500;
   --font-weight-bold: 800;
 
   --color-accent: #096a61;
   --color-text: #22252a;
   --color-background: #fafafa;
+
+  --transition-main: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }

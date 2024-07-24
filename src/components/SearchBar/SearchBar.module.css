@@ -1,4 +1,4 @@
-.wrapper {
+.form {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -6,7 +6,7 @@
   position: relative;
 }
 
-.wrapper::after {
+.form::after {
   content: '';
   position: absolute;
   bottom: -20%;
@@ -37,7 +37,7 @@
 }
 
 @media screen and (min-width: 768px) {
-  .wrapper {
+  .form {
     gap: 16px;
   }
 

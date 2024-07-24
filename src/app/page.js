@@ -4,7 +4,7 @@
 
 export default function MainPage() {
   return (
-    <h2>Main Page</h2>
+    <h2>Hello, Main Page!</h2>
     /* <div className={styles.description}>
         <p>
           Get started by editing&nbsp;

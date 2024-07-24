@@ -12,6 +12,7 @@
   font-size: var(--font-size-body);
   line-height: normal;
   color: var(--color-text);
+  transition: color var(--transition-main);
 }
 
 .button:hover {
