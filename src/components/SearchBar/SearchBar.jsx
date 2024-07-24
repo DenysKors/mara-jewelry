@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import styles from './SearchBar.module.css';
 
-import searchIcon from '../../assets/svg/header/search.svg';
+import searchIcon from '../../assets/svg/search.svg';
 
 export default function SearchBar() {
   return (
@@ -9,7 +9,12 @@ export default function SearchBar() {
       <button className={styles.button}>
         <Image src={searchIcon} className={styles.svg} alt="search" priority />
       </button>
-      <input className={styles.input} type="text" placeholder="Пошук..." />
+      <input
+        className={styles.input}
+        type="text"
+        name="text"
+        placeholder="Пошук..."
+      />
     </form>
   );
 }

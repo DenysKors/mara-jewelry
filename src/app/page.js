@@ -1,10 +1,18 @@
 // import Image from 'next/image';
 // import Link from 'next/link';
-// import styles from './page.module.css';
+import styles from './page.module.css';
+
+import HeroCarousel from '@/components/HeroCarousel/HeroCarousel';
 
 export default function MainPage() {
   return (
-    <h2>Hello, Main Page!</h2>
+    <section className={styles.section}>
+      <h1 className={styles.heroTitle}>
+        Mara<span className={styles.heroSpan}>jewelry</span>
+      </h1>
+      <HeroCarousel />
+    </section>
+
     /* <div className={styles.description}>
         <p>
           Get started by editing&nbsp;

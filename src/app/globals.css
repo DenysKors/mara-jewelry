@@ -1,5 +1,6 @@
 @import url('./styles/normalize.css');
 @import url('./styles/variables.css');
+/* @import 'react-responsive-carousel/lib/styles/carousel.min.css'; */
 
 body {
   font-family: var(--font-catallina-regular);

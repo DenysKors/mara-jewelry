@@ -1,3 +1,44 @@
+.section {
+  max-width: 1440px;
+  height: 346px;
+  position: relative;
+  border-top: 1px solid var(--color-accent);
+  border-bottom: 1px solid var(--color-accent);
+}
+
+.heroTitle {
+  position: absolute;
+  font-family: var(--font-tenor-regular);
+  font-size: var(--font-size-title);
+  letter-spacing: -0.005em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.heroSpan {
+  font-family: var(--font-tenor-regular);
+  font-size: inherit;
+  letter-spacing: inherit;
+  text-transform: uppercase;
+  color: var(--color-background);
+}
+
+@media screen and (min-width: 768px) {
+  .section {
+    height: 400px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section {
+    height: 406px;
+  }
+
+  .heroTitle {
+    font-size: var(--font-size-hero);
+  }
+}
+
 /* .description {
   display: inherit;
   justify-content: inherit;
