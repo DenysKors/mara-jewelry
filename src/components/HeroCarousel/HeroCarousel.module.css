@@ -1,0 +1,117 @@
+.image1 {
+  width: 100%;
+  height: 346px;
+  background-color: gray;
+  background-image: url('../../assets/images/hero_bg1@1x_s.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.image2 {
+  width: 100%;
+  height: 346px;
+  background-color: gray;
+  background-image: url('../../assets/images/hero_bg2@1x_s.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.image3 {
+  width: 100%;
+  height: 346px;
+  background-color: gray;
+  background-image: url('../../assets/images/hero_bg3@1x_s.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.image4 {
+  width: 100%;
+  height: 346px;
+  background-color: gray;
+  background-image: url('../../assets/images/hero_bg4@1x_s.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.image5 {
+  width: 100%;
+  height: 346px;
+  background-color: gray;
+  background-image: url('../../assets/images/hero_bg5@1x_s.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.image6 {
+  width: 100%;
+  height: 346px;
+  background-color: gray;
+  background-image: url('../../assets/images/hero_bg6@1x_s.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 768px) {
+  .image1 {
+    height: 400px;
+    background-image: url('../../assets/images/hero_bg1@1x_m.jpg');
+  }
+
+  .image2 {
+    height: 400px;
+    background-image: url('../../assets/images/hero_bg2@1x_m.jpg');
+  }
+
+  .image3 {
+    height: 400px;
+    background-image: url('../../assets/images/hero_bg3@1x_m.jpg');
+  }
+
+  .image4 {
+    height: 400px;
+    background-image: url('../../assets/images/hero_bg4@1x_m.jpg');
+  }
+
+  .image5 {
+    height: 400px;
+    background-image: url('../../assets/images/hero_bg5@1x_m.jpg');
+  }
+
+  .image6 {
+    height: 400px;
+    background-image: url('../../assets/images/hero_bg6@1x_m.jpg');
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .image1 {
+    height: 406px;
+    background-image: url('../../assets/images/hero_bg1@1x_l.jpg');
+  }
+
+  .image2 {
+    height: 406px;
+    background-image: url('../../assets/images/hero_bg2@1x_l.jpg');
+  }
+
+  .image3 {
+    height: 406px;
+    background-image: url('../../assets/images/hero_bg3@1x_l.jpg');
+  }
+
+  .image4 {
+    height: 406px;
+    background-image: url('../../assets/images/hero_bg4@1x_l.jpg');
+  }
+
+  .image5 {
+    height: 406px;
+    background-image: url('../../assets/images/hero_bg5@1x_l.jpg');
+  }
+
+  .image6 {
+    height: 406px;
+    background-image: url('../../assets/images/hero_bg6@1x_l.jpg');
+  }
+}
