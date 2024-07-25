@@ -14,8 +14,7 @@ export default function Header() {
           src={Logo}
           className={styles.image}
           alt="Mara Jewelry Logo"
-          width={64}
-          height={64}
+          priority
         />
       </div>
       <Navigation />
