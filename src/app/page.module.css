@@ -9,6 +9,9 @@
 
 .heroTitle {
   position: absolute;
+  z-index: 10;
+  top: 64px;
+  left: 20px;
   font-family: var(--font-tenor-regular);
   font-size: var(--font-size-title);
   letter-spacing: -0.005em;
@@ -24,9 +27,53 @@
   color: var(--color-background);
 }
 
+.text {
+  position: absolute;
+  z-index: 10;
+  top: 115px;
+  left: 20px;
+  max-width: 335px;
+  font-family: var(--font-nunito-regular);
+  font-size: var(--font-size-body);
+  line-height: 22px;
+}
+
+.button {
+  position: absolute;
+  z-index: 10;
+  bottom: 64px;
+  left: 20px;
+  padding: 18px 32px;
+  font-family: var(--font-tenor-regular);
+  font-size: var(--font-size-body);
+  text-transform: uppercase;
+  color: var(--color-background);
+  background-color: var(--color-accent);
+  border-radius: 16px;
+  transition: background-color var(--transition-main);
+}
+
+.button:hover {
+  background-color: var(--color-text);
+}
+
 @media screen and (min-width: 768px) {
   .section {
     height: 400px;
+  }
+
+  .heroTitle {
+    left: 100px;
+  }
+
+  .text {
+    top: 130px;
+    left: 100px;
+    max-width: 273px;
+  }
+
+  .button {
+    left: 100px;
   }
 }
 
@@ -36,7 +83,20 @@
   }
 
   .heroTitle {
+    top: 80px;
+    left: 200px;
     font-size: var(--font-size-hero);
+  }
+
+  .text {
+    top: 165px;
+    left: 200px;
+    max-width: 423px;
+  }
+
+  .button {
+    bottom: 80px;
+    left: 200px;
   }
 }
 

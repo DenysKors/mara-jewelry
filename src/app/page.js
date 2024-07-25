@@ -10,6 +10,13 @@ export default function MainPage() {
       <h1 className={styles.heroTitle}>
         Mara<span className={styles.heroSpan}>jewelry</span>
       </h1>
+      <p className={styles.text}>
+        Вирушайте в захоплюючу подорож світом неперевершеної краси і
+        витонченості разом із нашими прикрасами з каміння ручної роботи
+      </p>
+      <button className={styles.button} type="button">
+        Придбати прикрасу
+      </button>
       <HeroCarousel />
     </section>
 
