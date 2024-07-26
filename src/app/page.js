@@ -1,9 +1,11 @@
 import HeroSection from '@/components/HeroSection/HeroSection';
+import CatalogSection from '@/components/CatalogSection/CatalogSection';
 
 export default function MainPage() {
   return (
     <main>
       <HeroSection />
+      <CatalogSection />
     </main>
 
     /* <div className={styles.description}>
