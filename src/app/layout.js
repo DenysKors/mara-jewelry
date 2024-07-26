@@ -15,11 +15,6 @@ const poppins_regular = localFont({
   variable: '--font-poppins-regular',
 });
 
-const catallina_regular = localFont({
-  src: './styles/fonts/Catallina-Regular.ttf',
-  variable: '--font-catallina-regular',
-});
-
 const tenor_regular = localFont({
   src: './styles/fonts/TenorSans-Regular.ttf',
   variable: '--font-tenor-regular',
@@ -44,7 +39,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="uk">
       <body
-        className={`${nunito_regular.variable} ${catallina_regular.variable} ${poppins_regular.variable} ${tenor_regular.variable}`}
+        className={`${nunito_regular.variable} ${poppins_regular.variable} ${tenor_regular.variable}`}
       >
         <Header />
         {children}

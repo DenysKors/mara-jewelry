@@ -1,24 +1,10 @@
-// import Image from 'next/image';
-// import Link from 'next/link';
-import styles from './page.module.css';
-
-import HeroCarousel from '@/components/HeroCarousel/HeroCarousel';
+import HeroSection from '@/components/HeroSection/HeroSection';
 
 export default function MainPage() {
   return (
-    <section className={styles.section}>
-      <h1 className={styles.heroTitle}>
-        Mara<span className={styles.heroSpan}>jewelry</span>
-      </h1>
-      <p className={styles.text}>
-        Вирушайте в захоплюючу подорож світом неперевершеної краси і
-        витонченості разом із нашими прикрасами з каміння ручної роботи
-      </p>
-      <button className={styles.button} type="button">
-        Придбати прикрасу
-      </button>
-      <HeroCarousel />
-    </section>
+    <main>
+      <HeroSection />
+    </main>
 
     /* <div className={styles.description}>
         <p>
