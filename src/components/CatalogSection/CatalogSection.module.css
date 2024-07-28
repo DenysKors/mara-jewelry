@@ -1,4 +1,5 @@
 .section {
+  margin: 0 auto;
   padding: 65px 20px 65px 20px;
   max-width: 1440px;
 }
@@ -17,6 +18,7 @@
 .link {
   padding-top: 8px;
   padding-bottom: 8px;
+  margin-left: 8px;
   display: inline-flex;
   align-items: center;
   gap: 3px;
@@ -28,8 +30,21 @@
   transition: color var(--transition-main);
 }
 
-.link:hover {
+.link:hover,
+.link:focus {
   color: var(--color-accent);
+}
+
+.linkIcon {
+  width: 5px;
+  height: 14px;
+  fill: var(--color-text);
+  transition: fill var(--transition-main);
+}
+
+.link:hover .linkIcon,
+.link:focus .linkIcon {
+  fill: var(--color-accent);
 }
 
 .linkBoxBottom {

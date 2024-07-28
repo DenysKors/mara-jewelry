@@ -10,8 +10,9 @@
 .button {
   font-weight: var(--font-weight-body);
   font-size: var(--font-size-body);
-  line-height: normal;
+  text-transform: uppercase;
   color: var(--color-text);
+  background-color: var(--color-background);
   transition: color var(--transition-main);
 }
 
