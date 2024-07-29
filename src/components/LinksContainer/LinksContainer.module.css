@@ -3,100 +3,106 @@
   height: 100%;
   display: grid;
   justify-content: center;
-  grid-template-columns: [one] 158px [two] 158px [three];
-  grid-template-rows: [row-one] 145px [row-two] 145px [row-three] 145px [row-four];
+  grid-template-columns: 158px 158px;
+  grid-template-rows: 145px 145px 145px;
   row-gap: 32px;
   column-gap: 20px;
 }
 
 .chapletLink {
   grid-column-start: 1;
-  grid-column-end: two;
-  grid-row-start: row-three;
-  grid-row-end: row-four;
+  grid-column-end: 2;
+  grid-row-start: 3;
+  grid-row-end: 4;
 }
 
 .necklaceLink {
   grid-column-start: 2;
-  grid-column-end: three;
-  grid-row-start: row-three;
-  grid-row-end: row-four;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
 }
 
 .chockerLink {
   grid-column-start: 1;
-  grid-column-end: two;
-  grid-row-start: row-one;
-  grid-row-end: row-two;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
 }
 
 .braceletLink {
   grid-column-start: 2;
-  grid-column-end: three;
-  grid-row-start: row-one;
-  grid-row-end: row-two;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
 }
 
 .earringsLink {
-  grid-column-start: one;
-  grid-column-end: three;
-  grid-row-start: row-two;
-  grid-row-end: row-three;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
 }
 
 .thumb {
   position: relative;
   width: 100%;
   height: 100%;
+  /* background-image: linear-gradient(
+    200deg,
+    rgba(35, 38, 42, 0) 31.21%,
+    rgba(35, 38, 42, 0.71) 56.25%,
+    #23262a 100%
+  ); */
 }
 
 @media screen and (min-width: 768px) {
   .container {
-    grid-template-columns: [one] 176px [two] 126px [three] 30px [four] 176px [five];
-    grid-template-rows: [row-one] 161px [row-two] 161px [row-three];
+    grid-template-columns: 176px 126px 30px 176px;
+    grid-template-rows: 161px 161px;
     row-gap: 24px;
   }
 
   .chapletLink {
-    grid-column-start: four;
-    grid-column-end: five;
-    grid-row-start: row-two;
-    grid-row-end: row-three;
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 3;
   }
 
   .necklaceLink {
-    grid-column-start: three;
-    grid-column-end: five;
-    grid-row-start: row-one;
-    grid-row-end: row-two;
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 2;
   }
 
   .chockerLink {
     grid-column-start: 1;
-    grid-column-end: two;
-    grid-row-start: row-two;
-    grid-row-end: row-three;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
   }
 
   .braceletLink {
-    grid-column-start: two;
-    grid-column-end: four;
-    grid-row-start: row-two;
-    grid-row-end: row-three;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
   }
 
   .earringsLink {
     grid-column-start: 1;
-    grid-column-end: three;
-    grid-row-start: row-one;
-    grid-row-end: row-two;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1440px) {
   .container {
-    grid-template-columns: [one] 333px [two] 245px [three] 68px [four] 333px [five];
-    grid-template-rows: [row-one] 305px [row-two] 305px [row-three];
+    grid-template-columns: 333px 245px 68px 333px;
+    grid-template-rows: 305px 305px;
     row-gap: 40px;
   }
 }
