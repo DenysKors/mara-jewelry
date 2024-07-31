@@ -1,11 +1,13 @@
 import HeroSection from '@/components/HeroSection/HeroSection';
 import CatalogSection from '@/components/CatalogSection/CatalogSection';
+import UniqueDesign from '@/components/UniqueDesignSection/UniqueDesignSection';
 
 export default function MainPage() {
   return (
     <main>
       <HeroSection />
       <CatalogSection />
+      <UniqueDesign />
     </main>
 
     /* <div className={styles.description}>
