@@ -1,13 +1,15 @@
 import HeroSection from '@/components/HeroSection/HeroSection';
 import CatalogSection from '@/components/CatalogSection/CatalogSection';
-import UniqueDesign from '@/components/UniqueDesignSection/UniqueDesignSection';
+import UniqueDesignSection from '@/components/UniqueDesignSection/UniqueDesignSection';
+import CreatorSection from '@/components/CreatorSection/CreatorSection';
 
 export default function MainPage() {
   return (
     <main>
       <HeroSection />
       <CatalogSection />
-      <UniqueDesign />
+      <UniqueDesignSection />
+      <CreatorSection />
     </main>
 
     /* <div className={styles.description}>

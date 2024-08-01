@@ -3,7 +3,7 @@ import styles from './UniqueDesignSection.module.css';
 
 import telegram from '../../assets/svg/telegram.svg';
 
-export default function UniqueDesign() {
+export default function UniqueDesignSection() {
   return (
     <section className={styles.section}>
       <h2 className={styles.title}>Хочеш створити унікальний дизайн?</h2>
