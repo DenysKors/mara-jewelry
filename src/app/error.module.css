@@ -7,6 +7,10 @@
   gap: 2rem;
 }
 
+.title {
+  text-align: center;
+}
+
 .button {
   font-weight: var(--font-weight-body);
   font-size: var(--font-size-body);
