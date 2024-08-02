@@ -2,12 +2,16 @@
   margin: 0 auto;
   padding: 65px 20px;
   max-width: 1440px;
-  text-align: center;
+  display: grid;
+  justify-items: center;
+  align-items: end;
+  row-gap: 32px;
+  grid-template-columns: auto;
+  grid-template-rows: auto 420px auto;
   background-color: var(--color-background);
 }
 
 .title {
-  margin-bottom: 32px;
   font-family: var(--font-tenor-regular);
   font-size: var(--font-size-title);
   text-transform: uppercase;
@@ -15,32 +19,97 @@
 }
 
 .text {
+  max-width: 335px;
   font-family: var(--font-nunito-regular);
   font-size: var(--font-size-body);
   color: var(--color-accent);
   text-align: left;
 }
 
+.box {
+  position: relative;
+  width: 274px;
+  height: 411px;
+}
+
+.thumb {
+  position: absolute;
+  z-index: 10;
+  width: 274px;
+  height: 411px;
+}
+
+.background {
+  position: absolute;
+  z-index: 1;
+  top: -8px;
+  left: -8px;
+  width: 274px;
+  height: 411px;
+  background-image: url('../../assets/images/creator_bg@1x_s.png');
+  background-repeat: no-repeat;
+}
+
 @media screen and (min-width: 768px) {
   .section {
     padding: 65px 100px 0px 100px;
+    align-items: start;
+    column-gap: 20px;
+    row-gap: 40px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 35px auto;
   }
 
   .title {
-    margin-bottom: 40px;
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+
+  .text {
+    max-width: 352px;
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+
+  .box {
+    height: 475px;
+    grid-column: 1/2;
+    grid-row: 1/3;
+  }
+
+  .thumb {
+    height: 475px;
+  }
+
+  .background {
+    height: 475px;
+    background-image: url('../../assets/images/creator_bg@1x_m.png');
   }
 }
 
 @media screen and (min-width: 1440px) {
   .section {
     padding: 38px 200px 0px 200px;
+    column-gap: 100px;
+    row-gap: 80px;
   }
 
-  .title {
-    margin-bottom: 80px;
+  .text {
+    max-width: 422px;
+  }
+  .box {
+    width: 510px;
+    height: 551px;
   }
 
-  /* .text {
-    margin-bottom: 40px;
-  } */
+  .thumb {
+    width: 510px;
+    height: 551px;
+  }
+
+  .background {
+    width: 510px;
+    height: 551px;
+    background-image: url('../../assets/images/creator_bg@1x_l.png');
+  }
 }
