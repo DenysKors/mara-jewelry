@@ -37,7 +37,11 @@ export default function BraceletImage() {
       <source media="(min-width: 1440px)" srcSet={desktop} />
       <source media="(min-width: 768px)" srcSet={tablet} />
       <source media="(max-width: 767px)" srcSet={mobile} />
-      <img {...rest} style={{ width: '100%', height: '100%' }} />
+      <img
+        {...rest}
+        alt="Bracelet Example"
+        style={{ width: '100%', height: '100%' }}
+      />
     </picture>
   );
 }
