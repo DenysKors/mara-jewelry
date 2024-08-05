@@ -2,6 +2,7 @@ import HeroSection from '@/components/HeroSection/HeroSection';
 import CatalogSection from '@/components/CatalogSection/CatalogSection';
 import UniqueDesignSection from '@/components/UniqueDesignSection/UniqueDesignSection';
 import CreatorSection from '@/components/CreatorSection/CreatorSection';
+import ReviewsSection from '@/components/ReviewsSection/ReviewsSection';
 
 export default function MainPage() {
   return (
@@ -10,6 +11,7 @@ export default function MainPage() {
       <CatalogSection />
       <UniqueDesignSection />
       <CreatorSection />
+      <ReviewsSection />
     </main>
 
     /* <div className={styles.description}>

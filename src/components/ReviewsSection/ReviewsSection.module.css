@@ -1,0 +1,143 @@
+.section {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1440px;
+  height: 435px;
+  background-color: var(--color-background-hover);
+}
+
+.wrapper {
+  position: absolute;
+  z-index: 10;
+  top: 65px;
+  left: 50%;
+  padding: 16px 8px;
+  width: 319px;
+  height: 268px;
+  border-radius: 16px;
+  background-color: var(--color-background);
+  transform: translateX(-50%);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 2px, rgba(0, 0, 0, 0.2) 0px 4px 4px;
+}
+
+.title {
+  margin-bottom: 8px;
+  font-family: var(--font-nunito-regular);
+  font-size: var(--font-size-section);
+  font-weight: var(--font-weight-bold);
+}
+
+.text {
+  margin-bottom: 8px;
+  font-family: var(--font-nunito-regular);
+  font-size: var(--font-size-body);
+}
+
+.author {
+  font-family: var(--font-nunito-regular);
+  font-size: var(--font-size-body);
+  text-align: right;
+  text-transform: capitalize;
+}
+
+.box {
+  position: absolute;
+  z-index: 1;
+  top: 80px;
+  left: 50%;
+  width: 335px;
+  height: 236px;
+  border-radius: 16px;
+  background-color: var(--color-background);
+  transform: translateX(-50%);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 2px, rgba(0, 0, 0, 0.2) 0px 4px 4px;
+}
+
+.btnLeft {
+  position: absolute;
+  z-index: 10;
+  bottom: 65px;
+  left: 90px;
+  background-color: transparent;
+}
+
+.btnRight {
+  position: absolute;
+  z-index: 10;
+  bottom: 65px;
+  right: 90px;
+  background-color: transparent;
+}
+
+.svg {
+  width: 84px;
+  height: 7px;
+}
+
+@media screen and (min-width: 768px) {
+  .section {
+    height: 352px;
+  }
+
+  .wrapper {
+    padding: 24px 24px 24px 32px;
+    width: 520px;
+    height: 240px;
+  }
+
+  .box {
+    width: 552px;
+    height: 208px;
+  }
+
+  .btnLeft {
+    bottom: 172px;
+    left: 48px;
+  }
+
+  .btnRight {
+    bottom: 172px;
+    right: 48px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .section {
+    height: 386px;
+  }
+
+  .wrapper {
+    padding: 32px 90px;
+    top: 80px;
+    width: 864px;
+    height: 228px;
+  }
+
+  .title {
+    margin-bottom: 16px;
+  }
+
+  .text {
+    margin-bottom: 16px;
+  }
+
+  .box {
+    top: 104px;
+    width: 904px;
+    height: 180px;
+  }
+
+  .btnLeft {
+    bottom: 188px;
+    left: 200px;
+  }
+
+  .btnRight {
+    bottom: 188px;
+    right: 200px;
+  }
+
+  .svg {
+    width: 117px;
+  }
+}
