@@ -16,7 +16,9 @@ export default function BenefitsSection() {
             fill="#096A61"
           />
         </svg>
-        <p className={styles.text}>прикраси виготовляються вручну з любов'ю</p>
+        <p className={styles.text}>
+          прикраси виготовляються вручну з любов&apos;ю
+        </p>
       </div>
       <div className={styles.box}>
         <svg
