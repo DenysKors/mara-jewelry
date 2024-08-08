@@ -4,6 +4,7 @@ import UniqueDesignSection from '@/components/UniqueDesignSection/UniqueDesignSe
 import CreatorSection from '@/components/CreatorSection/CreatorSection';
 import ReviewsSection from '@/components/ReviewsSection/ReviewsSection';
 import BenefitsSection from '@/components/BenefitsSection/BenefitsSaection';
+import InstagramSection from '@/components/InstagramSection/InstagramSection';
 
 export default function MainPage() {
   return (
@@ -14,6 +15,7 @@ export default function MainPage() {
       <CreatorSection />
       <ReviewsSection />
       <BenefitsSection />
+      <InstagramSection />
     </main>
 
     /* <div className={styles.description}>

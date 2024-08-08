@@ -17,6 +17,7 @@ export default function HeroCarousel() {
         showArrows={false}
         showThumbs={false}
         swipeable={false}
+        stopOnHover={false}
       >
         <div className={styles.image1}></div>
         <div className={styles.image2}></div>
