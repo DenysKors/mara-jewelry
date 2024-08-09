@@ -1,0 +1,74 @@
+.section {
+  padding: 65px 20px 48px 20px;
+  max-width: 1440px;
+  margin: 0 auto;
+  border-top: 1px solid var(--color-accent);
+  background-color: var(--color-background);
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.image {
+  width: 124px;
+  height: 124px;
+}
+
+.box {
+  display: flex;
+  gap: 32px;
+}
+
+.link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  transition: border-color var(--transition-main),
+    background-color var(--transition-main);
+}
+
+.link:hover,
+.link:focus {
+  border-color: var(--color-accent);
+  background-color: var(--color-background-hover);
+}
+
+.list {
+  padding-top: 40px;
+  padding-bottom: 65px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.copyBox {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.copy {
+  font-family: var(--font-poppins-regular);
+  font-weight: 600;
+  font-size: var(--font-size-footer);
+  color: var(--color-text);
+  opacity: 0.5;
+}
+
+.dev {
+  font-family: var(--font-poppins-regular);
+  font-size: var(--font-size-footer);
+  color: var(--color-text);
+  opacity: 0.5;
+}
