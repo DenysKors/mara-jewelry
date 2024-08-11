@@ -6,6 +6,13 @@
   background-color: var(--color-background);
 }
 
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+}
+
 .wrapper {
   display: flex;
   align-items: center;
@@ -43,15 +50,20 @@
 }
 
 .list {
-  padding-top: 40px;
-  padding-bottom: 65px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  gap: 24px;
+  text-align: center;
+}
+
+.listItem:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.listItem {
+  font-family: var(--font-nunito-regular);
+  font-size: var(--font-size-body);
 }
 
 .copyBox {
+  padding-top: 65px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -71,4 +83,48 @@
   font-size: var(--font-size-footer);
   color: var(--color-text);
   opacity: 0.5;
+}
+
+@media screen and (min-width: 768px) {
+  .section {
+    padding: 65px 100px 40px 100px;
+  }
+
+  .container {
+    justify-content: center;
+    flex-direction: row;
+    gap: 134px;
+  }
+
+  .wrapper {
+    gap: 32px;
+  }
+
+  .list {
+    align-self: start;
+    text-align: start;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .section {
+    padding: 80px 200px 40px 200px;
+  }
+
+  .wrapper {
+    gap: 34px;
+  }
+
+  .image {
+    width: 87px;
+    height: 87px;
+  }
+
+  .listItem:not(:last-child) {
+    margin-bottom: 32px;
+  }
+
+  .copyBox {
+    padding-top: 80px;
+  }
 }

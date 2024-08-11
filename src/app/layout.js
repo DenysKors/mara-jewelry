@@ -6,17 +6,17 @@ import Header from '@/components/Header/Header';
 import Footer from '@/components/Footer/Footer';
 
 const nunito_regular = localFont({
-  src: './styles/fonts/Nunito-Regular.ttf',
+  src: '../assets/fonts/Nunito-Regular.ttf',
   variable: '--font-nunito-regular',
 });
 
 const poppins_regular = localFont({
-  src: './styles/fonts/Poppins-Regular.ttf',
+  src: '../assets/fonts/Poppins-Regular.ttf',
   variable: '--font-poppins-regular',
 });
 
 const tenor_regular = localFont({
-  src: './styles/fonts/TenorSans-Regular.ttf',
+  src: '../assets/fonts/TenorSans-Regular.ttf',
   variable: '--font-tenor-regular',
 });
 
