@@ -53,13 +53,23 @@
   text-align: center;
 }
 
-.listItem:not(:last-child) {
+.list > li:not(:last-child) {
   margin-bottom: 24px;
 }
 
-.listItem {
+.button {
   font-family: var(--font-nunito-regular);
   font-size: var(--font-size-body);
+  color: var(--color-text);
+  background-color: var(--color-background);
+  transition: color var(--transition-main),
+    background-color var(--transition-main);
+}
+
+.button:hover,
+.button:focus {
+  color: var(--color-accent);
+  background-color: var(--color-background-hover);
 }
 
 .copyBox {
@@ -120,7 +130,7 @@
     height: 87px;
   }
 
-  .listItem:not(:last-child) {
+  .list > li:not(:last-child) {
     margin-bottom: 32px;
   }
 

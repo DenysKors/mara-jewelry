@@ -1,0 +1,36 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(34, 37, 42, 0.6);
+  z-index: 100;
+}
+
+.window {
+  padding: 16px;
+  max-width: calc(100vw - 40px);
+  max-height: calc(100vh - 40px);
+  border-radius: 16px;
+  background-color: var(--color-background);
+}
+
+.button {
+  padding: 10px 24px;
+  font-family: var(--font-tenor-regular);
+  font-size: var(--font-size-body);
+  text-transform: uppercase;
+  color: var(--color-background);
+  background-color: var(--color-accent);
+  border-radius: 16px;
+  transition: background-color var(--transition-main);
+}
+
+.button:hover,
+.button:focus {
+  background-color: var(--color-text);
+}

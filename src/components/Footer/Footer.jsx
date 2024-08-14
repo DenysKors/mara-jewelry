@@ -1,11 +1,20 @@
+'use client';
+
 import Image from 'next/image';
+import { useState } from 'react';
 
 import styles from './Footer.module.css';
 import Logo from '../../assets/images/Logo.png';
 import instagram from '../../assets/svg/instagram.svg';
 import telegram from '../../assets/svg/telegram.svg';
+import Modal from '../Modal/Modal';
+import ModalAbout from '../ModalAbout/ModalAbout';
+import ModalTerms from '../ModalTerms/ModalTerms';
 
 export default function Footer() {
+  const [showAboutModal, setShowAboutModal] = useState(false);
+  const [showTermsModal, setShowTermsModal] = useState(false);
+
   return (
     <footer className={styles.section}>
       <div className={styles.container}>
@@ -48,16 +57,42 @@ export default function Footer() {
           </div>
         </div>
         <ul className={styles.list}>
-          <li className={styles.listItem}>
+          <li>
             <b>Інформація</b>
           </li>
-          <li className={styles.listItem}>Про Mara Jewelry</li>
-          <li className={styles.listItem}>Оплата та доставка</li>
+          <li>
+            <button
+              className={styles.button}
+              type="button"
+              onClick={() => setShowAboutModal(true)}
+            >
+              Про Mara Jewelry
+            </button>
+            {showAboutModal && (
+              <Modal onClose={() => setShowAboutModal(false)}>
+                <ModalAbout />
+              </Modal>
+            )}
+          </li>
+          <li>
+            <button
+              className={styles.button}
+              type="button"
+              onClick={() => setShowTermsModal(true)}
+            >
+              Оплата та доставка
+            </button>
+            {showTermsModal && (
+              <Modal onClose={() => setShowTermsModal(false)}>
+                <ModalTerms />
+              </Modal>
+            )}
+          </li>
         </ul>
       </div>
       <div className={styles.copyBox}>
         <span className={styles.copy}>
-          &copy; 2023 MaraJewelry, All Rights Reserved
+          &copy; 2024 MaraJewelry, All Rights Reserved
         </span>
         <span className={styles.dev}>Created by TechDev</span>
       </div>
