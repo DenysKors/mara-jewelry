@@ -1,0 +1,24 @@
+.title,
+.text {
+  margin-bottom: 20px;
+  font-family: var(--font-nunito-regular);
+  font-size: var(--font-size-body);
+  color: var(--color-text);
+}
+
+.list {
+  font-family: var(--font-nunito-regular);
+  font-size: var(--font-size-body);
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+.list li {
+  margin-bottom: 20px;
+}
+
+.list ol {
+  list-style-type: lower-alpha;
+  list-style-position: inside;
+  margin-left: 15px;
+}

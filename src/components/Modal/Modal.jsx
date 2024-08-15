@@ -31,7 +31,7 @@ export default function Modal({ onClose, children }) {
       <div className={styles.window}>
         {children}
         <button className={styles.button} type="button" onClick={onClose}>
-          Close
+          Закрити
         </button>
       </div>
     </div>,
