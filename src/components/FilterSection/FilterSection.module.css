@@ -1,4 +1,19 @@
 .sidebar {
   max-width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
   flex-shrink: 0;
+}
+
+.legend {
+  font-family: var(--font-nunito-regular);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-footer);
+}
+
+@media screen and (min-width: 768px) {
+  .legend {
+    font-size: var(--font-size-body);
+  }
 }

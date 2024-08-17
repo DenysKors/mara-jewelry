@@ -9,13 +9,13 @@
 }
 
 @media screen and (min-width: 768px) {
-  .section {
+  .container {
     padding: 65px 100px;
   }
 }
 
 @media screen and (min-width: 1440px) {
-  .section {
+  .container {
     padding: 80px 200px;
   }
 }
