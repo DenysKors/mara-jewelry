@@ -1,13 +1,12 @@
-import Image from 'next/image';
 import styles from './SearchBar.module.css';
-
-import searchIcon from '../../assets/svg/search.svg';
 
 export default function SearchBar() {
   return (
     <form className={styles.form}>
       <button className={styles.button}>
-        <Image src={searchIcon} className={styles.svg} alt="search" />
+        <svg className={styles.svg}>
+          <use href="./icons.svg#icon-search"></use>
+        </svg>
       </button>
       <input
         className={styles.input}

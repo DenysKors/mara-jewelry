@@ -1,10 +1,7 @@
-import Image from 'next/image';
 import Link from 'next/link';
 
 import styles from './HeroSection.module.css';
 import HeroCarousel from '../HeroCarousel/HeroCarousel';
-import instagram from '../../assets/svg/instagram.svg';
-import telegram from '../../assets/svg/telegram.svg';
 
 import { pageData } from '@/app/pageData';
 
@@ -21,7 +18,6 @@ export default function HeroSection() {
       <Link
         href={{
           pathname: pageData[1].href,
-          query: { product: 'all' },
         }}
         className={styles.link}
       >
@@ -36,12 +32,9 @@ export default function HeroSection() {
             rel="noreferrer noopener"
             aria-label="Instagram"
           >
-            <Image
-              src={instagram}
-              alt="Instagram Icon"
-              width={16}
-              height={16}
-            />
+            <svg width="16" height="16">
+              <use href="./icons.svg#icon-instagram"></use>
+            </svg>
           </a>
         </li>
         <li className={styles.listItem}>
@@ -52,7 +45,9 @@ export default function HeroSection() {
             rel="noreferrer noopener"
             aria-label="Telegram"
           >
-            <Image src={telegram} alt="Telegram Icon" width={16} height={16} />
+            <svg width="16" height="16">
+              <use href="./icons.svg#icon-telegram"></use>
+            </svg>
           </a>
         </li>
       </ul>

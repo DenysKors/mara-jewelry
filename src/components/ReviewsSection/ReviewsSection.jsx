@@ -41,6 +41,7 @@ export default function ReviewsSection() {
       <button
         className={styles.btnLeft}
         type="button"
+        aria-label="Prev slide"
         onClick={handleLeftClick}
       >
         <svg
@@ -60,6 +61,7 @@ export default function ReviewsSection() {
       <button
         className={styles.btnRight}
         type="button"
+        aria-label="Next slide"
         onClick={handleRightClick}
       >
         <svg

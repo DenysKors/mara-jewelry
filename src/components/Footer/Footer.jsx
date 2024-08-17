@@ -1,12 +1,10 @@
 'use client';
 
-import Image from 'next/image';
 import { useState } from 'react';
+import Image from 'next/image';
 
 import styles from './Footer.module.css';
 import Logo from '../../assets/images/Logo.png';
-import instagram from '../../assets/svg/instagram.svg';
-import telegram from '../../assets/svg/telegram.svg';
 import Modal from '../Modal/Modal';
 import ModalAbout from '../ModalAbout/ModalAbout';
 import ModalTerms from '../ModalTerms/ModalTerms';
@@ -33,12 +31,9 @@ export default function Footer() {
               rel="noreferrer noopener"
               aria-label="Instagram"
             >
-              <Image
-                src={instagram}
-                alt="Instagram Icon"
-                width={16}
-                height={16}
-              />
+              <svg width="16" height="16">
+                <use href="./icons.svg#icon-instagram"></use>
+              </svg>
             </a>
             <a
               className={styles.link}
@@ -47,12 +42,9 @@ export default function Footer() {
               rel="noreferrer noopener"
               aria-label="Telegram"
             >
-              <Image
-                src={telegram}
-                alt="Telegram Icon"
-                width={16}
-                height={16}
-              />
+              <svg width="16" height="16">
+                <use href="./icons.svg#icon-telegram"></use>
+              </svg>
             </a>
           </div>
         </div>

@@ -1,7 +1,4 @@
-import Image from 'next/image';
 import styles from './UniqueDesignSection.module.css';
-
-import telegram from '../../assets/svg/telegram.svg';
 
 export default function UniqueDesignSection() {
   return (
@@ -18,7 +15,9 @@ export default function UniqueDesignSection() {
             rel="noreferrer noopener"
             aria-label="Telegram"
           >
-            <Image src={telegram} alt="Telegram Icon" width={26} height={26} />
+            <svg width="26" height="26">
+              <use href="./icons.svg#icon-telegram"></use>
+            </svg>
           </a>
           <div className={styles.circle}></div>
         </div>

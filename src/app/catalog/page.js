@@ -1,3 +1,13 @@
+import styles from './page.module.css';
+
+import FilterSection from '@/components/FilterSection/FilterSection';
+import ProductsSection from '@/components/ProductsSection/ProductsSection';
+
 export default function CatalogPage() {
-  return <h2>Hello, Catalog Page!</h2>;
+  return (
+    <main className={styles.container}>
+      <FilterSection />
+      <ProductsSection />
+    </main>
+  );
 }

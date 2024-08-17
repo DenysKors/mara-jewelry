@@ -34,6 +34,7 @@
 .svg {
   width: 20px;
   height: 20px;
+  fill: var(--color-text);
 }
 
 @media screen and (min-width: 768px) {
