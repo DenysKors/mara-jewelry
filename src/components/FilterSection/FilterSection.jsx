@@ -1,4 +1,5 @@
 'use client';
+
 import { usePathname, useSearchParams, useRouter } from 'next/navigation';
 
 import styles from './FilterSection.module.css';
@@ -8,18 +9,16 @@ export default function FilterSection() {
   const pathname = usePathname();
   const { replace } = useRouter();
 
-  const onFilterChange = () => {
-    const products = document.querySelectorAll('#product');
-    const newUrlSearchParams = [];
+  const onFilterChange = evt => {
+    const params = new URLSearchParams(searchParams);
 
-    for (const product of products) {
-      if (product.checked) {
-        const newParam = [product.value, 'true'];
-        newUrlSearchParams.push(newParam);
-      }
+    if (evt.target.checked) {
+      params.set(evt.target.value, 'true');
+    } else {
+      params.delete(evt.target.value);
     }
-    const params = new URLSearchParams(newUrlSearchParams);
-    replace(`${pathname}?${params}`);
+
+    replace(`${pathname}?${params.toString()}`);
   };
 
   return (
@@ -28,7 +27,6 @@ export default function FilterSection() {
       <label>
         <input
           type="checkbox"
-          id="product"
           value="chocker"
           checked={
             searchParams.get('chocker'?.toString()) === 'true' ? true : false
@@ -40,7 +38,6 @@ export default function FilterSection() {
       <label>
         <input
           type="checkbox"
-          id="product"
           value="necklace"
           checked={
             searchParams.get('necklace'?.toString()) === 'true' ? true : false
@@ -52,7 +49,6 @@ export default function FilterSection() {
       <label>
         <input
           type="checkbox"
-          id="product"
           value="bracelet"
           checked={
             searchParams.get('bracelet'?.toString()) === 'true' ? true : false
@@ -64,7 +60,6 @@ export default function FilterSection() {
       <label>
         <input
           type="checkbox"
-          id="product"
           value="chaplet"
           checked={
             searchParams.get('chaplet'?.toString()) === 'true' ? true : false
@@ -76,7 +71,6 @@ export default function FilterSection() {
       <label>
         <input
           type="checkbox"
-          id="product"
           value="earrings"
           checked={
             searchParams.get('earrings'?.toString()) === 'true' ? true : false
@@ -88,6 +82,3 @@ export default function FilterSection() {
     </aside>
   );
 }
-
-// "Чокер", "Намисто", "Браслет", "Чотки", "Сережки"
-// "chocker", "necklace", "bracelet", "chaplet", "earrings"
