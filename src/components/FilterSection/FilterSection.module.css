@@ -12,8 +12,33 @@
   font-size: var(--font-size-footer);
 }
 
+.listItem {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--font-nunito-regular);
+  font-size: var(--font-size-footer);
+}
+
+.listItem:not(:last-child) {
+  margin-bottom: 16px;
+}
+
 @media screen and (min-width: 768px) {
+  .sidebar {
+    gap: 32px;
+  }
+
   .legend {
     font-size: var(--font-size-body);
+  }
+
+  .listItem {
+    gap: 8px;
+    font-size: var(--font-size-body);
+  }
+
+  .listItem:not(:last-child) {
+    margin-bottom: 24px;
   }
 }

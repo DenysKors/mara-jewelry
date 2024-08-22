@@ -4,13 +4,14 @@
   max-width: 1440px;
   display: flex;
   flex-direction: row;
-  gap: 20px;
+
   background-color: var(--color-background);
 }
 
 @media screen and (min-width: 768px) {
   .container {
     padding: 65px 100px;
+    gap: 20px;
   }
 }
 
