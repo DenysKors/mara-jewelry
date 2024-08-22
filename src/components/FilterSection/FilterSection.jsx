@@ -90,7 +90,7 @@ export default function FilterSection({ stones }) {
       <ul>
         {stones.map(({ _id, name, value }) => {
           return (
-            <li className={styles.listItem}>
+            <li key={_id} className={styles.listItem}>
               <input
                 id={value}
                 type="checkbox"
@@ -102,9 +102,7 @@ export default function FilterSection({ stones }) {
                 }
                 onChange={onFilterChange}
               />
-              <label key={_id} htmlFor={value}>
-                {name}
-              </label>
+              <label htmlFor={value}>{name}</label>
             </li>
           );
         })}
