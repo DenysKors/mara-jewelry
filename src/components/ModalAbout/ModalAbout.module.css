@@ -1,0 +1,6 @@
+.text {
+  margin-bottom: 20px;
+  font-family: var(--font-nunito-regular);
+  font-size: var(--font-size-body);
+  color: var(--color-text);
+}

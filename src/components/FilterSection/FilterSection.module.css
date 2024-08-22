@@ -1,9 +1,11 @@
 .sidebar {
-  max-width: 250px;
+  max-width: 100px;
+  max-height: 450px;
   display: flex;
   flex-direction: column;
   gap: 24px;
   flex-shrink: 0;
+  overflow-y: scroll;
 }
 
 .legend {
@@ -26,6 +28,7 @@
 
 @media screen and (min-width: 768px) {
   .sidebar {
+    max-width: 250px;
     gap: 32px;
   }
 
@@ -40,5 +43,11 @@
 
   .listItem:not(:last-child) {
     margin-bottom: 24px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .sidebar {
+    max-height: 1200px;
   }
 }
