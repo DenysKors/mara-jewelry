@@ -13,8 +13,8 @@ export default async function CatalogPage() {
     <main className={styles.container}>
       <Suspense>
         <FilterSection stones={stones} />
+        <ProductsSection />
       </Suspense>
-      <ProductsSection />
     </main>
   );
 }
