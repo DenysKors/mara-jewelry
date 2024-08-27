@@ -6,6 +6,9 @@
   gap: 24px;
   flex-shrink: 0;
   overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-accent) transparent;
+  scrollbar-gutter: stable;
 }
 
 .legend {
@@ -20,6 +23,7 @@
   gap: 4px;
   font-family: var(--font-nunito-regular);
   font-size: var(--font-size-footer);
+  text-transform: capitalize;
 }
 
 .listItem:not(:last-child) {
@@ -28,7 +32,7 @@
 
 @media screen and (min-width: 768px) {
   .sidebar {
-    max-width: 250px;
+    max-width: 160px;
     gap: 32px;
   }
 
@@ -48,6 +52,7 @@
 
 @media screen and (min-width: 1440px) {
   .sidebar {
+    max-width: 250px;
     max-height: 1200px;
   }
 }

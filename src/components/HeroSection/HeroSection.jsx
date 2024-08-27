@@ -1,9 +1,9 @@
-import Link from 'next/link';
+// import Link from 'next/link';
 
 import styles from './HeroSection.module.css';
 import HeroCarousel from '../HeroCarousel/HeroCarousel';
 
-import { pageData } from '@/app/pageData';
+// import { pageData } from '@/app/pageData';
 
 export default function HeroSection() {
   return (
@@ -15,14 +15,14 @@ export default function HeroSection() {
         Вирушайте в захоплюючу подорож світом неперевершеної краси і
         витонченості разом із нашими прикрасами з каміння ручної роботи
       </p>
-      <Link
+      {/* <Link
         href={{
           pathname: pageData[1].href,
         }}
         className={styles.link}
       >
         Придбати прикрасу
-      </Link>
+      </Link> */}
       <ul className={styles.list}>
         <li className={styles.listItem}>
           <a

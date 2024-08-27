@@ -4,7 +4,7 @@ import styles from './page.module.css';
 
 import FilterSection from '@/components/FilterSection/FilterSection';
 import ProductsSection from '@/components/ProductsSection/ProductsSection';
-import getAllStones from '@/lib/api';
+import { getAllStones } from '@/lib/api';
 
 export default async function CatalogPage() {
   const stones = await getAllStones();
