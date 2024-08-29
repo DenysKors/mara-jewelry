@@ -6,7 +6,6 @@ import Image from 'next/image';
 import styles from './ProductsList.module.css';
 
 export default function ProductsList({ products }) {
-  console.log(products);
   return (
     <ul className={styles.container}>
       {products.map(({ code, title, imageUrl, stones }) => {
@@ -20,15 +19,23 @@ export default function ProductsList({ products }) {
               <div className={`${styles.thumb} ${styles.overlay}`}>
                 <Image
                   src={imageUrl}
-                  className={styles.image}
                   alt={title}
                   width={230}
                   height={210}
+                  style={{ objectFit: 'cover' }}
                   unoptimized
                 />
                 <div className={styles.textBox}>
                   <h3 className={styles.linkTitle}>{title}</h3>
-                  <p className={styles.linkText}>{stones.join(', ')}</p>
+                  <p className={styles.linkText}>
+                    {stones.reduce((accum, stone, idx) => {
+                      if (idx === 0) {
+                        return accum + stone.name;
+                      } else {
+                        return accum + ', ' + stone.name;
+                      }
+                    }, '')}
+                  </p>
                 </div>
               </div>
             </Link>

@@ -21,11 +21,11 @@ const Product = mongoose.Schema(
     },
     category: {
       type: String,
-      enum: ['чокер', 'намисто', 'браслет', 'чотки', 'сережки'],
+      enum: ['chocker', 'necklace', 'bracelet', 'chaplet', 'earrings'],
       required: true,
     },
     stones: {
-      type: [String],
+      type: [{ name: String, value: String }],
       required: true,
     },
     price: {

@@ -4,8 +4,13 @@
     "title": "Браслет з камінням",
     "description": "Браслет з камінням ручної роботи",
     "imageUrl": "https://placehold.co/500x750?text=No+Image",
-    "category": "браслет",
-    "stones": ["бурштин", "кварц", "обсидіан", "топаз"],
+    "category": "bracelet",
+    "stones": [
+      { "name": "бурштин", "value": "amber" },
+      { "name": "кварц", "value": "quartz" },
+      { "name": "обсидіан", "value": "obsidian" },
+      { "name": "топаз", "value": "topaz" }
+    ],
     "price": 1000,
     "sell_status": "в наявності"
   },
@@ -14,8 +19,11 @@
     "title": "Намисто з камінням",
     "description": "Намисто з камінням ручної роботи",
     "imageUrl": "https://placehold.co/500x750?text=No+Image",
-    "category": "намисто",
-    "stones": ["яшма", "моховий агат"],
+    "category": "necklace",
+    "stones": [
+      { "name": "яшма", "value": "jasper" },
+      { "name": "моховий агат", "value": "moss-agate" }
+    ],
     "price": 1000,
     "sell_status": "немає в наявності"
   },
@@ -24,8 +32,8 @@
     "title": "Сережки з камінням",
     "description": "Сережки з камінням ручної роботи",
     "imageUrl": "https://placehold.co/500x750?text=No+Image",
-    "category": "сережки",
-    "stones": ["сердолік"],
+    "category": "earrings",
+    "stones": [{ "name": "сердолік", "value": "carnelian" }],
     "price": 1000,
     "sell_status": "під замовлення"
   },
@@ -34,14 +42,14 @@
     "title": "Чокер з камінням",
     "description": "Чокер з камінням ручної роботи",
     "imageUrl": "https://placehold.co/500x750?text=No+Image",
-    "category": "чокер",
+    "category": "chocker",
     "stones": [
-      "гранат",
-      "рожевий кварц",
-      "полуничний кварц",
-      "волосатик",
-      "приніт",
-      "кіаніт"
+      { "name": "гранат", "value": "garnet" },
+      { "name": "рожевий кварц", "value": "rose-quartz" },
+      { "name": "полуничний кварц", "value": "strawberry-quartz" },
+      { "name": "волосатик", "value": "hair-stone" },
+      { "name": "приніт", "value": "prehnite" },
+      { "name": "кіаніт", "value": "kyanite" }
     ],
     "price": 1000,
     "sell_status": "в наявності"
@@ -51,8 +59,12 @@
     "title": "Чотки з камінням",
     "description": "Чотки з камінням ручної роботи",
     "imageUrl": "https://placehold.co/500x750?text=No+Image",
-    "category": "чотки",
-    "stones": ["лабрадор", "апатит", "аметист"],
+    "category": "chaplet",
+    "stones": [
+      { "name": "лабрадор", "value": "labradorite" },
+      { "name": "апатит", "value": "apatite" },
+      { "name": "аметист", "value": "amethyst" }
+    ],
     "price": 1000,
     "sell_status": "в наявності"
   }

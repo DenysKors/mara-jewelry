@@ -9,13 +9,25 @@ export default function FilterSection({ stones }) {
   const pathname = usePathname();
   const { replace } = useRouter();
 
-  const onFilterChange = evt => {
+  const onProductFilterChange = evt => {
     const params = new URLSearchParams(searchParams);
 
     if (evt.target.checked) {
-      params.set(evt.target.value, 'true');
+      params.append('product', evt.target.value);
     } else {
-      params.delete(evt.target.value);
+      params.delete('product', evt.target.value);
+    }
+
+    replace(`${pathname}?${params.toString()}`);
+  };
+
+  const onStonesFilterChange = evt => {
+    const params = new URLSearchParams(searchParams);
+
+    if (evt.target.checked) {
+      params.append('stone', evt.target.value);
+    } else {
+      params.delete('stone', evt.target.value);
     }
 
     replace(`${pathname}?${params.toString()}`);
@@ -30,10 +42,8 @@ export default function FilterSection({ stones }) {
             id="bracelet"
             type="checkbox"
             value="bracelet"
-            checked={
-              searchParams.get('bracelet'?.toString()) === 'true' ? true : false
-            }
-            onChange={onFilterChange}
+            checked={searchParams.has('product', 'bracelet') ? true : false}
+            onChange={onProductFilterChange}
           />
           <label htmlFor="bracelet">Браслет</label>
         </li>
@@ -42,10 +52,8 @@ export default function FilterSection({ stones }) {
             id="necklace"
             type="checkbox"
             value="necklace"
-            checked={
-              searchParams.get('necklace'?.toString()) === 'true' ? true : false
-            }
-            onChange={onFilterChange}
+            checked={searchParams.has('product', 'necklace') ? true : false}
+            onChange={onProductFilterChange}
           />
           <label htmlFor="necklace">Намисто</label>
         </li>
@@ -54,10 +62,8 @@ export default function FilterSection({ stones }) {
             id="earrings"
             type="checkbox"
             value="earrings"
-            checked={
-              searchParams.get('earrings'?.toString()) === 'true' ? true : false
-            }
-            onChange={onFilterChange}
+            checked={searchParams.has('product', 'earrings') ? true : false}
+            onChange={onProductFilterChange}
           />
           <label htmlFor="earrings">Сережки</label>
         </li>
@@ -66,10 +72,8 @@ export default function FilterSection({ stones }) {
             id="chocker"
             type="checkbox"
             value="chocker"
-            checked={
-              searchParams.get('chocker'?.toString()) === 'true' ? true : false
-            }
-            onChange={onFilterChange}
+            checked={searchParams.has('product', 'chocker') ? true : false}
+            onChange={onProductFilterChange}
           />
           <label htmlFor="chocker">Чокер</label>
         </li>
@@ -78,10 +82,8 @@ export default function FilterSection({ stones }) {
             id="chaplet"
             type="checkbox"
             value="chaplet"
-            checked={
-              searchParams.get('chaplet'?.toString()) === 'true' ? true : false
-            }
-            onChange={onFilterChange}
+            checked={searchParams.has('product', 'chaplet') ? true : false}
+            onChange={onProductFilterChange}
           />
           <label htmlFor="chaplet">Чотки</label>
         </li>
@@ -95,12 +97,8 @@ export default function FilterSection({ stones }) {
                 id={value}
                 type="checkbox"
                 value={value}
-                checked={
-                  searchParams.get(`${value}`?.toString()) === 'true'
-                    ? true
-                    : false
-                }
-                onChange={onFilterChange}
+                checked={searchParams.has('stone', value) ? true : false}
+                onChange={onStonesFilterChange}
               />
               <label htmlFor={value}>{name}</label>
             </li>

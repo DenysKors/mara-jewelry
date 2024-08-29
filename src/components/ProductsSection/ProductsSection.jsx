@@ -17,9 +17,11 @@ export default function ProductsSection() {
           setProducts(data);
         });
     } else {
-      for (const key of searchParams.keys()) {
-        console.log(key);
-      }
+      fetch(`/api/filter-products?${searchParams.toString()}`)
+        .then(res => res.json())
+        .then(({ data }) => {
+          setProducts(data);
+        });
     }
   }, [searchParams]);
 

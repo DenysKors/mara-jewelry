@@ -15,7 +15,7 @@ export default function LinksContainer() {
       <Link
         href={{
           pathname: pageData[1].href,
-          query: { chaplet: 'true' },
+          query: { product: 'chaplet' },
         }}
         className={`${styles.chapletLink} ${styles.overlay}`}
       >
@@ -47,7 +47,7 @@ export default function LinksContainer() {
       <Link
         href={{
           pathname: pageData[1].href,
-          query: { necklace: 'true' },
+          query: { product: 'necklace' },
         }}
         className={`${styles.necklaceLink} ${styles.overlay}`}
       >
@@ -79,7 +79,7 @@ export default function LinksContainer() {
       <Link
         href={{
           pathname: pageData[1].href,
-          query: { chocker: 'true' },
+          query: { product: 'chocker' },
         }}
         className={`${styles.chockerLink} ${styles.overlay}`}
       >
@@ -111,7 +111,7 @@ export default function LinksContainer() {
       <Link
         href={{
           pathname: pageData[1].href,
-          query: { bracelet: 'true' },
+          query: { product: 'bracelet' },
         }}
         className={`${styles.braceletLink} ${styles.overlay}`}
       >
@@ -143,7 +143,7 @@ export default function LinksContainer() {
       <Link
         href={{
           pathname: pageData[1].href,
-          query: { earrings: 'true' },
+          query: { product: 'earrings' },
         }}
         className={`${styles.earringsLink} ${styles.overlay}`}
       >
