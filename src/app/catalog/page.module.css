@@ -4,7 +4,6 @@
   max-width: 1440px;
   display: flex;
   flex-direction: row;
-
   background-color: var(--color-background);
 }
 

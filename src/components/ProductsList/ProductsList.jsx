@@ -16,13 +16,13 @@ export default function ProductsList({ products }) {
                 pathname: `/product/${code}`,
               }}
             >
-              <div className={`${styles.thumb} ${styles.overlay}`}>
+              <div className={styles.thumb}>
                 <Image
                   src={imageUrl}
                   alt={title}
-                  width={230}
-                  height={210}
-                  style={{ objectFit: 'cover' }}
+                  width={210}
+                  height={190}
+                  className={styles.img}
                   unoptimized
                 />
                 <div className={styles.textBox}>

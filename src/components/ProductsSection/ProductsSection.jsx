@@ -6,7 +6,7 @@ import { useSearchParams } from 'next/navigation';
 import ProductsList from '../ProductsList/ProductsList';
 
 export default function ProductsSection() {
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState(null);
   const searchParams = useSearchParams();
 
   useEffect(() => {
@@ -27,12 +27,12 @@ export default function ProductsSection() {
 
   return (
     <>
-      {products.length === 0 && (
+      {products && products.length === 0 && (
         <p style={{ width: '100%', textAlign: 'center' }}>
           За цим запитом нічого не знайдено
         </p>
       )}
-      {products.length > 0 && <ProductsList products={products} />}
+      {products && products.length > 0 && <ProductsList products={products} />}
       {/* Add pagination component here */}
     </>
   );

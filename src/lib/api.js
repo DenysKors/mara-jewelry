@@ -18,7 +18,6 @@ export const getAllProducts = async () => {
   await dbConnect();
   try {
     const products = await Product.find({}).sort({ title: 1 });
-    console.log(products);
     return products;
   } catch (err) {
     console.log(err.message);
