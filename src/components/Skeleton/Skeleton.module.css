@@ -6,20 +6,13 @@
   gap: 28px;
 }
 
-a:hover .thumb,
-a:focus .thumb {
-  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
-    rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
-}
-
 .thumb {
   width: 210px;
-  height: 100%;
-  transition: box-shadow var(--transition-main);
 }
 
 .img {
-  object-fit: cover;
+  width: 210px;
+  height: 190px;
 }
 
 .textBox {
@@ -28,17 +21,29 @@ a:focus .thumb {
 
 .linkTitle {
   margin-bottom: 8px;
-  font-family: var(--font-nunito-regular);
-  font-weight: var(--font-weight-bold);
-  font-size: var(--font-size-body);
-  color: var(--color-accent);
+  width: 50%;
+  height: 18px;
+  border-radius: 5px;
 }
 
 .linkText {
-  font-family: var(--font-nunito-regular);
-  font-size: var(--font-size-footer);
-  text-transform: lowercase;
-  color: var(--color-text);
+  width: 80%;
+  height: 30px;
+  border-radius: 5px;
+}
+
+@keyframes skeleton {
+  to {
+    background-position: left;
+  }
+}
+
+.skeleton {
+  cursor: progress;
+
+  background: linear-gradient(90deg, #ddda 40%, #efefefaa, #ddda 60%) right /
+    300% 100%;
+  animation: skeleton 1.5s linear infinite;
 }
 
 @media screen and (min-width: 768px) {
@@ -64,6 +69,7 @@ a:focus .thumb {
   .thumb {
     width: 250px;
   }
+
   .img {
     width: 250px;
     height: 230px;
@@ -78,6 +84,6 @@ a:focus .thumb {
   }
 
   .linkText {
-    font-size: var(--font-size-body);
+    height: 36px;
   }
 }
