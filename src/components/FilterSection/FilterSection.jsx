@@ -11,6 +11,7 @@ export default function FilterSection({ stones }) {
 
   const onProductFilterChange = evt => {
     const params = new URLSearchParams(searchParams);
+    params.set('page', 1);
 
     if (evt.target.checked) {
       params.append('product', evt.target.value);
@@ -23,6 +24,7 @@ export default function FilterSection({ stones }) {
 
   const onStonesFilterChange = evt => {
     const params = new URLSearchParams(searchParams);
+    params.set('page', 1);
 
     if (evt.target.checked) {
       params.append('stone', evt.target.value);

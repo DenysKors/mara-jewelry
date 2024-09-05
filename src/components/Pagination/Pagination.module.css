@@ -1,0 +1,61 @@
+.wrapper {
+  align-self: center;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.button {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--font-tenor-regular);
+  font-size: var(--font-size-body);
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--color-text);
+  background-color: var(--color-backgrond);
+  transition: color var(--transition-main);
+}
+
+.button:hover,
+.button:focus {
+  color: var(--color-accent);
+}
+
+.icon {
+  width: 5px;
+  height: 14px;
+  fill: var(--color-text);
+  transition: fill var(--transition-main);
+}
+
+.iconRotate {
+  transform: rotate(180deg);
+}
+
+.button:hover .linkIcon,
+.button:focus .linkIcon {
+  fill: var(--color-accent);
+}
+
+.span {
+  font-family: var(--font-tenor-regular);
+  font-size: var(--font-size-body);
+  font-weight: bold;
+  color: var(--color-text);
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper {
+    gap: 30px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .wrapper {
+    gap: 100px;
+  }
+}

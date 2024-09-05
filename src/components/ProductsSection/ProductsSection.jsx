@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 
+import styles from './ProductSection.module.css';
 import ProductsList from '../ProductsList/ProductsList';
 import Skeleton from '../Skeleton/Skeleton';
 import Pagination from '../Pagination/Pagination';
@@ -20,15 +21,15 @@ export default function ProductsSection() {
         .then(res => res.json())
         .then(data => {
           setProductsData(data);
-        })
-        .finally(setLoading(false));
+          setLoading(false);
+        });
     } else {
       fetch(`/api/filter-products?${searchParams.toString()}`)
         .then(res => res.json())
         .then(data => {
           setProductsData(data);
-        })
-        .finally(setLoading(false));
+          setLoading(false);
+        });
     }
   }, [searchParams]);
 
@@ -40,9 +41,23 @@ export default function ProductsSection() {
         </p>
       )}
       {!isLoading && productsData && productsData.products.length > 0 && (
-        <ProductsList products={productsData.products} />
+        <div className={styles.container}>
+          <ProductsList products={productsData.products} />
+          {productsData.totalAmount > PAGINATION_LIMIT && (
+            <Pagination totalAmount={productsData.totalAmount} />
+          )}
+        </div>
       )}
-      {/* !isLoading && productsData && productsData.totalAmount > PAGINATION_LIMIT && <Pagination totalAmount={productsData.totalAmount} /> */}
+
+      {/* {!isLoading && productsData && productsData.products.length > 0 && (
+        <ProductsList products={productsData.products} />
+      )} */}
+      {/* {!isLoading &&
+        productsData &&
+        productsData.totalAmount > PAGINATION_LIMIT && (
+          <Pagination totalAmount={productsData.totalAmount} />
+        )} */}
+
       {isLoading && <Skeleton slotsAmount={2} />}
     </>
   );
