@@ -1,5 +1,7 @@
 import mongoose from 'mongoose';
 
+import { CATEGORIES_ENUMS, SELL_STATUS_ENUMS } from '@/constants/enums';
+
 const Product = mongoose.Schema(
   {
     code: {
@@ -21,7 +23,7 @@ const Product = mongoose.Schema(
     },
     category: {
       type: String,
-      enum: ['chocker', 'necklace', 'bracelet', 'chaplet', 'earrings'],
+      enum: CATEGORIES_ENUMS,
       required: true,
     },
     stones: {
@@ -34,7 +36,7 @@ const Product = mongoose.Schema(
     },
     sell_status: {
       type: String,
-      enum: ['в наявності', 'немає в наявності', 'під замовлення'],
+      enum: SELL_STATUS_ENUMS,
       required: true,
     },
   },

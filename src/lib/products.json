@@ -1,71 +1,68 @@
 [
   {
-    "code": 1,
-    "title": "Браслет з камінням",
-    "description": "Браслет з камінням ручної роботи",
+    "code": 11,
+    "title": "Браслет для весілля",
+    "description": "Браслет з вишуканим дизайном та природньою силою",
     "imageUrl": "https://placehold.co/500x750?text=No+Image",
     "category": "bracelet",
     "stones": [
-      { "name": "бурштин", "value": "amber" },
-      { "name": "кварц", "value": "quartz" },
-      { "name": "обсидіан", "value": "obsidian" },
-      { "name": "топаз", "value": "topaz" }
+      { "name": "амазоніт", "value": "amazonite" },
+      { "name": "лава", "value": "lava" },
+      { "name": "шпінель", "value": "spinel" }
     ],
-    "price": 1000,
-    "sell_status": "в наявності"
-  },
-  {
-    "code": 2,
-    "title": "Намисто з камінням",
-    "description": "Намисто з камінням ручної роботи",
-    "imageUrl": "https://placehold.co/500x750?text=No+Image",
-    "category": "necklace",
-    "stones": [
-      { "name": "яшма", "value": "jasper" },
-      { "name": "моховий агат", "value": "moss-agate" }
-    ],
-    "price": 1000,
+    "price": 5000,
     "sell_status": "немає в наявності"
   },
   {
-    "code": 3,
-    "title": "Сережки з камінням",
-    "description": "Сережки з камінням ручної роботи",
+    "code": 12,
+    "title": "Намисто для весілля",
+    "description": "Намисто з вишуканим дизайном та природньою силою",
     "imageUrl": "https://placehold.co/500x750?text=No+Image",
-    "category": "earrings",
-    "stones": [{ "name": "сердолік", "value": "carnelian" }],
-    "price": 1000,
-    "sell_status": "під замовлення"
+    "category": "necklace",
+    "stones": [{ "name": "танзаніт", "value": "tanzanite" }],
+    "price": 5000,
+    "sell_status": "в наявності"
   },
   {
-    "code": 4,
-    "title": "Чокер з камінням",
-    "description": "Чокер з камінням ручної роботи",
+    "code": 13,
+    "title": "Сережки для весілля",
+    "description": "Сережки з вишуканим дизайном та природньою силою",
+    "imageUrl": "https://placehold.co/500x750?text=No+Image",
+    "category": "earrings",
+    "stones": [
+      { "name": "лазурит", "value": "lapis-lazuli" },
+      { "name": "місячний камінь (адуляр)", "value": "moonstone" }
+    ],
+    "price": 5000,
+    "sell_status": "в наявності"
+  },
+  {
+    "code": 14,
+    "title": "Чокер для весілля",
+    "description": "Чокер з вишуканим дизайном та природньою силою",
     "imageUrl": "https://placehold.co/500x750?text=No+Image",
     "category": "chocker",
     "stones": [
-      { "name": "гранат", "value": "garnet" },
-      { "name": "рожевий кварц", "value": "rose-quartz" },
-      { "name": "полуничний кварц", "value": "strawberry-quartz" },
-      { "name": "волосатик", "value": "hair-stone" },
-      { "name": "приніт", "value": "prehnite" },
-      { "name": "кіаніт", "value": "kyanite" }
+      { "name": "гірський кришталь", "value": "rock-crystal" },
+      { "name": "халцедон", "value": "chalcedony" },
+      { "name": "тигрове око", "value": "tiger's-eye" },
+      { "name": "бичаче око", "value": "bull's-eye" },
+      { "name": "димчатий кварц", "value": "smoky-quartz" }
     ],
-    "price": 1000,
-    "sell_status": "в наявності"
+    "price": 5000,
+    "sell_status": "під замовлення"
   },
   {
-    "code": 5,
-    "title": "Чотки з камінням",
-    "description": "Чотки з камінням ручної роботи",
+    "code": 15,
+    "title": "Чотки для весілля",
+    "description": "Чотки з вишуканим дизайном та природньою силою",
     "imageUrl": "https://placehold.co/500x750?text=No+Image",
     "category": "chaplet",
     "stones": [
-      { "name": "лабрадор", "value": "labradorite" },
-      { "name": "апатит", "value": "apatite" },
-      { "name": "аметист", "value": "amethyst" }
+      { "name": "флюорит", "value": "fluorite" },
+      { "name": "рубеліт", "value": "rubellite" }
     ],
-    "price": 1000,
-    "sell_status": "в наявності"
+    "price": 5000,
+    "sell_status": "під замовлення"
   }
 ]
