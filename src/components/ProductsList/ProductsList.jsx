@@ -13,7 +13,7 @@ export default function ProductsList({ products }) {
           <li key={code}>
             <Link
               href={{
-                pathname: `/product/${code}`,
+                pathname: `/catalog/${code}`,
               }}
             >
               <div className={styles.thumb}>

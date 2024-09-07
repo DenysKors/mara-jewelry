@@ -37,7 +37,7 @@
   line-height: 22px;
 }
 
-.link {
+/* .link {
   position: absolute;
   z-index: 10;
   bottom: 64px;
@@ -55,7 +55,7 @@
 .link:hover,
 .link:focus {
   background-color: var(--color-text);
-}
+} */
 
 .list {
   display: inline-block;

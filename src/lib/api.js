@@ -75,3 +75,13 @@ export const getFilteredProducts = async (
     console.log(err.message);
   }
 };
+
+export const getProductByCode = cache(async productCode => {
+  await dbConnect();
+  try {
+    const product = await Product.findOne({ code: productCode });
+    return product;
+  } catch (err) {
+    console.log(err.message);
+  }
+});

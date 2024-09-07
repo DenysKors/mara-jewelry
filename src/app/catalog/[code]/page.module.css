@@ -1,0 +1,83 @@
+.container {
+  margin: 0 auto;
+  padding: 25px 20px;
+  max-width: 1440px;
+  background-color: var(--color-background);
+}
+
+.title {
+  margin-bottom: 8px;
+  font-family: var(--font-nunito-regular);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-section);
+  color: var(--color-accent);
+}
+
+.subTitle {
+  margin-bottom: 8px;
+  font-family: var(--font-nunito-regular);
+  font-size: var(--font-size-footer);
+  text-transform: lowercase;
+  color: var(--color-text);
+}
+
+.text {
+  margin-bottom: 24px;
+  font-family: var(--font-nunito-regular);
+  font-size: var(--font-size-body);
+  color: var(--color-text);
+}
+
+.price {
+  font-family: var(--font-nunito-regular);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-body);
+  color: var(--color-text);
+}
+
+.button {
+  width: 335px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-tenor-regular);
+  font-size: var(--font-size-body);
+  line-height: normal;
+  text-transform: uppercase;
+  color: var(--color-background);
+  background-color: var(--color-accent);
+  border-radius: 16px;
+  transition: background-color var(--transition-main);
+}
+
+.button:hover,
+.button:focus {
+  background-color: var(--color-text);
+}
+
+.buttonIcon {
+  margin-left: 8px;
+  width: 18px;
+  height: 18px;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    padding: 65px 100px;
+  }
+
+  .button {
+    width: 421px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    padding: 80px 200px;
+  }
+
+  .text {
+    font-size: var(--font-size-body);
+  }
+}

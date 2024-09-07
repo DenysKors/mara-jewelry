@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 
-import styles from './ProductSection.module.css';
+import styles from './ProductsSection.module.css';
 import ProductsList from '../ProductsList/ProductsList';
 import Skeleton from '../Skeleton/Skeleton';
 import Pagination from '../Pagination/Pagination';
@@ -48,16 +48,6 @@ export default function ProductsSection() {
           )}
         </div>
       )}
-
-      {/* {!isLoading && productsData && productsData.products.length > 0 && (
-        <ProductsList products={productsData.products} />
-      )} */}
-      {/* {!isLoading &&
-        productsData &&
-        productsData.totalAmount > PAGINATION_LIMIT && (
-          <Pagination totalAmount={productsData.totalAmount} />
-        )} */}
-
       {isLoading && <Skeleton slotsAmount={2} />}
     </>
   );

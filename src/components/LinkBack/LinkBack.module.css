@@ -1,0 +1,38 @@
+.link {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin-bottom: 25px;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-family: var(--font-tenor-regular);
+  font-size: var(--font-size-body);
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--color-text);
+  background-color: var(--color-background);
+  transition: color var(--transition-main);
+}
+
+.link:hover,
+.link:focus {
+  color: var(--color-accent);
+}
+
+.linkIcon {
+  width: 24px;
+  height: 24px;
+  fill: var(--color-text);
+  transition: fill var(--transition-main);
+}
+
+.link:hover .linkIcon,
+.link:focus .linkIcon {
+  fill: var(--color-accent);
+}
+
+@media screen and (min-width: 1440px) {
+  .link {
+    padding-bottom: 80px;
+  }
+}
