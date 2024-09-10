@@ -6,8 +6,8 @@ export const CATEGORIES_ENUMS = [
   'earrings',
 ];
 
-export const SELL_STATUS_ENUMS = [
-  'в наявності',
-  'немає в наявності',
-  'під замовлення',
-];
+export const SELL_STATUS_ENUMS = {
+  inStock: 'в наявності',
+  notAvailable: 'немає в наявності',
+  toOrder: 'під замовлення',
+};

@@ -36,7 +36,7 @@ const Product = mongoose.Schema(
     },
     sell_status: {
       type: String,
-      enum: SELL_STATUS_ENUMS,
+      enum: Object.values(SELL_STATUS_ENUMS),
       required: true,
     },
   },

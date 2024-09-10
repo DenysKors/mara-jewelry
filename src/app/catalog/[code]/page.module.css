@@ -31,53 +31,6 @@
 .price {
   font-family: var(--font-nunito-regular);
   font-weight: var(--font-weight-bold);
-  font-size: var(--font-size-body);
+  font-size: var(--font-size-section);
   color: var(--color-text);
-}
-
-.button {
-  width: 335px;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-tenor-regular);
-  font-size: var(--font-size-body);
-  line-height: normal;
-  text-transform: uppercase;
-  color: var(--color-background);
-  background-color: var(--color-accent);
-  border-radius: 16px;
-  transition: background-color var(--transition-main);
-}
-
-.button:hover,
-.button:focus {
-  background-color: var(--color-text);
-}
-
-.buttonIcon {
-  margin-left: 8px;
-  width: 18px;
-  height: 18px;
-}
-
-@media screen and (min-width: 768px) {
-  .container {
-    padding: 65px 100px;
-  }
-
-  .button {
-    width: 421px;
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  .container {
-    padding: 80px 200px;
-  }
-
-  .text {
-    font-size: var(--font-size-body);
-  }
 }

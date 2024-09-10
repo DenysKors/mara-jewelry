@@ -1,0 +1,79 @@
+.box {
+  margin-top: 32px;
+  margin-bottom: 57px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.buttonBuy {
+  width: 335px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-tenor-regular);
+  font-size: var(--font-size-body);
+  line-height: normal;
+  text-transform: uppercase;
+  color: var(--color-background);
+  background-color: var(--color-accent);
+  border-radius: 16px;
+  transition: background-color var(--transition-main);
+}
+
+.buttonBuy:hover,
+.buttonBuy:focus {
+  background-color: var(--color-text);
+}
+
+.buttonIcon {
+  margin-left: 8px;
+  width: 18px;
+  height: 18px;
+}
+
+.buttonShare {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-nunito-regular);
+  font-size: var(--font-size-footer);
+  text-transform: capitalize;
+  color: var(--color-text);
+  background-color: var(--color-background);
+  transition: color var(--transition-main);
+}
+
+.buttonShare:hover,
+.buttonShare:focus {
+  color: var(--color-accent);
+}
+
+.link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: 25%;
+  transition: border-color var(--transition-main),
+    background-color var(--transition-main);
+}
+
+.link:hover,
+.link:focus {
+  border-color: var(--color-accent);
+  background-color: var(--color-background-hover);
+}
+
+@media screen and (min-width: 768px) {
+  .buttonBuy {
+    width: 421px;
+  }
+}
+
+/* @media screen and (min-width: 1440px) {
+
+  } */

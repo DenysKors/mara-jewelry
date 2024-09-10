@@ -18,12 +18,11 @@ export default function ProductsList({ products }) {
             >
               <div className={styles.thumb}>
                 <Image
-                  src={imageUrl}
+                  src="/no-image-placeholder.png"
                   alt={title}
                   width={210}
                   height={190}
                   className={styles.img}
-                  unoptimized
                 />
                 <div className={styles.textBox}>
                   <h3 className={styles.linkTitle}>{title}</h3>
