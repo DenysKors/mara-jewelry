@@ -33,7 +33,7 @@ export default function HeroSection() {
             aria-label="Instagram"
           >
             <svg width="16" height="16">
-              <use href="./icons.svg#icon-instagram"></use>
+              <use href="/icons.svg#icon-instagram"></use>
             </svg>
           </a>
         </li>
@@ -46,7 +46,7 @@ export default function HeroSection() {
             aria-label="Telegram"
           >
             <svg width="16" height="16">
-              <use href="./icons.svg#icon-telegram"></use>
+              <use href="/icons.svg#icon-telegram"></use>
             </svg>
           </a>
         </li>

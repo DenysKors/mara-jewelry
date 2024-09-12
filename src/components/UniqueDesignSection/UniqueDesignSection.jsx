@@ -16,7 +16,7 @@ export default function UniqueDesignSection() {
             aria-label="Telegram"
           >
             <svg width="26" height="26">
-              <use href="./icons.svg#icon-telegram"></use>
+              <use href="/icons.svg#icon-telegram"></use>
             </svg>
           </a>
           <div className={styles.circle}></div>

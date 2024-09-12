@@ -19,7 +19,7 @@ export default function CatalogSection() {
           >
             Переглянути весь
             <svg className={styles.linkIcon}>
-              <use href="./icons.svg#icon-Vector"></use>
+              <use href="/icons.svg#icon-Vector"></use>
             </svg>
           </Link>
         </div>
@@ -34,7 +34,7 @@ export default function CatalogSection() {
         >
           Переглянути весь
           <svg className={styles.linkIcon}>
-            <use href="./icons.svg#icon-Vector"></use>
+            <use href="/icons.svg#icon-Vector"></use>
           </svg>
         </Link>
       </div>

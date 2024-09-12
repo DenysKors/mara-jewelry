@@ -15,7 +15,7 @@ export default function LinkBack({ children }) {
       }}
     >
       <svg className={styles.linkIcon}>
-        <use href="./icons.svg#icon-arrow-left"></use>
+        <use href="/icons.svg#icon-arrow-left"></use>
       </svg>
       {children}
     </button>

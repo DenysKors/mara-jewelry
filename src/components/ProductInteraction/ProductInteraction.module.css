@@ -1,11 +1,19 @@
 .box {
   margin-top: 32px;
   margin-bottom: 57px;
-  margin-left: auto;
-  margin-right: auto;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 16px;
 }
 
 .buttonBuy {
+  margin: 0 auto;
   width: 335px;
   height: 60px;
   display: flex;
@@ -69,11 +77,11 @@
 }
 
 @media screen and (min-width: 768px) {
+  .container {
+    gap: 14px;
+  }
+
   .buttonBuy {
     width: 421px;
   }
 }
-
-/* @media screen and (min-width: 1440px) {
-
-  } */

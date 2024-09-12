@@ -32,7 +32,7 @@ export default function Footer() {
               aria-label="Instagram"
             >
               <svg width="16" height="16">
-                <use href="./icons.svg#icon-instagram"></use>
+                <use href="/icons.svg#icon-instagram"></use>
               </svg>
             </a>
             <a
@@ -43,7 +43,7 @@ export default function Footer() {
               aria-label="Telegram"
             >
               <svg width="16" height="16">
-                <use href="./icons.svg#icon-telegram"></use>
+                <use href="/icons.svg#icon-telegram"></use>
               </svg>
             </a>
           </div>

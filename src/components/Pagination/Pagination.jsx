@@ -41,7 +41,7 @@ export default function Pagination({ totalAmount }) {
         onClick={handlePrevPageChange}
       >
         <svg className={`${styles.icon} ${styles.iconRotate}`}>
-          <use href="./icons.svg#icon-Vector"></use>
+          <use href="/icons.svg#icon-Vector"></use>
         </svg>
         назад
       </button>
@@ -55,7 +55,7 @@ export default function Pagination({ totalAmount }) {
       >
         далі
         <svg className={styles.icon}>
-          <use href="./icons.svg#icon-Vector"></use>
+          <use href="/icons.svg#icon-Vector"></use>
         </svg>
       </button>
     </div>

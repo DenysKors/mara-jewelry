@@ -5,7 +5,7 @@ export default function SearchBar() {
     <form className={styles.form}>
       <button className={styles.button}>
         <svg className={styles.svg}>
-          <use href="./icons.svg#icon-search"></use>
+          <use href="/icons.svg#icon-search"></use>
         </svg>
       </button>
       <input

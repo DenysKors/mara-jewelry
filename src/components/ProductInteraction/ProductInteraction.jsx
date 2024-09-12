@@ -22,7 +22,7 @@ export default function ProductInteraction({ sell_status, title }) {
         >
           придбати прикрасу
           <svg className={styles.buttonIcon}>
-            <use href="./icons.svg#icon-shopping-bag"></use>
+            <use href="/icons.svg#icon-shopping-bag"></use>
           </svg>
         </button>
         {showBasketModal && (
@@ -40,45 +40,46 @@ export default function ProductInteraction({ sell_status, title }) {
       >
         поділитись
         <svg className={styles.buttonIcon}>
-          <use href="./icons.svg#icon-share"></use>
+          <use href="/icons.svg#icon-share"></use>
         </svg>
       </button>
       {showShareModal && (
         <Modal onClose={() => setShowShareModal(false)}>
-          <h3>поділитись</h3>
-          <a
-            className={styles.link}
-            href="https://www.instagram.com/?url=https://webdealer.com.ua"
-            target="_blank"
-            rel="noreferrer noopener"
-            aria-label="share on instagram"
-          >
-            <svg width="32" height="32">
-              <use href="./icons.svg#icon-instagram"></use>
-            </svg>
-          </a>
-          <a
-            className={styles.link}
-            href="https://t.me/share/url?url=https://webdealer.com.ua"
-            target="_blank"
-            rel="noreferrer noopener"
-            aria-label="share on telegram"
-          >
-            <svg width="32" height="32">
-              <use href="./icons.svg#icon-telegram"></use>
-            </svg>
-          </a>
-          <a
-            className={styles.link}
-            href="https://www.facebook.com/sharer.php?u=https://webdealer.com.ua"
-            target="_blank"
-            rel="noreferrer noopener"
-            aria-label="share on facebook"
-          >
-            <svg width="32" height="32">
-              <use href="./icons.svg#icon-facebook"></use>
-            </svg>
-          </a>
+          <div className={styles.container}>
+            <a
+              className={styles.link}
+              href="https://www.instagram.com/?url=https://webdealer.com.ua"
+              target="_blank"
+              rel="noreferrer noopener"
+              aria-label="share on instagram"
+            >
+              <svg width="32" height="32">
+                <use href="/icons.svg#icon-instagram"></use>
+              </svg>
+            </a>
+            <a
+              className={styles.link}
+              href="https://t.me/share/url?url=https://webdealer.com.ua"
+              target="_blank"
+              rel="noreferrer noopener"
+              aria-label="share on telegram"
+            >
+              <svg width="32" height="32">
+                <use href="/icons.svg#icon-telegram"></use>
+              </svg>
+            </a>
+            <a
+              className={styles.link}
+              href="https://www.facebook.com/sharer.php?u=https://webdealer.com.ua"
+              target="_blank"
+              rel="noreferrer noopener"
+              aria-label="share on facebook"
+            >
+              <svg width="32" height="32">
+                <use href="/icons.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </div>
         </Modal>
       )}
     </>
