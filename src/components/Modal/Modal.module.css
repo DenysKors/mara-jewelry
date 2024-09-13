@@ -34,9 +34,3 @@
 .button:focus {
   background-color: var(--color-text);
 }
-
-@media screen and (min-width: 768px) {
-  .window {
-    width: 450px;
-  }
-}

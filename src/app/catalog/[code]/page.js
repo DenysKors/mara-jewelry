@@ -3,6 +3,7 @@ import LinkBack from '@/components/LinkBack/LinkBack';
 
 import { getProductByCode } from '@/lib/api';
 import ProductInteraction from '@/components/ProductInteraction/ProductInteraction';
+import ProductAccordion from '@/components/ProductAccordion/ProductAccordion';
 
 export default async function ProductPage({ params }) {
   const productCode = Number(params.code);
@@ -12,7 +13,7 @@ export default async function ProductPage({ params }) {
   return (
     <main className={styles.container}>
       <LinkBack>назад до товарів</LinkBack>
-      <div className={styles.wrappper}>
+      <div className={styles.wrapper}>
         {/* Images */}
         <div>
           <h2 className={styles.title}>{title}</h2>
@@ -31,6 +32,7 @@ export default async function ProductPage({ params }) {
           <ProductInteraction sell_status={sell_status} title={title} />
         </div>
       </div>
+      <ProductAccordion />
     </main>
   );
 }

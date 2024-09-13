@@ -5,6 +5,11 @@
   background-color: var(--color-background);
 }
 
+.wrapper {
+  margin-top: 60px;
+  margin-bottom: 65px;
+}
+
 .title {
   margin-bottom: 8px;
   font-family: var(--font-nunito-regular);
@@ -33,4 +38,11 @@
   font-weight: var(--font-weight-bold);
   font-size: var(--font-size-section);
   color: var(--color-text);
+}
+
+@media screen and (min-width: 1440px) {
+  .wrapper {
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
 }

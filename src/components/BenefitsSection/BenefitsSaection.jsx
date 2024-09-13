@@ -5,7 +5,7 @@ export default function BenefitsSection() {
     <section className={styles.section}>
       <div className={styles.box}>
         <svg width="100" height="100">
-          <use href="./icons.svg#icon-hand-heart"></use>
+          <use href="/icons.svg#icon-hand-heart"></use>
         </svg>
         <p className={styles.text}>
           прикраси виготовляються вручну з любов&apos;ю
@@ -13,7 +13,7 @@ export default function BenefitsSection() {
       </div>
       <div className={styles.box}>
         <svg width="100" height="100">
-          <use href="./icons.svg#icon-premium"></use>
+          <use href="/icons.svg#icon-premium"></use>
         </svg>
         <p className={styles.text}>
           використовуються натуральне каміння та фурнітура преміальної якості
@@ -21,7 +21,7 @@ export default function BenefitsSection() {
       </div>
       <div className={styles.box}>
         <svg width="100" height="100">
-          <use href="./icons.svg#icon-recommend"></use>
+          <use href="/icons.svg#icon-recommend"></use>
         </svg>
         <p className={styles.text}>нас рекомендують своїм близьким</p>
       </div>

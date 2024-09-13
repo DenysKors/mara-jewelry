@@ -4,3 +4,9 @@
   font-size: var(--font-size-body);
   color: var(--color-text);
 }
+
+@media screen and (min-width: 768px) {
+  .text {
+    width: 450px;
+  }
+}
