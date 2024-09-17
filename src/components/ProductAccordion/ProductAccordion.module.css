@@ -13,6 +13,10 @@
   background-color: var(--color-background);
 }
 
+.accordion:hover {
+  background-color: var(--color-background-hover);
+}
+
 .btnIcon {
   width: 5px;
   height: 14px;
@@ -20,11 +24,19 @@
   transform: rotate(90deg);
 }
 
+.btnIconRotate {
+  transform: rotate(0deg);
+}
+
 .panel {
   padding: 20px 24px;
   background-color: var(--color-background);
   display: none;
   overflow: hidden;
+}
+
+.showPanel {
+  display: block;
 }
 
 .text {

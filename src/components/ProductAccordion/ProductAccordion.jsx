@@ -1,14 +1,26 @@
 'use client';
 
+import { useState } from 'react';
 import styles from './ProductAccordion.module.css';
 
 export default function ProductAccordion() {
+  const [isActive, setIsActive] = useState(false);
+
+  const handleBtnClick = evt => {
+    const icon = evt.target.firstElementChild;
+    const panel = evt.target.nextElementSibling;
+    setIsActive(!isActive);
+    panel.classList.toggle(`${styles.showPanel}`);
+    icon.classList.toggle(`${styles.btnIconRotate}`);
+  };
+
   return (
     <>
       <button
         className={styles.accordion}
         type="button"
         aria-label="show/hide text"
+        onClick={handleBtnClick}
       >
         Догляд за прикрасами
         <svg className={styles.btnIcon}>
@@ -58,6 +70,7 @@ export default function ProductAccordion() {
         className={styles.accordion}
         type="button"
         aria-label="show/hide text"
+        onClick={handleBtnClick}
       >
         Умови оплати та доставки
         <svg className={styles.btnIcon}>
@@ -100,6 +113,7 @@ export default function ProductAccordion() {
         className={styles.accordion}
         type="button"
         aria-label="show/hide text"
+        onClick={handleBtnClick}
       >
         Правила повернення
         <svg className={styles.btnIcon}>
