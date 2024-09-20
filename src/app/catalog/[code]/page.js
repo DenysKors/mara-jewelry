@@ -14,7 +14,7 @@ export default async function ProductPage({ params }) {
     <main className={styles.container}>
       <LinkBack>назад до товарів</LinkBack>
       <div className={styles.wrapper}>
-        {/* Images */}
+        <div className={styles.imgBox}></div>
         <div>
           <h2 className={styles.title}>{title}</h2>
           <h5 className={styles.subTitle}>

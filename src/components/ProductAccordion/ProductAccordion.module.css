@@ -13,19 +13,23 @@
   background-color: var(--color-background);
 }
 
+.accordion:last-of-type {
+  border-bottom: 1px solid var(--color-border);
+}
+
 .accordion:hover {
   background-color: var(--color-background-hover);
 }
 
 .btnIcon {
-  width: 5px;
-  height: 14px;
+  width: 8px;
+  height: 24px;
   fill: var(--color-text);
   transform: rotate(90deg);
 }
 
 .btnIconRotate {
-  transform: rotate(0deg);
+  transform: rotate(-90deg);
 }
 
 .panel {
