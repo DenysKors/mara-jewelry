@@ -1,7 +1,8 @@
 import styles from './page.module.css';
-import LinkBack from '@/components/LinkBack/LinkBack';
 
 import { getProductByCode } from '@/lib/api';
+import LinkBack from '@/components/LinkBack/LinkBack';
+import CloudinaryImage from '@/components/CloudinaryImage/CloudinaryImage';
 import ProductInteraction from '@/components/ProductInteraction/ProductInteraction';
 import ProductAccordion from '@/components/ProductAccordion/ProductAccordion';
 
@@ -14,7 +15,38 @@ export default async function ProductPage({ params }) {
     <main className={styles.container}>
       <LinkBack>назад до товарів</LinkBack>
       <div className={styles.wrapper}>
-        <div className={styles.imgBox}></div>
+        <div className={styles.imgBox}>
+          <CloudinaryImage
+            width="335"
+            height="190"
+            src="g9p4fkqcmrdcw0cenzss"
+            alt={title}
+            className={styles.img1}
+            sizes="(max-width: 767px) 33vw,
+                          (max-width: 1440px) 50vw,
+                          100vw"
+          />
+          <CloudinaryImage
+            width="163"
+            height="143"
+            src="obitkytnatsnbvj79zol"
+            alt={title}
+            className={styles.img2}
+            sizes="(max-width: 767px) 33vw,
+                          (max-width: 1440px) 50vw,
+                          100vw"
+          />
+          <CloudinaryImage
+            width="163"
+            height="143"
+            src="kktzviuiqhhvmv0kiseo"
+            alt={title}
+            className={styles.img3}
+            sizes="(max-width: 767px) 33vw,
+                          (max-width: 1440px) 50vw,
+                          100vw"
+          />
+        </div>
         <div>
           <h2 className={styles.title}>{title}</h2>
           <h5 className={styles.subTitle}>

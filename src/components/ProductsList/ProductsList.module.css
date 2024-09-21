@@ -46,13 +46,21 @@ a:focus .thumb {
     gap: 32px;
   }
 
-  .thumb {
+  /* .thumb {
     width: 230px;
   }
 
   .img {
     width: 230px;
     height: 210px;
+  } */
+
+  .thumb {
+    width: 250px;
+  }
+  .img {
+    width: 250px;
+    height: 230px;
   }
 }
 
