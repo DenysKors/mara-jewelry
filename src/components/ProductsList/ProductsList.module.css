@@ -19,6 +19,8 @@ a:focus .thumb {
 }
 
 .img {
+  width: 210px;
+  height: 196px;
   object-fit: cover;
 }
 
@@ -60,7 +62,7 @@ a:focus .thumb {
   }
   .img {
     width: 250px;
-    height: 230px;
+    height: 232px;
   }
 }
 
@@ -69,13 +71,13 @@ a:focus .thumb {
     gap: 14px;
   }
 
-  .thumb {
+  /* .thumb {
     width: 250px;
   }
   .img {
     width: 250px;
-    height: 230px;
-  }
+    height: 232px;
+  } */
 
   .textBox {
     padding: 12px;

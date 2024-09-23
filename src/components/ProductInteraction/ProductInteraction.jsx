@@ -48,7 +48,7 @@ export default function ProductInteraction({ sell_status, title }) {
           <div className={styles.container}>
             <a
               className={styles.link}
-              href="https://www.instagram.com/?url=https://webdealer.com.ua"
+              href="https://www.instagram.com/?url=https://mara-jewelry.vercel.app/"
               target="_blank"
               rel="noreferrer noopener"
               aria-label="share on instagram"
@@ -59,7 +59,7 @@ export default function ProductInteraction({ sell_status, title }) {
             </a>
             <a
               className={styles.link}
-              href="https://t.me/share/url?url=https://webdealer.com.ua"
+              href="https://t.me/share/url?url=https://mara-jewelry.vercel.app/"
               target="_blank"
               rel="noreferrer noopener"
               aria-label="share on telegram"
@@ -70,7 +70,7 @@ export default function ProductInteraction({ sell_status, title }) {
             </a>
             <a
               className={styles.link}
-              href="https://www.facebook.com/sharer.php?u=https://webdealer.com.ua"
+              href="https://www.facebook.com/sharer.php?u=https://mara-jewelry.vercel.app/"
               target="_blank"
               rel="noreferrer noopener"
               aria-label="share on facebook"

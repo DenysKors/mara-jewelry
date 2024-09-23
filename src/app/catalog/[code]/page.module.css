@@ -17,28 +17,28 @@
   align-self: center;
   display: grid;
   grid-template-columns: 163px 163px;
-  grid-template-rows: 190px 143px;
+  grid-template-rows: 191px 152px;
   row-gap: 32px;
   column-gap: 9px;
 }
 
 .img1 {
   width: 335px;
-  height: 190px;
+  height: 191px;
   grid-column: 1 / 3;
   grid-row: 1 / 2;
 }
 
 .img2 {
   width: 163px;
-  height: 143px;
+  height: 152px;
   grid-column: 1 / 2;
   grid-row: 2 / 3;
 }
 
 .img3 {
   width: 163px;
-  height: 143px;
+  height: 152px;
   grid-column: 2 / 3;
   grid-row: 2 / 3;
 }

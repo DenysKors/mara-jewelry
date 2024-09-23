@@ -20,7 +20,7 @@ export default function ProductsList({ products }) {
               <div className={styles.thumb}>
                 <CldImage
                   width="210"
-                  height="190"
+                  height="196"
                   src="obitkytnatsnbvj79zol"
                   alt={title}
                   className={styles.img}

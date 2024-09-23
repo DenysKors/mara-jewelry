@@ -18,7 +18,7 @@ export default async function ProductPage({ params }) {
         <div className={styles.imgBox}>
           <CloudinaryImage
             width="335"
-            height="190"
+            height="191"
             src="g9p4fkqcmrdcw0cenzss"
             alt={title}
             className={styles.img1}
@@ -28,7 +28,7 @@ export default async function ProductPage({ params }) {
           />
           <CloudinaryImage
             width="163"
-            height="143"
+            height="152"
             src="obitkytnatsnbvj79zol"
             alt={title}
             className={styles.img2}
@@ -38,7 +38,7 @@ export default async function ProductPage({ params }) {
           />
           <CloudinaryImage
             width="163"
-            height="143"
+            height="152"
             src="kktzviuiqhhvmv0kiseo"
             alt={title}
             className={styles.img3}
