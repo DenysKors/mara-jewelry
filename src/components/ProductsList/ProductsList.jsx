@@ -21,7 +21,7 @@ export default function ProductsList({ products }) {
                 <CldImage
                   width="210"
                   height="196"
-                  src="obitkytnatsnbvj79zol"
+                  src="agdzncdzz3jgubuhxcga"
                   alt={title}
                   className={styles.img}
                   sizes="(max-width: 767px) 33vw,

@@ -19,7 +19,8 @@ export default async function ProductPage({ params }) {
           <CloudinaryImage
             width="335"
             height="191"
-            src="g9p4fkqcmrdcw0cenzss"
+            src="as03s5m0rc6stgnnwlj9"
+            priority
             alt={title}
             className={styles.img1}
             sizes="(max-width: 767px) 33vw,
@@ -29,7 +30,7 @@ export default async function ProductPage({ params }) {
           <CloudinaryImage
             width="163"
             height="152"
-            src="obitkytnatsnbvj79zol"
+            src="agdzncdzz3jgubuhxcga"
             alt={title}
             className={styles.img2}
             sizes="(max-width: 767px) 33vw,
@@ -39,7 +40,7 @@ export default async function ProductPage({ params }) {
           <CloudinaryImage
             width="163"
             height="152"
-            src="kktzviuiqhhvmv0kiseo"
+            src="hob5r8x9uqqmxc8we3yy"
             alt={title}
             className={styles.img3}
             sizes="(max-width: 767px) 33vw,
