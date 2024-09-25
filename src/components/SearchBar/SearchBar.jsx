@@ -12,6 +12,8 @@ export default function SearchBar() {
   const handleSubmit = evt => {
     evt.preventDefault();
     const userQuery = evt.currentTarget.elements.query.value.trim();
+    if (userQuery === '' || userQuery.lenth > 30)
+      return alert('Заповніть поле пошуку');
     router.push(`${pageData[1].href}?search=${userQuery}`);
     evt.currentTarget.elements.query.value = '';
   };
@@ -28,6 +30,7 @@ export default function SearchBar() {
         type="text"
         name="query"
         placeholder="Пошук..."
+        maxLength={30}
       />
     </form>
   );

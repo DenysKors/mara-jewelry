@@ -51,6 +51,7 @@ export default async function ProductPage({ params }) {
         <div>
           <h2 className={styles.title}>{title}</h2>
           <h5 className={styles.subTitle}>
+            <span style={{ textTransform: 'capitalize' }}>Камені: </span>
             {stones.reduce((accum, stone, idx) => {
               if (idx === 0) {
                 return accum + stone.name;
