@@ -16,8 +16,19 @@ export default function ProductsSection() {
 
   useEffect(() => {
     setLoading(true);
-    if (!searchParams.has('product') && !searchParams.has('stone')) {
+    if (
+      !searchParams.has('product') &&
+      !searchParams.has('stone') &&
+      !searchParams.has('search')
+    ) {
       fetch(`/api/all-products?${searchParams.toString()}`)
+        .then(res => res.json())
+        .then(data => {
+          setProductsData(data);
+          setLoading(false);
+        });
+    } else if (searchParams.has('search')) {
+      fetch(`/api/search-products?${searchParams.toString()}`)
         .then(res => res.json())
         .then(data => {
           setProductsData(data);

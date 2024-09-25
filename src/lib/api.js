@@ -76,6 +76,30 @@ export const getFilteredProducts = async (
   }
 };
 
+export const getSearchedProducts = async (decodedQuery, page = 1) => {
+  const paginationPage = Number(page);
+  const skip = (paginationPage - 1) * PAGINATION_LIMIT;
+  await dbConnect();
+  try {
+    const products = await Product.find({ title: decodedQuery }, '', {
+      skip,
+      limit: PAGINATION_LIMIT,
+    })
+      .collation({ locale: 'uk', strength: 1 })
+      .sort({ title: 1 });
+
+    const totalAmount = await Product.countDocuments({
+      title: decodedQuery,
+    }).collation({ locale: 'uk', strength: 1 });
+    return {
+      products,
+      totalAmount,
+    };
+  } catch (err) {
+    console.log(err.message);
+  }
+};
+
 export const getProductByCode = cache(async productCode => {
   await dbConnect();
   try {

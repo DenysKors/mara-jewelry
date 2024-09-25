@@ -48,15 +48,6 @@ a:focus .thumb {
     gap: 32px;
   }
 
-  /* .thumb {
-    width: 230px;
-  }
-
-  .img {
-    width: 230px;
-    height: 210px;
-  } */
-
   .thumb {
     width: 250px;
   }
@@ -70,14 +61,6 @@ a:focus .thumb {
   .container {
     gap: 14px;
   }
-
-  /* .thumb {
-    width: 250px;
-  }
-  .img {
-    width: 250px;
-    height: 232px;
-  } */
 
   .textBox {
     padding: 12px;

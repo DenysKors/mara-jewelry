@@ -13,6 +13,10 @@ export default function FilterSection({ stones }) {
     const params = new URLSearchParams(searchParams);
     params.set('page', 1);
 
+    if (params.has('search')) {
+      params.delete('search');
+    }
+
     if (evt.target.checked) {
       params.append('product', evt.target.value);
     } else {
@@ -25,6 +29,10 @@ export default function FilterSection({ stones }) {
   const onStonesFilterChange = evt => {
     const params = new URLSearchParams(searchParams);
     params.set('page', 1);
+
+    if (params.has('search')) {
+      params.delete('search');
+    }
 
     if (evt.target.checked) {
       params.append('stone', evt.target.value);

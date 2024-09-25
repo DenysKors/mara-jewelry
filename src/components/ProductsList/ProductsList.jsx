@@ -1,7 +1,6 @@
 'use client';
 
 import Link from 'next/link';
-// import Image from 'next/image';
 import { CldImage } from 'next-cloudinary';
 
 import styles from './ProductsList.module.css';
@@ -23,18 +22,12 @@ export default function ProductsList({ products }) {
                   height="196"
                   src="agdzncdzz3jgubuhxcga"
                   alt={title}
+                  priority
                   className={styles.img}
                   sizes="(max-width: 767px) 33vw,
                           (max-width: 1440px) 50vw,
                           100vw"
                 />
-                {/* <Image
-                  src="/no-image-placeholder.png"
-                  alt={title}
-                  width={210}
-                  height={190}
-                  className={styles.img}
-                /> */}
                 <div className={styles.textBox}>
                   <h3 className={styles.linkTitle}>{title}</h3>
                   <p className={styles.linkText}>
