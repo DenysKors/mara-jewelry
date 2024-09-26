@@ -1,0 +1,25 @@
+import mongoose from 'mongoose';
+
+const Article = mongoose.Schema(
+  {
+    code: {
+      type: Number,
+      required: true,
+      unique: true,
+    },
+    title: {
+      type: String,
+      required: true,
+    },
+    text: {
+      type: String,
+      required: true,
+    },
+    imageUrl: {
+      type: String,
+      required: true,
+    },
+  },
+  { timeStamps: true }
+);
+export default mongoose.models.Article || mongoose.model('Article', Article);
