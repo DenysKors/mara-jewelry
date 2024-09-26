@@ -2,6 +2,7 @@ import { cache } from 'react';
 import dbConnect from './connectDB';
 import Stone from '@/modelsDB/stoneModel';
 import Product from '@/modelsDB/productModel';
+import Article from '@/modelsDB/articleModel';
 
 import { PAGINATION_LIMIT } from '@/constants/pagination';
 
@@ -109,3 +110,24 @@ export const getProductByCode = cache(async productCode => {
     console.log(err.message);
   }
 });
+
+export const getAllArticles = async (page = 1) => {
+  const paginationPage = Number(page);
+  const skip = (paginationPage - 1) * PAGINATION_LIMIT;
+
+  await dbConnect();
+  try {
+    const articles = await Article.find({}, '', {
+      skip,
+      limit: PAGINATION_LIMIT,
+    }).sort({ title: 1 });
+
+    const totalAmount = await Article.countDocuments();
+    return {
+      articles,
+      totalAmount,
+    };
+  } catch (err) {
+    console.log(err.message);
+  }
+};

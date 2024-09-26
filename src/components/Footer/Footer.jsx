@@ -86,7 +86,7 @@ export default function Footer() {
         <span className={styles.copy}>
           &copy; 2024 MaraJewelry, All Rights Reserved
         </span>
-        <span className={styles.dev}>Created by Explorer</span>
+        <span className={styles.dev}>Created by DenExplorer</span>
       </div>
     </footer>
   );

@@ -1,0 +1,32 @@
+.container {
+  padding: 25px 20px;
+  max-width: 1440px;
+  background-color: var(--color-background);
+}
+
+.wrapper {
+  display: flex;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    padding: 65px 100px;
+  }
+
+  .wrapper {
+    gap: 16px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    padding: 80px 200px;
+  }
+
+  .wrapper {
+    gap: 20px;
+  }
+}
