@@ -11,14 +11,18 @@ const Article = mongoose.Schema(
       type: String,
       required: true,
     },
-    text: {
-      type: String,
-      required: true,
-    },
-    imageUrl: {
-      type: String,
-      required: true,
-    },
+    parts: [
+      {
+        text: {
+          type: String,
+          required: true,
+        },
+        imageUrl: {
+          type: String,
+          required: true,
+        },
+      },
+    ],
   },
   { timeStamps: true }
 );

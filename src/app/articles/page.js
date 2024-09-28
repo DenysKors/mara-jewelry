@@ -14,7 +14,7 @@ export default async function ArticlePage({ searchParams }) {
   return (
     <main className={styles.container}>
       <ul className={styles.wrapper}>
-        {/* {articlesData.articles.map(({ code, title, text }) => {
+        {/* {articlesData.articles.map(({ code,title, parts }) => {
           return (
             <li key={code}>        
               <article>

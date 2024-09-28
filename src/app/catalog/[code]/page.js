@@ -8,7 +8,7 @@ import ProductAccordion from '@/components/ProductAccordion/ProductAccordion';
 
 export default async function ProductPage({ params }) {
   const productCode = Number(params.code);
-  const { title, description, stones, price, sell_status } =
+  const { code, title, description, stones, price, sell_status } =
     await getProductByCode(productCode);
 
   return (
@@ -61,6 +61,7 @@ export default async function ProductPage({ params }) {
             }, '')}
           </h5>
           <p className={styles.text}>{description}</p>
+          <p className={styles.subTitle}>{`Код товару: ${code}`}</p>
           <p className={styles.subTitle}>{sell_status}</p>
           <span className={styles.price}>{`${price} грн.`}</span>
           <ProductInteraction sell_status={sell_status} title={title} />
