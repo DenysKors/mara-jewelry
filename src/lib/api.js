@@ -4,7 +4,10 @@ import Stone from '@/modelsDB/stoneModel';
 import Product from '@/modelsDB/productModel';
 import Article from '@/modelsDB/articleModel';
 
-import { PAGINATION_LIMIT } from '@/constants/pagination';
+import {
+  PRODUCT_PAGINATION_LIMIT,
+  ARTICLE_PAGINATION_LIMIT,
+} from '@/constants/pagination';
 
 export const getAllStones = cache(async () => {
   await dbConnect();
@@ -19,13 +22,13 @@ export const getAllStones = cache(async () => {
 
 export const getAllProducts = async (page = 1) => {
   const paginationPage = Number(page);
-  const skip = (paginationPage - 1) * PAGINATION_LIMIT;
+  const skip = (paginationPage - 1) * PRODUCT_PAGINATION_LIMIT;
 
   await dbConnect();
   try {
     const products = await Product.find({}, '', {
       skip,
-      limit: PAGINATION_LIMIT,
+      limit: PRODUCT_PAGINATION_LIMIT,
     }).sort({ title: 1 });
 
     const totalAmount = await Product.countDocuments();
@@ -44,7 +47,7 @@ export const getFilteredProducts = async (
   page = 1
 ) => {
   const paginationPage = Number(page);
-  const skip = (paginationPage - 1) * PAGINATION_LIMIT;
+  const skip = (paginationPage - 1) * PRODUCT_PAGINATION_LIMIT;
   await dbConnect();
   try {
     const products = await Product.find(
@@ -57,7 +60,7 @@ export const getFilteredProducts = async (
       '',
       {
         skip,
-        limit: PAGINATION_LIMIT,
+        limit: PRODUCT_PAGINATION_LIMIT,
       }
     ).sort({ title: 1 });
 
@@ -79,12 +82,12 @@ export const getFilteredProducts = async (
 
 export const getSearchedProducts = async (decodedQuery, page = 1) => {
   const paginationPage = Number(page);
-  const skip = (paginationPage - 1) * PAGINATION_LIMIT;
+  const skip = (paginationPage - 1) * PRODUCT_PAGINATION_LIMIT;
   await dbConnect();
   try {
     const products = await Product.find({ title: decodedQuery }, '', {
       skip,
-      limit: PAGINATION_LIMIT,
+      limit: PRODUCT_PAGINATION_LIMIT,
     })
       .collation({ locale: 'uk', strength: 1 })
       .sort({ title: 1 });
@@ -113,13 +116,13 @@ export const getProductByCode = cache(async productCode => {
 
 export const getAllArticles = async (page = 1) => {
   const paginationPage = Number(page);
-  const skip = (paginationPage - 1) * PAGINATION_LIMIT;
+  const skip = (paginationPage - 1) * ARTICLE_PAGINATION_LIMIT;
 
   await dbConnect();
   try {
     const articles = await Article.find({}, '', {
       skip,
-      limit: PAGINATION_LIMIT,
+      limit: ARTICLE_PAGINATION_LIMIT,
     }).sort({ title: 1 });
 
     const totalAmount = await Article.countDocuments();

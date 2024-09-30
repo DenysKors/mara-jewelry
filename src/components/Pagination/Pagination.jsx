@@ -3,14 +3,13 @@
 import { usePathname, useSearchParams, useRouter } from 'next/navigation';
 
 import styles from './Pagination.module.css';
-import { PAGINATION_LIMIT } from '@/constants/pagination';
 
-export default function Pagination({ totalAmount }) {
+export default function Pagination({ totalAmount, paginationLimit }) {
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const { replace } = useRouter();
 
-  const totalPages = Math.ceil(totalAmount / PAGINATION_LIMIT);
+  const totalPages = Math.ceil(totalAmount / paginationLimit);
   const currentPage = Number(searchParams.get('page')) || 1;
 
   const createPageURL = pageNumber => {

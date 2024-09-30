@@ -1,1 +1,2 @@
-export const PAGINATION_LIMIT = 9;
+export const PRODUCT_PAGINATION_LIMIT = 9;
+export const ARTICLE_PAGINATION_LIMIT = 4;

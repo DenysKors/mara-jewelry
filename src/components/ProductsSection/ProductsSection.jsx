@@ -7,7 +7,7 @@ import styles from './ProductsSection.module.css';
 import ProductsList from '../ProductsList/ProductsList';
 import Skeleton from '../Skeleton/Skeleton';
 import Pagination from '../Pagination/Pagination';
-import { PAGINATION_LIMIT } from '@/constants/pagination';
+import { PRODUCT_PAGINATION_LIMIT } from '@/constants/pagination';
 
 export default function ProductsSection() {
   const [productsData, setProductsData] = useState(null);
@@ -54,8 +54,11 @@ export default function ProductsSection() {
       {!isLoading && productsData && productsData.products.length > 0 && (
         <div className={styles.container}>
           <ProductsList products={productsData.products} />
-          {productsData.totalAmount > PAGINATION_LIMIT && (
-            <Pagination totalAmount={productsData.totalAmount} />
+          {productsData.totalAmount > PRODUCT_PAGINATION_LIMIT && (
+            <Pagination
+              totalAmount={productsData.totalAmount}
+              paginationLimit={PRODUCT_PAGINATION_LIMIT}
+            />
           )}
         </div>
       )}
