@@ -4,7 +4,7 @@ import { usePathname, useSearchParams, useRouter } from 'next/navigation';
 
 import styles from './Pagination.module.css';
 
-export default function Pagination({ totalAmount, paginationLimit }) {
+export default function Pagination({ totalAmount, paginationLimit, ...rest }) {
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const { replace } = useRouter();
@@ -31,7 +31,7 @@ export default function Pagination({ totalAmount, paginationLimit }) {
   };
 
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.wrapper} {...rest}>
       <button
         className={styles.button}
         type="button"

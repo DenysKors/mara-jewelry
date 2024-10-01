@@ -19,7 +19,7 @@ export default async function ArticlePage({ searchParams }) {
             <li key={code}>
               <article>
                 <header>
-                  <div>
+                  <div className={styles.box}>
                     {parts.map(part => {
                       return (
                         <CloudinaryImage
@@ -37,8 +37,9 @@ export default async function ArticlePage({ searchParams }) {
                       );
                     })}
                   </div>
-                  <h3>
+                  <h3 style={{ marginBottom: '16px' }}>
                     <Link
+                      className={styles.link}
                       href={{
                         pathname: `/articles/${code}`,
                       }}
@@ -47,19 +48,24 @@ export default async function ArticlePage({ searchParams }) {
                     </Link>
                   </h3>
                 </header>
-                <section>
-                  <p>{parts[0].text}</p>
+                <section style={{ marginBottom: '16px' }}>
+                  <p className={styles.text}>{`${parts[0].text.slice(
+                    0,
+                    125
+                  )}...`}</p>
                 </section>
                 <footer>
-                  <span>дата публіквції</span>
+                  <span className={styles.span}>дата публікації</span>
                 </footer>
               </article>
             </li>
           );
         })}
       </ul>
+
       {totalAmount > ARTICLE_PAGINATION_LIMIT && (
         <Pagination
+          style={{ justifyContent: 'center', marginTop: '30px' }}
           totalAmount={totalAmount}
           paginationLimit={ARTICLE_PAGINATION_LIMIT}
         />
