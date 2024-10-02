@@ -45,6 +45,13 @@ export default async function ArticlePage({ searchParams }) {
                       }}
                     >
                       {title}
+                      <br />
+                      <span className={styles.linkText}>
+                        до статті
+                        <svg className={styles.linkIcon}>
+                          <use href="/icons.svg#icon-Vector"></use>
+                        </svg>
+                      </span>
                     </Link>
                   </h3>
                 </header>
@@ -55,7 +62,7 @@ export default async function ArticlePage({ searchParams }) {
                   )}...`}</p>
                 </section>
                 <footer>
-                  <span className={styles.span}>дата публікації</span>
+                  <span className={styles.date}>дата публікації</span>
                 </footer>
               </article>
             </li>
