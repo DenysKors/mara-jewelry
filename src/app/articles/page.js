@@ -24,8 +24,8 @@ export default async function ArticlePage({ searchParams }) {
                       return (
                         <CloudinaryImage
                           key={code}
-                          width="165"
-                          height="165"
+                          width="106"
+                          height="120"
                           src={part.imageUrl}
                           alt={title}
                           priority

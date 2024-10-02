@@ -7,15 +7,22 @@
 
 .wrapper {
   display: grid;
-  grid-template-columns: 511px;
+  grid-template-columns: 335px;
   justify-content: center;
-  /* row-gap: 40px; */
+  row-gap: 40px;
 }
 
 .box {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
   margin-bottom: 16px;
+}
+
+.img {
+  width: 163px;
+  height: 185px;
+  object-fit: cover;
 }
 
 .link {
@@ -32,6 +39,7 @@
   gap: 6px;
   font-family: var(--font-tenor-regular);
   font-size: var(--font-size-footer);
+  letter-spacing: 0.08em;
   color: var(--color-text);
   transition: color var(--transition-main);
 }
@@ -75,6 +83,11 @@
   .wrapper {
     grid-template-columns: 511px;
     row-gap: 40px;
+  }
+
+  .img {
+    width: 165px;
+    height: 187px;
   }
 }
 
