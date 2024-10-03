@@ -24,15 +24,15 @@ export default async function ArticlePage({ searchParams }) {
                       return (
                         <CloudinaryImage
                           key={code}
-                          width="106"
-                          height="120"
+                          width="335"
+                          height="380"
                           src={part.imageUrl}
                           alt={title}
                           priority
                           className={styles.img}
-                          sizes="(max-width: 767px) 33vw,
+                          sizes="(max-width: 767px) 100vw,
                             (max-width: 1440px) 50vw,
-                            100vw"
+                            33vw"
                         />
                       );
                     })}

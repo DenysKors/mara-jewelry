@@ -20,8 +20,8 @@
 }
 
 .img {
-  width: 163px;
-  height: 185px;
+  width: 335px;
+  height: 380px;
   object-fit: cover;
 }
 
@@ -83,6 +83,10 @@
   .wrapper {
     grid-template-columns: 511px;
     row-gap: 40px;
+  }
+
+  .box {
+    flex-wrap: nowrap;
   }
 
   .img {
