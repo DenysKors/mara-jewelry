@@ -114,7 +114,7 @@ export const getProductByCode = cache(async productCode => {
   }
 });
 
-export const getAllArticles = async (page = 1) => {
+export const getAllArticles = cache(async (page = 1) => {
   const paginationPage = Number(page);
   const skip = (paginationPage - 1) * ARTICLE_PAGINATION_LIMIT;
 
@@ -133,4 +133,14 @@ export const getAllArticles = async (page = 1) => {
   } catch (err) {
     console.log(err.message);
   }
-};
+});
+
+export const getArticleByCode = cache(async articleCode => {
+  await dbConnect();
+  try {
+    const article = await Article.findOne({ code: articleCode });
+    return article;
+  } catch (err) {
+    console.log(err.message);
+  }
+});

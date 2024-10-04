@@ -106,10 +106,14 @@
 }
 
 @media screen and (min-width: 1440px) {
+  .container {
+    padding: 25px 200px 40px 200px;
+  }
+
   .wrapper {
     margin-top: 80px;
     margin-bottom: 80px;
     flex-direction: row;
-    gap: 60px;
+    gap: 50px;
   }
 }
