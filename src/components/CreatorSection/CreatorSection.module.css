@@ -22,6 +22,7 @@
   max-width: 335px;
   font-family: var(--font-nunito-regular);
   font-size: var(--font-size-body);
+  line-height: 1.5;
   color: var(--color-accent);
   text-align: left;
 }

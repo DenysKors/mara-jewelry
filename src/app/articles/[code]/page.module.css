@@ -58,15 +58,17 @@
 .textRight {
   font-family: var(--font-nunito-regular);
   font-size: var(--font-size-body);
-  color: var(--color-text);
+  line-height: 1.5;
   letter-spacing: 0.08em;
+  color: var(--color-text);
 }
 
 .textLeft {
   font-family: var(--font-nunito-regular);
   font-size: var(--font-size-body);
-  color: var(--color-text);
+  line-height: 1.5;
   letter-spacing: 0.08em;
+  color: var(--color-text);
 }
 
 .date {

@@ -25,17 +25,20 @@
   font-family: var(--font-nunito-regular);
   font-size: var(--font-size-section);
   font-weight: var(--font-weight-bold);
+  line-height: 1.5;
 }
 
 .text {
   margin-bottom: 8px;
   font-family: var(--font-nunito-regular);
   font-size: var(--font-size-body);
+  line-height: 1.5;
 }
 
 .author {
   font-family: var(--font-nunito-regular);
   font-size: var(--font-size-body);
+  line-height: 1.5;
   text-align: right;
   text-transform: capitalize;
 }

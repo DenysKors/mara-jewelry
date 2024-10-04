@@ -16,6 +16,7 @@
   margin-top: 24px;
   font-family: var(--font-nunito-regular);
   font-size: var(--font-size-body);
+  line-height: 1.5;
   color: var(--color-text);
 }
 
