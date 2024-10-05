@@ -5,11 +5,14 @@
   background-color: var(--color-background);
 }
 
-/* .article{
-
-} */
+.article {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 32px;
+}
 
 .title {
+  margin-bottom: 32px;
   font-family: var(--font-nunito-regular);
   font-weight: var(--font-weight-bold);
   font-size: var(--font-size-section);
@@ -18,24 +21,24 @@
 }
 
 .box {
-  /* display: flex;
-    flex-wrap: wrap;
-    gap: 8px; */
-  margin-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
 }
 
 .thumbFirst {
   flex-shrink: 0;
-  width: 510px;
-  height: 580px;
+  width: 335px;
+  height: 380px;
   border-bottom-right-radius: 100px;
   overflow: hidden;
 }
 
 .thumbSecond {
   flex-shrink: 0;
-  width: 510px;
-  height: 580px;
+  width: 335px;
+  height: 380px;
   border-bottom-left-radius: 100px;
   border-top-left-radius: 100px;
   overflow: hidden;
@@ -43,8 +46,8 @@
 
 .thumbThird {
   flex-shrink: 0;
-  width: 510px;
-  height: 580px;
+  width: 335px;
+  height: 380px;
   border-top-right-radius: 100px;
   overflow: hidden;
 }
@@ -58,16 +61,14 @@
 .textRight {
   font-family: var(--font-nunito-regular);
   font-size: var(--font-size-body);
-  line-height: 1.5;
-  letter-spacing: 0.08em;
+  line-height: 1.05;
   color: var(--color-text);
 }
 
 .textLeft {
   font-family: var(--font-nunito-regular);
   font-size: var(--font-size-body);
-  line-height: 1.5;
-  letter-spacing: 0.08em;
+  line-height: 1.05;
   color: var(--color-text);
 }
 
@@ -80,6 +81,42 @@
 @media screen and (min-width: 768px) {
   .container {
     padding: 25px 100px 40px 100px;
+  }
+
+  .box {
+    margin-bottom: 32px;
+    flex-direction: row;
+    gap: 0px;
+  }
+
+  .thumbFirst {
+    width: 278px;
+    height: 316px;
+  }
+
+  .thumbSecond {
+    align-self: center;
+    width: 278px;
+    height: 316px;
+  }
+
+  .thumbThird {
+    align-self: end;
+    width: 278px;
+    height: 316px;
+  }
+
+  .img {
+    width: 278px;
+    height: 316px;
+  }
+
+  .textRight {
+    padding-left: 12px;
+  }
+
+  .textLeft {
+    padding-right: 12px;
   }
 }
 
@@ -97,7 +134,22 @@
   }
 
   .box {
-    display: flex;
+    margin-bottom: 80px;
+  }
+
+  .thumbFirst {
+    width: 510px;
+    height: 580px;
+  }
+
+  .thumbSecond {
+    width: 510px;
+    height: 580px;
+  }
+
+  .thumbThird {
+    width: 510px;
+    height: 580px;
   }
 
   .img {
@@ -107,9 +159,13 @@
 
   .textRight {
     padding-left: 108px;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
   }
 
   .textLeft {
     padding-right: 108px;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
   }
 }
