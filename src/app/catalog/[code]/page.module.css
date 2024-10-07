@@ -54,7 +54,7 @@
 .subTitle {
   margin-bottom: 8px;
   font-family: var(--font-nunito-regular);
-  font-size: var(--font-size-footer);
+  font-size: var(--font-size-body);
   text-transform: lowercase;
   color: var(--color-text);
 }

@@ -10,13 +10,13 @@
 }
 
 .navLink {
-  font-family: var(--font-nunito-regular);
+  font-family: var(--font-tenor-regular);
   font-size: var(--font-size-body);
   color: var(--color-text);
 }
 
 .navLink_active {
-  font-family: var(--font-nunito-regular);
+  font-family: var(--font-tenor-regular);
   font-size: var(--font-size-body);
   font-weight: var(--font-weight-bold);
   color: var(--color-text);
