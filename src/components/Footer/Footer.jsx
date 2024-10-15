@@ -14,7 +14,7 @@ export default function Footer() {
   const [showTermsModal, setShowTermsModal] = useState(false);
 
   return (
-    <footer className={styles.section}>
+    <footer className={styles.footer}>
       <div className={styles.container}>
         <div className={styles.wrapper}>
           <Image

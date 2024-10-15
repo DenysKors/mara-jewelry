@@ -1,0 +1,74 @@
+.header {
+  margin: 0 auto;
+  padding: 8px 20px 40px 20px;
+  max-width: 1440px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image {
+  width: 64px;
+  height: 64px;
+  justify-self: center;
+}
+
+.main {
+  height: 250px;
+}
+
+.footer {
+  padding: 65px 20px 28px 20px;
+  max-width: 1440px;
+  margin: 0 auto;
+  border-top: 1px solid var(--color-accent);
+  background-color: var(--color-background);
+}
+
+.copyBox {
+  padding-top: 65px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.copy {
+  font-family: var(--font-poppins-regular);
+  font-weight: 600;
+  font-size: var(--font-size-footer);
+  color: var(--color-text);
+  opacity: 0.5;
+}
+
+.dev {
+  font-family: var(--font-poppins-regular);
+  font-size: var(--font-size-footer);
+  color: var(--color-text);
+  opacity: 0.5;
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    padding: 8px 100px 40px 100px;
+  }
+
+  .image {
+    width: 87px;
+    height: 87px;
+  }
+
+  .footer {
+    padding: 65px 100px 30px 100px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .header {
+    padding: 8px 200px 40px 200px;
+  }
+
+  .footer {
+    padding: 80px 200px 40px 200px;
+  }
+}
