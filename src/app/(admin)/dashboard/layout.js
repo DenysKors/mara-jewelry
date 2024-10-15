@@ -2,12 +2,12 @@ export default function DashboardLayout({ children }) {
   return (
     <>
       <header className={styles.header}>
-        <Image
+        {/* <Image
           src={Logo}
           className={styles.image}
           alt="Mara Jewelry Logo"
           priority
-        />
+        /> */}
       </header>
       {children}
       <footer className={styles.footer}>

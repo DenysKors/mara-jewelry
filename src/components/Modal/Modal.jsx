@@ -12,7 +12,7 @@ export default function Modal({ onClose, children }) {
       window.removeEventListener('keydown', handleCloseEsc);
       document.body.style.overflow = 'scroll';
     };
-  }, []);
+  }, [handleCloseEsc]);
 
   function handleCloseEsc(evt) {
     if (evt.code === 'Escape') {
