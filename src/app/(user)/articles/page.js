@@ -7,7 +7,7 @@ import CloudinaryImage from '@/components/CloudinaryImage/CloudinaryImage';
 import { ARTICLE_PAGINATION_LIMIT } from '@/constants/pagination';
 import { getAllArticles } from '@/lib/api';
 
-export default async function ArticlePage({ searchParams }) {
+export default async function ArticlesPage({ searchParams }) {
   const page = searchParams.page || 1;
   const { articles, totalAmount } = await getAllArticles(page);
 
@@ -20,10 +20,10 @@ export default async function ArticlePage({ searchParams }) {
               <article>
                 <header>
                   <div className={styles.box}>
-                    {parts.map(part => {
+                    {parts.map((part, idx) => {
                       return (
                         <CloudinaryImage
-                          key={code}
+                          key={idx}
                           width="335"
                           height="380"
                           src={part.imageUrl}

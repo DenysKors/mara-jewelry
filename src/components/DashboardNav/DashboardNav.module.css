@@ -1,0 +1,30 @@
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  flex-shrink: 0;
+}
+
+.list {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.navLink {
+  font-family: var(--font-tenor-regular);
+  font-size: var(--font-size-body);
+  color: var(--color-text);
+}
+
+.navLink_active {
+  font-family: var(--font-tenor-regular);
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text);
+}
+
+.icon {
+  width: 18px;
+  height: 18px;
+}

@@ -11,7 +11,7 @@ export default async function ArticlePage({ params }) {
   const articlePart = parts.map((part, idx) => {
     if (idx === 0) {
       return (
-        <div key={code} className={styles.box}>
+        <div key={idx} className={styles.box}>
           <div className={styles.thumbFirst}>
             <CloudinaryImage
               width="510"
@@ -30,7 +30,7 @@ export default async function ArticlePage({ params }) {
       );
     } else if (idx === 1) {
       return (
-        <div key={code} className={styles.box}>
+        <div key={idx} className={styles.box}>
           <p className={styles.textLeft}>{part.text}</p>
           <div className={styles.thumbSecond}>
             <CloudinaryImage
@@ -49,7 +49,7 @@ export default async function ArticlePage({ params }) {
       );
     } else if (idx === 2) {
       return (
-        <div key={code} className={styles.box}>
+        <div key={idx} className={styles.box}>
           <div className={styles.thumbThird}>
             <CloudinaryImage
               width="510"

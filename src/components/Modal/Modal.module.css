@@ -17,7 +17,7 @@
   max-height: calc(100vh - 100px);
   border-radius: 16px;
   background-color: var(--color-background);
-  overflow: scroll;
+  overflow-y: auto;
 }
 
 .button {
