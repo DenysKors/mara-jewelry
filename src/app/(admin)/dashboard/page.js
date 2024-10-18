@@ -1,20 +1,5 @@
-import dynamic from 'next/dynamic';
-
-import styles from './page.module.css';
-
-const DashboardNav = dynamic(
-  () => import('../../../components/DashboardNav/DashboardNav'),
-  {
-    ssr: false,
-  }
-);
+// import styles from './page.module.css';
 
 export default function DashboardPage() {
-  return (
-    <main className={styles.main}>
-      <aside className={styles.sidebar}>
-        <DashboardNav />
-      </aside>
-    </main>
-  );
+  return <h3>Analytics</h3>;
 }

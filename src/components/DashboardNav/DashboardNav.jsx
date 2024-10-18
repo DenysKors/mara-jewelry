@@ -1,7 +1,7 @@
 'use client';
 
-import { usePathname } from 'next/navigation';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 import styles from './DashboardNav.module.css';
 
@@ -16,7 +16,11 @@ export default function DashboardNav() {
         }`}
         href="/dashboard"
       >
-        <svg className={styles.icon}>
+        <svg
+          className={`${
+            pathname === `/dashboard` ? styles.icon_active : styles.icon
+          }`}
+        >
           <use href="/icons.svg#icon-analytics"></use>
         </svg>
       </Link>
@@ -28,7 +32,13 @@ export default function DashboardNav() {
         }`}
         href="/dashboard/add-product"
       >
-        <svg className={styles.icon}>
+        <svg
+          className={`${
+            pathname === `/dashboard/add-product`
+              ? styles.icon_active
+              : styles.icon
+          }`}
+        >
           <use href="/icons.svg#icon-add-product"></use>
         </svg>
       </Link>
@@ -40,7 +50,13 @@ export default function DashboardNav() {
         }`}
         href="/dashboard/add-article"
       >
-        <svg className={styles.icon}>
+        <svg
+          className={`${
+            pathname === `/dashboard/add-article`
+              ? styles.icon_active
+              : styles.icon
+          }`}
+        >
           <use href="/icons.svg#icon-add-article"></use>
         </svg>
       </Link>
