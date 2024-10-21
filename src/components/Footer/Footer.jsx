@@ -50,7 +50,7 @@ export default function Footer() {
         </div>
         <ul className={styles.list}>
           <li>
-            <b>Інформація</b>
+            <strong>Інформація</strong>
           </li>
           <li>
             <button

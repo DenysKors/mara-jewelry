@@ -11,6 +11,7 @@ export default function DashboardNav() {
   return (
     <nav className={styles.nav}>
       <Link
+        title="Аналітика"
         className={`${
           pathname === `/dashboard` ? styles.navLink_active : styles.navLink
         }`}
@@ -25,6 +26,7 @@ export default function DashboardNav() {
         </svg>
       </Link>
       <Link
+        title="Додати товар"
         className={`${
           pathname === `/dashboard/add-product`
             ? styles.navLink_active
@@ -43,6 +45,7 @@ export default function DashboardNav() {
         </svg>
       </Link>
       <Link
+        title="Додати статтю"
         className={`${
           pathname === `/dashboard/add-article`
             ? styles.navLink_active

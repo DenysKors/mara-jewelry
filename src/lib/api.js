@@ -144,3 +144,17 @@ export const getArticleByCode = cache(async articleCode => {
     console.log(err.message);
   }
 });
+
+export const getAnalytics = cache(async () => {
+  await dbConnect();
+  try {
+    const productsAmount = await Product.countDocuments();
+    const articlesAmount = await Article.countDocuments();
+    return {
+      productsAmount,
+      articlesAmount,
+    };
+  } catch (err) {
+    console.log(err.message);
+  }
+});

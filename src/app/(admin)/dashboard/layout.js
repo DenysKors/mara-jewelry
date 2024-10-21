@@ -16,14 +16,22 @@ export default function DashboardLayout({ children }) {
     <>
       <header className={styles.header}>
         <Image
-          width={32}
-          height={32}
           src={Logo}
           priority
           className={styles.image}
           alt="Mara Jewelry Logo"
         />
         <strong className={styles.title}>Панель адміністратора</strong>
+        <button
+          type="button"
+          aria-label="sing-out"
+          title="Вийти"
+          style={{ backgroundColor: 'inherit' }}
+        >
+          <svg className={styles.icon}>
+            <use href="/icons.svg#icon-sign-out"></use>
+          </svg>
+        </button>
       </header>
       <main className={styles.main}>
         <aside className={styles.sidebar}>
