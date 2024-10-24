@@ -1,0 +1,137 @@
+.subTitle {
+  padding-bottom: 5px;
+
+  font-style: normal;
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-body);
+  font-family: inherit;
+}
+
+.input {
+  font-size: var(--font-size-footer);
+}
+
+.wrapper {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  min-height: 280px;
+  width: 100%;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.thumb {
+  width: 278px;
+  height: 316px;
+}
+
+.img {
+  width: 278px;
+  height: 316px;
+  object-fit: cover;
+}
+
+.error {
+  margin-bottom: 10px;
+  color: var(--color-error);
+  font-size: var(--font-size-footer);
+  font-family: var(--font-nunito-regular);
+}
+
+.lable {
+  padding-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  font-style: normal;
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-body);
+  font-family: inherit;
+}
+
+.textField {
+  padding: 5px;
+  width: 100%;
+  font-family: var(--font-nunito-regular);
+  background-color: var(--color-background);
+  border: none;
+  border-bottom: 1px solid var(--color-accent);
+  outline: none;
+}
+
+.textareaField {
+  padding: 5px;
+  font-family: var(--font-nunito-regular);
+  background-color: var(--color-background-hover);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  resize: none;
+}
+
+.button {
+  margin-top: 30px;
+  padding: 15px 40px;
+
+  font-size: 16px;
+  color: var(--color-background);
+
+  cursor: pointer;
+  background-color: var(--color-accent);
+
+  border: none;
+  border-radius: 14px;
+}
+
+.button:hover,
+.button:focus {
+  background-color: var(--color-text);
+}
+
+@media screen and (min-width: 768px) {
+  .thumb {
+    width: 278px;
+    height: 316px;
+  }
+
+  .img {
+    width: 278px;
+    height: 316px;
+  }
+
+  .textfield {
+    width: 660px;
+  }
+
+  .textareaField {
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .subTitle {
+    padding-bottom: 10px;
+  }
+
+  .wrapper {
+    min-height: 355px;
+  }
+
+  .thumb {
+    width: 510px;
+    height: 580px;
+  }
+
+  .img {
+    width: 510px;
+    height: 580px;
+  }
+
+  .textareaField {
+    width: 650px;
+  }
+
+  .error {
+    font-size: var(--font-size-body);
+  }
+}

@@ -4,7 +4,7 @@ import dynamic from 'next/dynamic';
 import styles from './page.module.css';
 import Logo from '../../../assets/images/Logo.png';
 
-const DashboardNav = dynamic(
+const NavSection = dynamic(
   () => import('../../../components/DashboardNav/DashboardNav'),
   {
     ssr: false,
@@ -35,7 +35,7 @@ export default function DashboardLayout({ children }) {
       </header>
       <main className={styles.main}>
         <aside className={styles.sidebar}>
-          <DashboardNav />
+          <NavSection />
         </aside>
         {children}
       </main>

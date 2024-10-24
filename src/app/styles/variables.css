@@ -13,6 +13,7 @@
   --color-background: #fafafa;
   --color-background-hover: #ede8e7;
   --color-border: #b5abaa;
+  --color-error: #e74a3b;
 
   --transition-main: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }

@@ -14,8 +14,8 @@ export default async function ArticlePage({ params }) {
         <div key={idx} className={styles.box}>
           <div className={styles.thumbFirst}>
             <CloudinaryImage
-              width="510"
-              height="580"
+              width="335"
+              height="380"
               src={part.imageUrl}
               alt={title}
               priority
@@ -34,8 +34,8 @@ export default async function ArticlePage({ params }) {
           <p className={styles.textLeft}>{part.text}</p>
           <div className={styles.thumbSecond}>
             <CloudinaryImage
-              width="510"
-              height="580"
+              width="335"
+              height="380"
               src={part.imageUrl}
               alt={title}
               priority
@@ -52,8 +52,8 @@ export default async function ArticlePage({ params }) {
         <div key={idx} className={styles.box}>
           <div className={styles.thumbThird}>
             <CloudinaryImage
-              width="510"
-              height="580"
+              width="335"
+              height="380"
               src={part.imageUrl}
               alt={title}
               priority
