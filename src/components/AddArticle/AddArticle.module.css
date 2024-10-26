@@ -4,7 +4,13 @@
   font-style: normal;
   font-weight: var(--font-weight-bold);
   font-size: var(--font-size-body);
-  font-family: inherit;
+  font-family: var(--font-tenor-regular);
+}
+
+.formGroup {
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 4px;
 }
 
 .input {
@@ -47,7 +53,7 @@
   font-style: normal;
   font-weight: var(--font-weight-bold);
   font-size: var(--font-size-body);
-  font-family: inherit;
+  font-family: var(--font-tenor-regular);
 }
 
 .textField {
@@ -62,6 +68,7 @@
 
 .textareaField {
   padding: 5px;
+  width: calc(100vw - 80px);
   font-family: var(--font-nunito-regular);
   background-color: var(--color-background-hover);
   border: 1px solid var(--color-border);
