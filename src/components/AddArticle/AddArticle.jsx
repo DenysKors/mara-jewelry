@@ -63,9 +63,9 @@ export default function AddArticle() {
                 {values.parts.length > 0 &&
                   values.parts.map((part, index) => (
                     <div className={styles.formGroup} key={index}>
-                      <p className={styles.subTitle}>{`Фото частини ${
-                        index + 1
-                      }:`}</p>
+                      <p
+                        className={styles.subTitle}
+                      >{`Фото (розмір 510х580) частини ${index + 1}:`}</p>
                       <Field name={`parts.${index}.image`}>
                         {() => (
                           <input
@@ -119,23 +119,33 @@ export default function AddArticle() {
                       </label>
                       <ErrorMessage
                         className={styles.error}
-                        name="text"
+                        name={`parts.${index}.text`}
                         component="div"
                       />
-
-                      <div>
-                        <button type="button" onClick={() => remove(index)}>
-                          X
+                      {index !== 0 && (
+                        <div>
+                          <button
+                            className={styles.btnRemove}
+                            type="button"
+                            title="Видалити частину"
+                            onClick={() => remove(index)}
+                          >
+                            {`Видалити частину ${index + 1}`}
+                          </button>
+                        </div>
+                      )}
+                      {index === values.parts.length - 1 && index < 2 && (
+                        <button
+                          className={styles.btnAdd}
+                          type="button"
+                          title="Додати частину"
+                          onClick={() => push({ image: '', text: '' })}
+                        >
+                          {`Додати частину ${index + 2}`}
                         </button>
-                      </div>
+                      )}
                     </div>
                   ))}
-                <button
-                  type="button"
-                  onClick={() => push({ image: '', text: '' })}
-                >
-                  Add part
-                </button>
               </>
             )}
           </FieldArray>

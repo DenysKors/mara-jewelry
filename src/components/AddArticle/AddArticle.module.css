@@ -13,22 +13,17 @@
   border-radius: 4px;
 }
 
+.formGroup:not(:last-child) {
+  margin-bottom: 10px;
+}
+
 .input {
+  margin-bottom: 5px;
   font-size: var(--font-size-footer);
 }
 
-.wrapper {
-  padding-top: 5px;
-  padding-bottom: 5px;
-  min-height: 280px;
-  width: 100%;
-
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
-}
-
 .thumb {
+  margin-bottom: 5px;
   width: 278px;
   height: 316px;
 }
@@ -47,9 +42,10 @@
 }
 
 .lable {
-  padding-bottom: 15px;
+  margin-bottom: 15px;
   display: flex;
   flex-direction: column;
+  gap: 5px;
   font-style: normal;
   font-weight: var(--font-weight-bold);
   font-size: var(--font-size-body);
@@ -76,11 +72,28 @@
   resize: none;
 }
 
+.btnRemove {
+  padding: 6px;
+  font-size: var(--font-size-body);
+  color: var(--color-background);
+  border-radius: 4px;
+  background-color: var(--color-error);
+}
+
+.btnAdd {
+  margin-top: 10px;
+  padding: 6px;
+  font-size: var(--font-size-body);
+  color: var(--color-background);
+  border-radius: 4px;
+  background-color: var(--color-accent);
+}
+
 .button {
   margin-top: 30px;
   padding: 15px 40px;
 
-  font-size: 16px;
+  font-size: var(--font-size-body);
   color: var(--color-background);
 
   cursor: pointer;
@@ -118,10 +131,6 @@
 @media screen and (min-width: 1440px) {
   .subTitle {
     padding-bottom: 10px;
-  }
-
-  .wrapper {
-    min-height: 355px;
   }
 
   .thumb {
