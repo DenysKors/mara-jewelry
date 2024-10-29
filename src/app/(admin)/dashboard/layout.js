@@ -15,13 +15,15 @@ export default function DashboardLayout({ children }) {
   return (
     <>
       <header className={styles.header}>
-        <Image
-          src={Logo}
-          priority
-          className={styles.image}
-          alt="Mara Jewelry Logo"
-        />
-        <strong className={styles.title}>Панель адміністратора</strong>
+        <div className={styles.imageBox}>
+          <Image
+            src={Logo}
+            priority
+            className={styles.image}
+            alt="Mara Jewelry Logo"
+          />
+          <strong className={styles.title}>Панель адміністратора</strong>
+        </div>
         <button
           type="button"
           aria-label="sing-out"
