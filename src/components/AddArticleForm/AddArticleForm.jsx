@@ -56,6 +56,7 @@ export default function AddArticleForm() {
 
     if (response.ok) {
       resetForm();
+      // Manually set input file value due to formik failure:
       inputRef.current[1].value = '';
       toast.success('Стаття збережена');
     } else toast.error('Помилка при збереженні, повторіть знову');
