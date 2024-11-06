@@ -1,15 +1,10 @@
 import Image from 'next/image';
-import dynamic from 'next/dynamic';
+import { Toaster } from 'react-hot-toast';
 
 import styles from './page.module.css';
 import Logo from '../../../assets/images/Logo.png';
 
-const NavSection = dynamic(
-  () => import('../../../components/DashboardNav/DashboardNav'),
-  {
-    ssr: false,
-  }
-);
+import DashboardNav from '@/components/DashboardNav/DashboardNav';
 
 export default function DashboardLayout({ children }) {
   return (
@@ -37,7 +32,7 @@ export default function DashboardLayout({ children }) {
       </header>
       <main className={styles.main}>
         <aside className={styles.sidebar}>
-          <NavSection />
+          <DashboardNav />
         </aside>
         {children}
       </main>
@@ -47,6 +42,17 @@ export default function DashboardLayout({ children }) {
         </span>
         <span className={styles.dev}>Created by DenExplorer</span>
       </footer>
+      <Toaster
+        position="top-center"
+        reverseOrder={false}
+        toastOptions={{
+          duration: 4000,
+          style: {
+            background: '#333',
+            color: '#fff',
+          },
+        }}
+      />
     </>
   );
 }

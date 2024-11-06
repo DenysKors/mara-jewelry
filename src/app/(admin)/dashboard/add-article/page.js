@@ -1,13 +1,6 @@
-import dynamic from 'next/dynamic';
-
 import styles from './page.module.css';
 
-const AddArticleForm = dynamic(
-  () => import('../../../../components/AddArticle/AddArticle'),
-  {
-    ssr: false,
-  }
-);
+import AddArticleForm from '@/components/AddArticleForm/AddArticleForm';
 
 export default function AddArticle() {
   return (

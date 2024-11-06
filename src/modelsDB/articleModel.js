@@ -24,6 +24,6 @@ const Article = mongoose.Schema(
       },
     ],
   },
-  { timeStamps: true }
+  { timestamps: true }
 );
 export default mongoose.models.Article || mongoose.model('Article', Article);

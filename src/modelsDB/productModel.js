@@ -40,6 +40,6 @@ const Product = mongoose.Schema(
       required: true,
     },
   },
-  { timeStamps: true }
+  { timestamps: true }
 );
 export default mongoose.models.Product || mongoose.model('Product', Product);

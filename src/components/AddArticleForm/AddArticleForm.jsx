@@ -1,10 +1,12 @@
 'use client';
 
+import { useRef } from 'react';
 import Image from 'next/image';
+import toast from 'react-hot-toast';
 import * as Yup from 'yup';
 import { Formik, Form, Field, FieldArray, ErrorMessage } from 'formik';
 
-import styles from './AddArticle.module.css';
+import styles from './AddArticleForm.module.css';
 import imgPlaceholder from '../../../public/no-image-placeholder.png';
 
 const initialValues = {
@@ -29,11 +31,34 @@ const articleSchema = Yup.object().shape({
   ),
 });
 
-export default function AddArticle() {
-  const handleSubmit = (values, { resetForm }) => {
-    // async/await AddArticle()
-    console.log(values);
-    resetForm();
+export default function AddArticleForm() {
+  const inputRef = useRef(null);
+
+  const handleSubmit = async (values, { resetForm }) => {
+    const articleData = new FormData();
+
+    articleData.append('title', values.title);
+
+    values.parts.forEach((part, idx) => {
+      articleData.append(`image${[idx]}`, part.image[0]);
+    });
+
+    const parts = values.parts.map(part => {
+      return { text: part.text };
+    });
+
+    articleData.append('parts', JSON.stringify(parts));
+
+    const response = await fetch('/api/add-article', {
+      method: 'POST',
+      body: articleData,
+    });
+
+    if (response.ok) {
+      resetForm();
+      inputRef.current[1].value = '';
+      toast.success('Стаття збережена');
+    } else toast.error('Помилка при збереженні, повторіть знову');
   };
 
   return (
@@ -43,7 +68,7 @@ export default function AddArticle() {
       onSubmit={handleSubmit}
     >
       {({ values, setFieldValue, isSubmitting }) => (
-        <Form>
+        <Form ref={inputRef}>
           <p className={styles.error}>
             Стаття може складатися з однієї, двох або трьох частин
           </p>
@@ -58,7 +83,7 @@ export default function AddArticle() {
           </label>
           <ErrorMessage className={styles.error} name="title" component="div" />
           <FieldArray name="parts">
-            {({ insert, remove, push }) => (
+            {({ _, remove, push }) => (
               <>
                 {values.parts.length > 0 &&
                   values.parts.map((part, index) => (
@@ -73,10 +98,12 @@ export default function AddArticle() {
                             type="file"
                             accept="image/*,.png, .jpeg, .webp"
                             onChange={event => {
-                              setFieldValue(
-                                `parts.${index}.image`,
-                                event.currentTarget.files
-                              );
+                              if (event.target.value === '') return;
+                              else
+                                setFieldValue(
+                                  `parts.${index}.image`,
+                                  event.currentTarget.files
+                                );
                             }}
                           />
                         )}
@@ -139,7 +166,7 @@ export default function AddArticle() {
                           className={styles.btnAdd}
                           type="button"
                           title="Додати частину"
-                          onClick={() => push({ image: '', text: '' })}
+                          onClick={() => push({ image: null, text: '' })}
                         >
                           {`Додати частину ${index + 2}`}
                         </button>

@@ -1,8 +1,10 @@
 import { cache } from 'react';
+
 import dbConnect from './connectDB';
 import Stone from '@/modelsDB/stoneModel';
 import Product from '@/modelsDB/productModel';
 import Article from '@/modelsDB/articleModel';
+import { uploadImage } from './cloudinaryUpload';
 
 import {
   PRODUCT_PAGINATION_LIMIT,
@@ -158,3 +160,50 @@ export const getAnalytics = cache(async () => {
     console.log(err.message);
   }
 });
+
+export const CreateArticle = async articleData => {
+  const title = articleData.get('title');
+  const parts = JSON.parse(articleData.get('parts'));
+  const partsAmount = parts.length;
+  const ImgIdArray = [];
+
+  for (let i = 0; i < partsAmount; i += 1) {
+    let file = articleData.get(`image${i}`);
+    if (
+      !(
+        file.type === 'image/jpeg' ||
+        file.type === 'image/jpg' ||
+        file.type === 'image/png' ||
+        file.type === 'image/webp'
+      )
+    ) {
+      throw new Error('Invalid File Type', { statusCode: 412 });
+    }
+    let fileBuffer = await file.arrayBuffer();
+    let mimeType = file.type;
+    let encoding = 'base64';
+    let base64Data = Buffer.from(fileBuffer).toString('base64');
+    let fileUri = `data:${mimeType};${encoding},${base64Data}`;
+    let cloudinaryImgId = await uploadImage(fileUri);
+    ImgIdArray.push(cloudinaryImgId);
+  }
+
+  parts.forEach((part, idx) => {
+    part.imageUrl = ImgIdArray[idx];
+  });
+
+  const article = {
+    code: Date.now().toString().slice(-4),
+    title,
+    parts,
+  };
+
+  await dbConnect();
+
+  try {
+    const createdArticle = await Article.create(article);
+    return createdArticle;
+  } catch (err) {
+    console.log(err.message);
+  }
+};

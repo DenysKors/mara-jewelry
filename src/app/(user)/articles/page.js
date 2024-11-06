@@ -1,6 +1,5 @@
 import Link from 'next/link';
 
-// import CloudinaryWidget from '@/components/CloudinaryWidget/CloudinaryWidget';
 import styles from './page.module.css';
 import Pagination from '@/components/Pagination/Pagination';
 import CloudinaryImage from '@/components/CloudinaryImage/CloudinaryImage';
@@ -14,7 +13,7 @@ export default async function ArticlesPage({ searchParams }) {
   return (
     <main className={styles.container}>
       <ul className={styles.wrapper}>
-        {articles.map(({ code, title, parts }) => {
+        {articles.map(({ code, title, parts, createdAt }) => {
           return (
             <li key={code}>
               <article>
@@ -62,7 +61,11 @@ export default async function ArticlesPage({ searchParams }) {
                   )}...`}</p>
                 </section>
                 <footer>
-                  <span className={styles.date}>дата публікації</span>
+                  <span className={styles.date}>
+                    {new Intl.DateTimeFormat('uk-UA', {
+                      dateStyle: 'short',
+                    }).format(createdAt)}
+                  </span>
                 </footer>
               </article>
             </li>
@@ -77,7 +80,6 @@ export default async function ArticlesPage({ searchParams }) {
           paginationLimit={ARTICLE_PAGINATION_LIMIT}
         />
       )}
-      {/* <CloudinaryWidget /> */}
     </main>
   );
 }
