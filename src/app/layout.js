@@ -18,8 +18,9 @@ const tenor_regular = localFont({
 });
 
 export const metadata = {
-  title: 'Mara Jewelry',
-  description: 'Perfect jewelry made of natural stones',
+  title: 'Mara Jewelry / Прикраси ручної роботи',
+  description:
+    'Perfect jewelry made of natural stones / Вишукані прикраси, зроблені з натурального каміння',
   icons: {
     icon: [
       { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },

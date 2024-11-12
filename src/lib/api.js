@@ -125,7 +125,7 @@ export const getAllArticles = cache(async (page = 1) => {
     const articles = await Article.find({}, '', {
       skip,
       limit: ARTICLE_PAGINATION_LIMIT,
-    }).sort({ title: 1 });
+    }).sort({ createdAt: -1 });
 
     const totalAmount = await Article.countDocuments();
     return {
@@ -147,7 +147,7 @@ export const getArticleByCode = cache(async articleCode => {
   }
 });
 
-export const getAnalytics = cache(async () => {
+export const getAnalytics = async () => {
   await dbConnect();
   try {
     const productsAmount = await Product.countDocuments();
@@ -159,7 +159,7 @@ export const getAnalytics = cache(async () => {
   } catch (err) {
     console.log(err.message);
   }
-});
+};
 
 export const CreateArticle = async articleData => {
   const title = articleData.get('title');

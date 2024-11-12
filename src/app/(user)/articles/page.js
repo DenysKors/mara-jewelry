@@ -6,6 +6,10 @@ import CloudinaryImage from '@/components/CloudinaryImage/CloudinaryImage';
 import { ARTICLE_PAGINATION_LIMIT } from '@/constants/pagination';
 import { getAllArticles } from '@/lib/api';
 
+export const metadata = {
+  title: "Статті про прикраси та все, що з ними пов'язано",
+};
+
 export default async function ArticlesPage({ searchParams }) {
   const page = searchParams.page || 1;
   const { articles, totalAmount } = await getAllArticles(page);

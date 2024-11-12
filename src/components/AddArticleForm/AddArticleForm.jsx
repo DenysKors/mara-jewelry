@@ -58,6 +58,7 @@ export default function AddArticleForm() {
       resetForm();
       // Manually set input file value due to formik failure:
       inputRef.current[1].value = '';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
       toast.success('Стаття збережена');
     } else toast.error('Помилка при збереженні, повторіть знову');
   };
@@ -114,8 +115,8 @@ export default function AddArticleForm() {
                           <Image
                             className={styles.img}
                             src={URL.createObjectURL(part.image[0])}
-                            width={335}
-                            height={380}
+                            width={278}
+                            height={316}
                             alt={index}
                           />
                         </div>
@@ -124,8 +125,8 @@ export default function AddArticleForm() {
                           <Image
                             className={styles.img}
                             src={imgPlaceholder}
-                            width={335}
-                            height={380}
+                            width={278}
+                            height={316}
                             alt="No image"
                             priority
                           />

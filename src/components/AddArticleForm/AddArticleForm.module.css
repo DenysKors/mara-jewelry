@@ -64,7 +64,7 @@
 
 .textareaField {
   padding: 5px;
-  width: calc(100vw - 80px);
+  width: 100%;
   font-family: var(--font-nunito-regular);
   background-color: var(--color-background-hover);
   border: 1px solid var(--color-border);
@@ -109,16 +109,6 @@
 }
 
 @media screen and (min-width: 768px) {
-  .thumb {
-    width: 278px;
-    height: 316px;
-  }
-
-  .img {
-    width: 278px;
-    height: 316px;
-  }
-
   .textfield {
     width: 660px;
   }

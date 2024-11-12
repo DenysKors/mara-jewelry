@@ -23,7 +23,7 @@ const Product = mongoose.Schema(
     },
     category: {
       type: String,
-      enum: CATEGORIES_ENUMS,
+      enum: Object.values(CATEGORIES_ENUMS),
       required: true,
     },
     stones: {
