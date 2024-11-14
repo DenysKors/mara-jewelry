@@ -44,7 +44,7 @@
 }
 
 .box {
-  padding-bottom: 15px;
+  margin-bottom: 15px;
 
   display: flex;
   flex-wrap: wrap;
@@ -61,13 +61,12 @@
 }
 
 .optionBox {
-  padding-top: 5px;
-  padding-bottom: 10px;
+  margin-bottom: 15px;
 
   width: 100%;
 
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   gap: 20px;
 }
 
@@ -100,7 +99,7 @@
 
 .wrapper {
   margin-top: 5px;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
   width: 100%;
 
   display: flex;
@@ -121,7 +120,7 @@
 
 .wideThumb {
   margin-top: 5px;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
   width: 335px;
   height: 191px;
 }
@@ -264,9 +263,5 @@
 
   .error {
     font-size: var(--font-size-body);
-  }
-
-  .wrapper {
-    min-height: 260px;
   }
 }

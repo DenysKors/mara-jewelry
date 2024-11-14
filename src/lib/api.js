@@ -14,7 +14,7 @@ import {
 export const getAllStones = cache(async () => {
   await dbConnect();
   try {
-    const stonesData = await Stone.find({}).sort({ name: 1 });
+    const stonesData = await Stone.find({}, { _id: 0 }).sort({ name: 1 });
     const stones = JSON.parse(JSON.stringify(stonesData));
     return stones;
   } catch (err) {

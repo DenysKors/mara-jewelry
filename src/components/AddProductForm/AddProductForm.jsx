@@ -13,7 +13,7 @@ import { CATEGORIES } from '@/constants/categories';
 
 export default function AddProductForm({ allStones }) {
   const inputRef = useRef(null);
-  const allStonesName = allStones.map(stone => stone.name);
+  const allStonesValue = allStones.map(stone => stone.value);
 
   const handleSubmit = async (values, { resetForm }) => {
     const isDuplicated = values.stones.some(
@@ -27,16 +27,26 @@ export default function AddProductForm({ allStones }) {
     } else if (!(values.images.length === 2)) {
       return toast.error('Додана невірна кількість фото (розмір 280х260)!');
     }
-    console.log(values);
-    // const articleData = new FormData();
-    // articleData.append('title', values.title);
-    // values.parts.forEach((part, idx) => {
-    //   articleData.append(`image${[idx]}`, part.image[0]);
-    // });
-    // const parts = values.parts.map(part => {
-    //   return { text: part.text };
-    // });
-    // articleData.append('parts', JSON.stringify(parts));
+
+    const stonesAmount = values.stones.length;
+    const stonesArray = [];
+
+    for (let i = 0; i < stonesAmount; i += 1) {
+      let stonesObj = allStones.find(stone => stone.value === values.stones[i]);
+      stonesArray.push(stonesObj);
+    }
+
+    const productData = new FormData();
+    productData.append('title', values.title);
+    productData.append('description', values.description);
+    productData.append('category', values.category);
+    productData.append('stones', JSON.stringify(stonesArray));
+    [...values.images].forEach(image => {
+      productData.append('image', image);
+    });
+    productData.append('wideImage', values.wideImage[0]);
+    productData.append('price', values.price);
+
     // const response = await fetch('/api/add-article', {
     //   method: 'POST',
     //   body: articleData,
@@ -69,7 +79,7 @@ export default function AddProductForm({ allStones }) {
         stones: Yup.array()
           .of(
             Yup.string().test('valid', 'Виберіть камінь зі списку', val => {
-              if (allStonesName.includes(val)) return true;
+              if (allStonesValue.includes(val)) return true;
               return false;
             })
           )
@@ -139,15 +149,13 @@ export default function AddProductForm({ allStones }) {
                   values.stones.map((_, index, arr) => (
                     <div key={index}>
                       <div className={styles.optionBox}>
-                        {index !== arr.length - 1 && (
-                          <button
-                            className={styles.btnAdd}
-                            type="button"
-                            onClick={() => remove(index)}
-                          >
-                            &#8722;
-                          </button>
-                        )}
+                        <button
+                          className={styles.btnAdd}
+                          type="button"
+                          onClick={() => insert(index, '')}
+                        >
+                          &#43;
+                        </button>
 
                         <Field
                           className={styles.select}
@@ -159,19 +167,21 @@ export default function AddProductForm({ allStones }) {
                           </option>
                           {allStones.map(item => {
                             return (
-                              <option value={item.name} key={item.value}>
+                              <option value={item.value} key={item.value}>
                                 {item.name}
                               </option>
                             );
                           })}
                         </Field>
-                        <button
-                          className={styles.btnAdd}
-                          type="button"
-                          onClick={() => insert(index, '')}
-                        >
-                          &#43;
-                        </button>
+                        {index !== arr.length - 1 && (
+                          <button
+                            className={styles.btnAdd}
+                            type="button"
+                            onClick={() => remove(index)}
+                          >
+                            &#8722;
+                          </button>
+                        )}
                       </div>
                       <ErrorMessage
                         className={styles.error}
