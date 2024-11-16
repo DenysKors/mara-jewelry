@@ -8,8 +8,16 @@ import ProductAccordion from '@/components/ProductAccordion/ProductAccordion';
 
 export default async function ProductPage({ params }) {
   const productCode = Number(params.code);
-  const { code, title, description, stones, price, sell_status } =
-    await getProductByCode(productCode);
+  const {
+    code,
+    title,
+    description,
+    stones,
+    imagesUrl,
+    wideImageUrl,
+    price,
+    sell_status,
+  } = await getProductByCode(productCode);
 
   return (
     <main className={styles.container}>
@@ -19,7 +27,7 @@ export default async function ProductPage({ params }) {
           <CloudinaryImage
             width="335"
             height="191"
-            src="as03s5m0rc6stgnnwlj9"
+            src={wideImageUrl}
             priority
             alt={title}
             className={styles.img1}
@@ -30,22 +38,22 @@ export default async function ProductPage({ params }) {
           <CloudinaryImage
             width="163"
             height="152"
-            src="agdzncdzz3jgubuhxcga"
+            src={imagesUrl[0]}
             alt={title}
             className={styles.img2}
             sizes="(max-width: 767px) 33vw,
-                          (max-width: 1440px) 50vw,
-                          100vw"
+                (max-width: 1440px) 50vw,
+                100vw"
           />
           <CloudinaryImage
             width="163"
             height="152"
-            src="hob5r8x9uqqmxc8we3yy"
+            src={imagesUrl[1]}
             alt={title}
             className={styles.img3}
             sizes="(max-width: 767px) 33vw,
-                          (max-width: 1440px) 50vw,
-                          100vw"
+                (max-width: 1440px) 50vw,
+                100vw"
           />
         </div>
         <div>

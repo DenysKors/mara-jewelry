@@ -133,9 +133,10 @@
 
 .inputNumber {
   padding: 5px;
+  max-width: 100px;
 
   font-size: var(--font-size-body);
-  max-width: 100px;
+  background-color: var(--color-background);
   border: none;
   border-bottom: 2px solid var(--color-accent);
   outline: none;

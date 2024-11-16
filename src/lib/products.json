@@ -1,14 +1,272 @@
 [
   {
+    "code": 1,
+    "title": "Браслет з камінням",
+    "description": "Браслет з камінням ручної роботи",
+    "imagesUrl": ["agdzncdzz3jgubuhxcga", "hob5r8x9uqqmxc8we3yy"],
+    "wideImageUrl": "as03s5m0rc6stgnnwlj9",
+    "category": "bracelet",
+    "stones": [
+      {
+        "name": "бурштин",
+        "value": "amber"
+      },
+      {
+        "name": "кварц",
+        "value": "quartz"
+      },
+      {
+        "name": "обсидіан",
+        "value": "obsidian"
+      },
+      {
+        "name": "топаз",
+        "value": "topaz"
+      }
+    ],
+    "price": 1000,
+    "sell_status": "в наявності"
+  },
+  {
+    "code": 2,
+    "title": "Намисто з камінням",
+    "description": "Намисто з камінням ручної роботи",
+    "imagesUrl": ["agdzncdzz3jgubuhxcga", "hob5r8x9uqqmxc8we3yy"],
+    "wideImageUrl": "as03s5m0rc6stgnnwlj9",
+    "category": "necklace",
+    "stones": [
+      {
+        "name": "яшма",
+        "value": "jasper"
+      },
+      {
+        "name": "моховий агат",
+        "value": "moss-agate"
+      }
+    ],
+    "price": 1000,
+    "sell_status": "немає в наявності"
+  },
+  {
+    "code": 3,
+    "title": "Сережки з камінням",
+    "description": "Сережки з камінням ручної роботи",
+    "imagesUrl": ["agdzncdzz3jgubuhxcga", "hob5r8x9uqqmxc8we3yy"],
+    "wideImageUrl": "as03s5m0rc6stgnnwlj9",
+    "category": "earrings",
+    "stones": [
+      {
+        "name": "сердолік",
+        "value": "carnelian"
+      }
+    ],
+    "price": 1000,
+    "sell_status": "під замовлення"
+  },
+  {
+    "code": 4,
+    "title": "Чокер з камінням",
+    "description": "Чокер з камінням ручної роботи",
+    "imagesUrl": ["agdzncdzz3jgubuhxcga", "hob5r8x9uqqmxc8we3yy"],
+    "wideImageUrl": "as03s5m0rc6stgnnwlj9",
+    "category": "chocker",
+    "stones": [
+      {
+        "name": "гранат",
+        "value": "garnet"
+      },
+      {
+        "name": "рожевий кварц",
+        "value": "rose-quartz"
+      },
+      {
+        "name": "полуничний кварц",
+        "value": "strawberry-quartz"
+      },
+      {
+        "name": "волосатик",
+        "value": "hair-stone"
+      },
+      {
+        "name": "приніт",
+        "value": "prehnite"
+      },
+      {
+        "name": "кіаніт",
+        "value": "kyanite"
+      }
+    ],
+    "price": 1000,
+    "sell_status": "в наявності"
+  },
+  {
+    "code": 5,
+    "title": "Чотки з камінням",
+    "description": "Чотки з камінням ручної роботи",
+    "imagesUrl": ["agdzncdzz3jgubuhxcga", "hob5r8x9uqqmxc8we3yy"],
+    "wideImageUrl": "as03s5m0rc6stgnnwlj9",
+    "category": "chaplet",
+    "stones": [
+      {
+        "name": "лабрадор",
+        "value": "labradorite"
+      },
+      {
+        "name": "апатит",
+        "value": "apatite"
+      },
+      {
+        "name": "аметист",
+        "value": "amethyst"
+      }
+    ],
+    "price": 1000,
+    "sell_status": "в наявності"
+  },
+  {
+    "code": 6,
+    "title": "Браслет зі знаком зодіаку",
+    "description": "Браслет зі знаком зодіаку ручної роботи",
+    "imagesUrl": ["agdzncdzz3jgubuhxcga", "hob5r8x9uqqmxc8we3yy"],
+    "wideImageUrl": "as03s5m0rc6stgnnwlj9",
+    "category": "bracelet",
+    "stones": [
+      {
+        "name": "жад",
+        "value": "jade"
+      },
+      {
+        "name": "нефрит",
+        "value": "jadeite"
+      }
+    ],
+    "price": 2000,
+    "sell_status": "в наявності"
+  },
+  {
+    "code": 7,
+    "title": "Намисто зі знаком зодіаку",
+    "description": "Намисто зі знаком зодіаку ручної роботи",
+    "imagesUrl": ["agdzncdzz3jgubuhxcga", "hob5r8x9uqqmxc8we3yy"],
+    "wideImageUrl": "as03s5m0rc6stgnnwlj9",
+    "category": "necklace",
+    "stones": [
+      {
+        "name": "шерл",
+        "value": "schorl"
+      },
+      {
+        "name": "турмалін",
+        "value": "tourmaline"
+      },
+      {
+        "name": "перли",
+        "value": "pearls"
+      }
+    ],
+    "price": 2000,
+    "sell_status": "немає в наявності"
+  },
+  {
+    "code": 8,
+    "title": "Сережки зі знаком зодіаку",
+    "description": "Сережки зі знаком зодіаку ручної роботи",
+    "imagesUrl": ["agdzncdzz3jgubuhxcga", "hob5r8x9uqqmxc8we3yy"],
+    "wideImageUrl": "as03s5m0rc6stgnnwlj9",
+    "category": "earrings",
+    "stones": [
+      {
+        "name": "перламутр",
+        "value": "mother-of-pearl"
+      },
+      {
+        "name": "опал",
+        "value": "opal"
+      },
+      {
+        "name": "морганіт",
+        "value": "morganite"
+      },
+      {
+        "name": "родоніт",
+        "value": "rhodonite"
+      }
+    ],
+    "price": 2000,
+    "sell_status": "під замовлення"
+  },
+  {
+    "code": 9,
+    "title": "Чокер зі знаком зодіаку",
+    "description": "Чокер зі знаком зодіаку ручної роботи",
+    "imagesUrl": ["agdzncdzz3jgubuhxcga", "hob5r8x9uqqmxc8we3yy"],
+    "wideImageUrl": "as03s5m0rc6stgnnwlj9",
+    "category": "chocker",
+    "stones": [
+      {
+        "name": "родохрозит",
+        "value": "rhodocrosite"
+      }
+    ],
+    "price": 2000,
+    "sell_status": "в наявності"
+  },
+  {
+    "code": 10,
+    "title": "Чотки зі знаком зодіаку",
+    "description": "Чотки зі знаком зодіаку ручної роботи",
+    "imagesUrl": ["agdzncdzz3jgubuhxcga", "hob5r8x9uqqmxc8we3yy"],
+    "wideImageUrl": "as03s5m0rc6stgnnwlj9",
+    "category": "chaplet",
+    "stones": [
+      {
+        "name": "селеніт",
+        "value": "selenite"
+      },
+      {
+        "name": "рудракша",
+        "value": "rudraksha"
+      },
+      {
+        "name": "аквамарин",
+        "value": "aquamarine"
+      },
+      {
+        "name": "рубін",
+        "value": "ruby"
+      },
+      {
+        "name": "ангеліт",
+        "value": "angelite"
+      },
+      {
+        "name": "цитрин",
+        "value": "citrine"
+      }
+    ],
+    "price": 2000,
+    "sell_status": "в наявності"
+  },
+  {
     "code": 11,
     "title": "Браслет для весілля",
     "description": "Браслет з вишуканим дизайном та природньою силою",
-    "imageUrl": "https://placehold.co/500x750?text=No+Image",
+    "imagesUrl": ["agdzncdzz3jgubuhxcga", "hob5r8x9uqqmxc8we3yy"],
+    "wideImageUrl": "as03s5m0rc6stgnnwlj9",
     "category": "bracelet",
     "stones": [
-      { "name": "амазоніт", "value": "amazonite" },
-      { "name": "лава", "value": "lava" },
-      { "name": "шпінель", "value": "spinel" }
+      {
+        "name": "амазоніт",
+        "value": "amazonite"
+      },
+      {
+        "name": "лава",
+        "value": "lava"
+      },
+      {
+        "name": "шпінель",
+        "value": "spinel"
+      }
     ],
     "price": 5000,
     "sell_status": "немає в наявності"
@@ -17,9 +275,15 @@
     "code": 12,
     "title": "Намисто для весілля",
     "description": "Намисто з вишуканим дизайном та природньою силою",
-    "imageUrl": "https://placehold.co/500x750?text=No+Image",
+    "imagesUrl": ["agdzncdzz3jgubuhxcga", "hob5r8x9uqqmxc8we3yy"],
+    "wideImageUrl": "as03s5m0rc6stgnnwlj9",
     "category": "necklace",
-    "stones": [{ "name": "танзаніт", "value": "tanzanite" }],
+    "stones": [
+      {
+        "name": "танзаніт",
+        "value": "tanzanite"
+      }
+    ],
     "price": 5000,
     "sell_status": "в наявності"
   },
@@ -27,11 +291,18 @@
     "code": 13,
     "title": "Сережки для весілля",
     "description": "Сережки з вишуканим дизайном та природньою силою",
-    "imageUrl": "https://placehold.co/500x750?text=No+Image",
+    "imagesUrl": ["agdzncdzz3jgubuhxcga", "hob5r8x9uqqmxc8we3yy"],
+    "wideImageUrl": "as03s5m0rc6stgnnwlj9",
     "category": "earrings",
     "stones": [
-      { "name": "лазурит", "value": "lapis-lazuli" },
-      { "name": "місячний камінь (адуляр)", "value": "moonstone" }
+      {
+        "name": "лазурит",
+        "value": "lapis-lazuli"
+      },
+      {
+        "name": "місячний камінь (адуляр)",
+        "value": "moonstone"
+      }
     ],
     "price": 5000,
     "sell_status": "в наявності"
@@ -40,14 +311,30 @@
     "code": 14,
     "title": "Чокер для весілля",
     "description": "Чокер з вишуканим дизайном та природньою силою",
-    "imageUrl": "https://placehold.co/500x750?text=No+Image",
+    "imagesUrl": ["agdzncdzz3jgubuhxcga", "hob5r8x9uqqmxc8we3yy"],
+    "wideImageUrl": "as03s5m0rc6stgnnwlj9",
     "category": "chocker",
     "stones": [
-      { "name": "гірський кришталь", "value": "rock-crystal" },
-      { "name": "халцедон", "value": "chalcedony" },
-      { "name": "тигрове око", "value": "tiger's-eye" },
-      { "name": "бичаче око", "value": "bull's-eye" },
-      { "name": "димчатий кварц", "value": "smoky-quartz" }
+      {
+        "name": "гірський кришталь",
+        "value": "rock-crystal"
+      },
+      {
+        "name": "халцедон",
+        "value": "chalcedony"
+      },
+      {
+        "name": "тигрове око",
+        "value": "tiger's-eye"
+      },
+      {
+        "name": "бичаче око",
+        "value": "bull's-eye"
+      },
+      {
+        "name": "димчатий кварц",
+        "value": "smoky-quartz"
+      }
     ],
     "price": 5000,
     "sell_status": "під замовлення"
@@ -56,11 +343,18 @@
     "code": 15,
     "title": "Чотки для весілля",
     "description": "Чотки з вишуканим дизайном та природньою силою",
-    "imageUrl": "https://placehold.co/500x750?text=No+Image",
+    "imagesUrl": ["agdzncdzz3jgubuhxcga", "hob5r8x9uqqmxc8we3yy"],
+    "wideImageUrl": "as03s5m0rc6stgnnwlj9",
     "category": "chaplet",
     "stones": [
-      { "name": "флюорит", "value": "fluorite" },
-      { "name": "рубеліт", "value": "rubellite" }
+      {
+        "name": "флюорит",
+        "value": "fluorite"
+      },
+      {
+        "name": "рубеліт",
+        "value": "rubellite"
+      }
     ],
     "price": 5000,
     "sell_status": "під замовлення"

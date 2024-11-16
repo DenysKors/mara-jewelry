@@ -25,13 +25,14 @@ const articleSchema = Yup.object().shape({
     .required("Заголовок обов'язковий"),
   parts: Yup.array().of(
     Yup.object().shape({
-      image: Yup.string().required("Фото обов'язкове"),
+      image: Yup.mixed().required("Фото обов'язкове"),
       text: Yup.string().required("Зміст обов'язковий"),
     })
   ),
 });
 
 export default function AddArticleForm() {
+  // const [preview, setPreview] = useState(null);
   const inputRef = useRef(null);
 
   const handleSubmit = async (values, { resetForm }) => {
@@ -106,6 +107,11 @@ export default function AddArticleForm() {
                                   `parts.${index}.image`,
                                   event.currentTarget.files
                                 );
+                              // setPreview(
+                              //   URL.createObjectURL(
+                              //     event.currentTarget.files[0]
+                              //   )
+                              // );
                             }}
                           />
                         )}
@@ -114,6 +120,7 @@ export default function AddArticleForm() {
                         <div className={styles.thumb}>
                           <Image
                             className={styles.img}
+                            // src={preview}
                             src={URL.createObjectURL(part.image[0])}
                             width={278}
                             height={316}

@@ -8,7 +8,7 @@ import styles from './ProductsList.module.css';
 export default function ProductsList({ products }) {
   return (
     <ul className={styles.container}>
-      {products.map(({ code, title, stones }) => {
+      {products.map(({ code, title, stones, imagesUrl }) => {
         return (
           <li key={code}>
             <Link
@@ -20,7 +20,7 @@ export default function ProductsList({ products }) {
                 <CldImage
                   width="210"
                   height="196"
-                  src="agdzncdzz3jgubuhxcga"
+                  src={imagesUrl[0]}
                   alt={title}
                   priority
                   className={styles.img}

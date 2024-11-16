@@ -17,17 +17,21 @@ const Product = mongoose.Schema(
       type: String,
       required: true,
     },
-    imageUrl: {
-      type: String,
-      required: true,
-    },
     category: {
       type: String,
-      enum: Object.values(CATEGORIES_ENUMS),
+      enum: Object.keys(CATEGORIES_ENUMS),
       required: true,
     },
     stones: {
       type: [{ name: String, value: String }],
+      required: true,
+    },
+    imagesUrl: {
+      type: [String],
+      required: true,
+    },
+    wideImageUrl: {
+      type: String,
       required: true,
     },
     price: {

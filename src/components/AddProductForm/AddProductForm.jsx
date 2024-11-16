@@ -25,7 +25,7 @@ export default function AddProductForm({ allStones }) {
         'Додано декілька однакових каменів! Видаліть дублювання'
       );
     } else if (!(values.images.length === 2)) {
-      return toast.error('Додана невірна кількість фото (розмір 280х260)!');
+      return toast.error('Додана невірна кількість фото (розмір 280x260)!');
     }
 
     const stonesAmount = values.stones.length;
@@ -47,17 +47,19 @@ export default function AddProductForm({ allStones }) {
     productData.append('wideImage', values.wideImage[0]);
     productData.append('price', values.price);
 
-    // const response = await fetch('/api/add-article', {
-    //   method: 'POST',
-    //   body: articleData,
-    // });
-    // if (response.ok) {
-    //   resetForm();
-    //   // Manually set input file value due to formik failure:
-    //   inputRef.current[1].value = '';
-    //   window.scrollTo({ top: 0, behavior: 'smooth' });
-    //   toast.success('Стаття збережена');
-    // } else toast.error('Помилка при збереженні, повторіть знову');
+    const response = await fetch('/api/add-product', {
+      method: 'POST',
+      body: productData,
+    });
+    if (response.ok) {
+      resetForm();
+      // Manually set inputs file value due to formik failure:
+      inputRef.current[9].value = '';
+      inputRef.current[10].value = '';
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      toast.success('Товар збережено');
+    } else toast.error('Помилка при збереженні, повторіть знову');
   };
   return (
     <Formik
@@ -71,7 +73,9 @@ export default function AddProductForm({ allStones }) {
         price: 0,
       }}
       validationSchema={Yup.object().shape({
-        title: Yup.string().required("Назва обов'язкова"),
+        title: Yup.string()
+          .max(50, 'Заголовок занадто довгий')
+          .required("Назва обов'язкова"),
         description: Yup.string().required("Опис обов'язковий"),
         category: Yup.string()
           .oneOf(Object.keys(CATEGORIES_ENUMS))
@@ -84,8 +88,8 @@ export default function AddProductForm({ allStones }) {
             })
           )
           .required(),
-        images: Yup.string().required("Фото обов'язкове"),
-        wideImage: Yup.string().required("Фото обов'язкове"),
+        images: Yup.mixed().required("Фото обов'язкове"),
+        wideImage: Yup.mixed().required("Фото обов'язкове"),
         price: Yup.number()
           .integer('Ціна повинна бути цілим числом')
           .moreThan(0, 'Ціна повинна бути більше 0')
