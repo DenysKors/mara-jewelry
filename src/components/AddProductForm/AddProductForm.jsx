@@ -69,7 +69,9 @@ export default function AddProductForm({ allStones }) {
         category: '',
         stones: [''],
         images: null,
+        blobImages: [],
         wideImage: null,
+        blobWideImage: null,
         price: 0,
       }}
       validationSchema={Yup.object().shape({
@@ -206,17 +208,24 @@ export default function AddProductForm({ allStones }) {
                 accept="image/*, .png, .jpeg, .gif, .webp"
                 onChange={event => {
                   setFieldValue('images', event.currentTarget.files);
+                  values.blobImages.length = 0;
+                  [...event.currentTarget.files].forEach((file, idx) =>
+                    setFieldValue(
+                      `blobImages.${idx}`,
+                      URL.createObjectURL(file)
+                    )
+                  );
                 }}
               />
             )}
           </Field>
           <div className={styles.wrapper}>
             {values.images ? (
-              [...values.images].map((image, index) => (
+              values.blobImages.map((image, index) => (
                 <div className={styles.thumb} key={index}>
                   <Image
                     className={styles.img}
-                    src={URL.createObjectURL(image)}
+                    src={image}
                     width={210}
                     height={196}
                     alt={index}
@@ -251,6 +260,10 @@ export default function AddProductForm({ allStones }) {
                 onChange={event => {
                   if (event.target.value === '') return;
                   else setFieldValue('wideImage', event.currentTarget.files);
+                  setFieldValue(
+                    `blobWideImage`,
+                    URL.createObjectURL(event.currentTarget.files[0])
+                  );
                 }}
               />
             )}
@@ -259,7 +272,7 @@ export default function AddProductForm({ allStones }) {
             <div className={styles.wideThumb}>
               <Image
                 className={styles.wideImg}
-                src={URL.createObjectURL(values.wideImage[0])}
+                src={values.blobWideImage}
                 width={335}
                 height={191}
                 alt="Jewelry"

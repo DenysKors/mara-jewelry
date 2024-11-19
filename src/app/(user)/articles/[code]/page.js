@@ -6,7 +6,7 @@ import { getArticleByCode } from '@/lib/api';
 
 export default async function ArticlePage({ params }) {
   const articleCode = Number(params.code);
-  const { title, parts, createdAt } = await getArticleByCode(articleCode);
+  const { code, title, parts, createdAt } = await getArticleByCode(articleCode);
 
   const articlePart = parts.map((part, idx) => {
     if (idx === 0) {
@@ -79,9 +79,9 @@ export default async function ArticlePage({ params }) {
         <section>{articlePart}</section>
         <footer style={{ textAlign: 'right' }}>
           <span className={styles.date}>
-            {new Intl.DateTimeFormat('uk-UA', {
+            {`${new Intl.DateTimeFormat('uk-UA', {
               dateStyle: 'short',
-            }).format(createdAt)}
+            }).format(createdAt)} / ${code}`}
           </span>
         </footer>
       </article>

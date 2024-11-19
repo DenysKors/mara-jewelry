@@ -15,6 +15,7 @@ const initialValues = {
     {
       image: null,
       text: '',
+      blobImage: null,
     },
   ],
 };
@@ -32,7 +33,6 @@ const articleSchema = Yup.object().shape({
 });
 
 export default function AddArticleForm() {
-  // const [preview, setPreview] = useState(null);
   const inputRef = useRef(null);
 
   const handleSubmit = async (values, { resetForm }) => {
@@ -107,11 +107,12 @@ export default function AddArticleForm() {
                                   `parts.${index}.image`,
                                   event.currentTarget.files
                                 );
-                              // setPreview(
-                              //   URL.createObjectURL(
-                              //     event.currentTarget.files[0]
-                              //   )
-                              // );
+                              setFieldValue(
+                                `parts.${index}.blobImage`,
+                                URL.createObjectURL(
+                                  event.currentTarget.files[0]
+                                )
+                              );
                             }}
                           />
                         )}
@@ -120,8 +121,7 @@ export default function AddArticleForm() {
                         <div className={styles.thumb}>
                           <Image
                             className={styles.img}
-                            // src={preview}
-                            src={URL.createObjectURL(part.image[0])}
+                            src={part.blobImage}
                             width={278}
                             height={316}
                             alt={index}
@@ -175,7 +175,9 @@ export default function AddArticleForm() {
                           className={styles.btnAdd}
                           type="button"
                           title="Додати частину"
-                          onClick={() => push({ image: null, text: '' })}
+                          onClick={() =>
+                            push({ image: null, text: '', blobImage: null })
+                          }
                         >
                           {`Додати частину ${index + 2}`}
                         </button>
