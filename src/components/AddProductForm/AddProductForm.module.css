@@ -161,65 +161,7 @@
   background-color: var(--color-text);
 }
 
-/* .subTitle {
-    padding-bottom: 5px;
-  
-    font-style: normal;
-    font-weight: var(--font-weight-bold);
-    font-size: var(--font-size-body);
-    font-family: var(--font-tenor-regular);
-  }
-  
-  .formGroup {
-    padding: 5px;
-    border: 1px solid black;
-    border-radius: 4px;
-  }
-  
-  .formGroup:not(:last-child) {
-    margin-bottom: 10px;
-  }
-  
-  .input {
-    margin-bottom: 5px;
-    font-size: var(--font-size-footer);
-  }
-  
-  .thumb {
-    margin-bottom: 5px;
-    width: 278px;
-    height: 316px;
-  }
-  
-  .img {
-    width: 278px;
-    height: 316px;
-    object-fit: cover;
-  }
-  
-  .btnRemove {
-    padding: 6px;
-    font-size: var(--font-size-body);
-    color: var(--color-background);
-    border-radius: 4px;
-    background-color: var(--color-error);
-  }
-  
-
-  
-
-   */
 @media screen and (min-width: 768px) {
-  /* .thumb {
-      width: 278px;
-      height: 316px;
-    }
-  
-    .img {
-      width: 278px;
-      height: 316px;
-    } */
-
   .textfield {
     width: 660px;
   }
@@ -253,11 +195,6 @@
 }
 
 @media screen and (min-width: 1440px) {
-  /* .subTitle {
-      padding-bottom: 10px;
-    }
-    */
-
   .textareaField {
     width: 650px;
   }

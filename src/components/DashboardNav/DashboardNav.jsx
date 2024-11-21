@@ -63,6 +63,42 @@ export default function DashboardNav() {
           <use href="/icons.svg#icon-add-article"></use>
         </svg>
       </Link>
+      <Link
+        title="Додати камінь"
+        className={`${
+          pathname === `/dashboard/add-stone`
+            ? styles.navLink_active
+            : styles.navLink
+        }`}
+        href="/dashboard/add-stone"
+      >
+        <svg
+          className={`${
+            pathname === `/dashboard/add-stone`
+              ? styles.icon_active
+              : styles.icon
+          }`}
+        >
+          <use href="/icons.svg#icon-add-stone"></use>
+        </svg>
+      </Link>
+      <Link
+        title="Видалити"
+        className={`${
+          pathname === `/dashboard/delete`
+            ? styles.navLink_active
+            : styles.navLink
+        }`}
+        href="/dashboard/delete"
+      >
+        <svg
+          className={`${
+            pathname === `/dashboard/delete` ? styles.icon_active : styles.icon
+          }`}
+        >
+          <use href="/icons.svg#icon-delete"></use>
+        </svg>
+      </Link>
     </nav>
   );
 }
