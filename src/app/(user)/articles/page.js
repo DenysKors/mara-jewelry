@@ -59,10 +59,11 @@ export default async function ArticlesPage({ searchParams }) {
                   </h3>
                 </header>
                 <section style={{ marginBottom: '16px' }}>
-                  <p className={styles.text}>{`${parts[0].text.slice(
-                    0,
-                    125
-                  )}...`}</p>
+                  <p className={styles.text}>
+                    {parts[0].text.length > 125
+                      ? `${parts[0].text.slice(0, 125)}...`
+                      : parts[0].text}
+                  </p>
                 </section>
                 <footer>
                   <span className={styles.date}>
