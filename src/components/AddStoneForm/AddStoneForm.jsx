@@ -1,6 +1,6 @@
 'use client';
 
-// import toast from 'react-hot-toast';
+import toast from 'react-hot-toast';
 import * as Yup from 'yup';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 
@@ -35,15 +35,17 @@ export default function AddStoneForm() {
       value: values.value.trim(),
     };
 
-    console.log(stoneData);
-    // const response = await fetch('/api/add-article', {
-    //   method: 'POST',
-    //   body: JSON.stringify(values),
-    // });
-    // if (response.ok) {
-    //   resetForm();
-    //   toast.success('Камінь збережений');
-    // } else toast.error('Помилка при збереженні, повторіть знову');
+    const response = await fetch('/api/add-stone', {
+      method: 'POST',
+      body: JSON.stringify(stoneData),
+    });
+    if (response.ok) {
+      resetForm();
+      toast.success('Камінь збережений');
+    } else if (response.status === 422) {
+      const message = await response.json();
+      toast.error(message);
+    } else toast.error('Помилка при збереженні, повторіть знову');
   };
 
   return (
@@ -80,7 +82,7 @@ export default function AddStoneForm() {
             aria-label="add stone"
             disabled={isSubmitting}
           >
-            Додати камінь
+            Зберегти камінь
           </button>
         </Form>
       )}

@@ -282,3 +282,21 @@ export const createArticle = async articleData => {
     console.log(err.message);
   }
 };
+
+export const createStone = async stoneData => {
+  await dbConnect();
+
+  try {
+    const createdStone = await Stone.create(stoneData);
+    console.log(createdStone);
+    return createdStone;
+  } catch (err) {
+    if (err.code === 11000) {
+      throw new Error(
+        `Значення ${
+          err.keyValue.name ? err.keyValue.name : err.keyValue.value
+        } вже існує`
+      );
+    } else console.log(err);
+  }
+};

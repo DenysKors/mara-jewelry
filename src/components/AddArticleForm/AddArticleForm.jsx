@@ -193,7 +193,7 @@ export default function AddArticleForm() {
             aria-label="add article"
             disabled={isSubmitting}
           >
-            Додати статтю
+            Зберегти статтю
           </button>
         </Form>
       )}

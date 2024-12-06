@@ -313,7 +313,7 @@ export default function AddProductForm({ allStones }) {
             aria-label="add product"
             disabled={isSubmitting}
           >
-            Додати товар
+            Зберегти товар
           </button>
         </Form>
       )}
