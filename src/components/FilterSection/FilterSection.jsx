@@ -110,9 +110,9 @@ export default function FilterSection({ stones }) {
       </ul>
       <legend className={styles.legend}>Вид каменю</legend>
       <ul>
-        {stones.map(({ _id, name, value }) => {
+        {stones.map(({ name, value }) => {
           return (
-            <li key={_id} className={styles.listItem}>
+            <li key={value} className={styles.listItem}>
               <input
                 id={value}
                 type="checkbox"
