@@ -283,12 +283,21 @@ export const createArticle = async articleData => {
   }
 };
 
+export const getAllStonesAdmin = async () => {
+  await dbConnect();
+  try {
+    const stones = await Stone.find({}, { _id: 0 }).sort({ name: 1 });
+    return stones;
+  } catch (err) {
+    console.log(err.message);
+  }
+};
+
 export const createStone = async stoneData => {
   await dbConnect();
 
   try {
     const createdStone = await Stone.create(stoneData);
-    console.log(createdStone);
     return createdStone;
   } catch (err) {
     if (err.code === 11000) {
@@ -298,5 +307,16 @@ export const createStone = async stoneData => {
         } вже існує`
       );
     } else console.log(err);
+  }
+};
+
+export const deleteStone = async stoneName => {
+  await dbConnect();
+
+  try {
+    const deletedStone = await Stone.deleteOne({ name: stoneName });
+    return deletedStone;
+  } catch (err) {
+    console.log(err.message);
   }
 };

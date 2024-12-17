@@ -96,7 +96,7 @@ export default function DashboardNav() {
             pathname === `/dashboard/delete` ? styles.icon_active : styles.icon
           }`}
         >
-          <use href="/icons.svg#icon-delete"></use>
+          <use href="/icons.svg#icon-trash"></use>
         </svg>
       </Link>
     </nav>

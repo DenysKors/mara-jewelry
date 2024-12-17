@@ -1,0 +1,74 @@
+.container {
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.item {
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-family: var(--font-nunito-regular);
+  font-size: var(--font-size-footer);
+  text-transform: lowercase;
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+}
+
+.button {
+  width: 24px;
+  height: 22px;
+  border: none;
+  background-color: transparent;
+}
+
+.icon {
+  width: 24px;
+  height: 22px;
+  fill: var(--color-error);
+}
+
+.buttonDel {
+  padding: 10px 24px;
+  font-family: var(--font-tenor-regular);
+  font-size: var(--font-size-body);
+  text-transform: uppercase;
+  color: var(--color-background);
+  background-color: var(--color-error);
+  border-radius: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    padding-top: 20px;
+    gap: 14px;
+  }
+
+  .item {
+    padding: 6px;
+  }
+
+  .button {
+    width: 26px;
+    height: 24px;
+  }
+
+  .icon {
+    width: 26px;
+    height: 24px;
+    fill: var(--color-error);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .item {
+    padding: 8px;
+  }
+
+  .linkText {
+    font-size: var(--font-size-body);
+  }
+}

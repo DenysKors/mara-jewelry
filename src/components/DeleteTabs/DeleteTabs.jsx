@@ -7,7 +7,7 @@ import DeleteProduct from '../DeleteProduct/DeleteProduct';
 import DeleteArticle from '../DeleteArticle/DeleteArticle';
 import styles from './DeleteTabs.module.css';
 
-export default function DeleteTabs({ allStones }) {
+export default function DeleteTabs() {
   const [tabId, setTabId] = useState(0);
 
   const handleClick = evt => {
@@ -30,7 +30,7 @@ export default function DeleteTabs({ allStones }) {
     <>
       <div className={styles.wrapper}>
         <button
-          className={styles.button}
+          className={`${tabId === 0 ? styles.button_active : styles.button}`}
           type="button"
           id="tab-0"
           onClick={handleClick}
@@ -38,7 +38,7 @@ export default function DeleteTabs({ allStones }) {
           Товар
         </button>
         <button
-          className={styles.button}
+          className={`${tabId === 1 ? styles.button_active : styles.button}`}
           type="button"
           id="tab-1"
           onClick={handleClick}
@@ -46,7 +46,7 @@ export default function DeleteTabs({ allStones }) {
           Стаття
         </button>
         <button
-          className={styles.button}
+          className={`${tabId === 2 ? styles.button_active : styles.button}`}
           type="button"
           id="tab-2"
           onClick={handleClick}
@@ -56,7 +56,7 @@ export default function DeleteTabs({ allStones }) {
       </div>
       {tabId === 0 && <DeleteProduct />}
       {tabId === 1 && <DeleteArticle />}
-      {tabId === 2 && <DeleteStone allStones={allStones} />}
+      {tabId === 2 && <DeleteStone />}
     </>
   );
 }
