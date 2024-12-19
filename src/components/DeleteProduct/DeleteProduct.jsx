@@ -8,7 +8,6 @@ import styles from './DeleteProduct.module.css';
 
 const delProdSchema = Yup.object().shape({
   code: Yup.string()
-    .min(4, 'Повинно бути 4 символи')
     .max(4, 'Повинно бути 4 символи')
     .matches(/^[0-9]*$/, 'Тільки цифри')
     .required("Поле обов'язкове"),

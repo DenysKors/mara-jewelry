@@ -5,6 +5,7 @@ import Stone from '@/modelsDB/stoneModel';
 import Product from '@/modelsDB/productModel';
 import Article from '@/modelsDB/articleModel';
 import { uploadImage } from './cloudinaryUpload';
+import { deleteImage } from './cloudinaryDelete';
 
 import {
   PRODUCT_PAGINATION_LIMIT,
@@ -325,6 +326,15 @@ export const deleteProduct = async productCode => {
   await dbConnect();
 
   try {
+    const product = await Product.findOne({ code: productCode });
+
+    if (!product) return { deletedCount: 0 };
+
+    const { imagesUrl, wideImageUrl } = product;
+    imagesUrl.push(wideImageUrl);
+
+    await deleteImage(imagesUrl);
+
     const result = await Product.deleteOne({ code: productCode });
     return result;
   } catch (err) {
