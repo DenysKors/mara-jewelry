@@ -25,7 +25,7 @@ const stoneSchema = Yup.object().shape({
       /^[a-z\-]+$/,
       'Тільки маленькі літери, тут замість пробілу між словами використовуйте знак -'
     )
-    .required("Назва обов'язкова"),
+    .required("Значення обов'язкове"),
 });
 
 export default function AddStoneForm() {

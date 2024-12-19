@@ -320,3 +320,14 @@ export const deleteStone = async stoneName => {
     console.log(err.message);
   }
 };
+
+export const deleteProduct = async productCode => {
+  await dbConnect();
+
+  try {
+    const result = await Product.deleteOne({ code: productCode });
+    return result;
+  } catch (err) {
+    console.log(err.message);
+  }
+};

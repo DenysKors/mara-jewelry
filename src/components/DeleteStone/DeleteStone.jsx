@@ -13,7 +13,10 @@ export default function DeleteStone() {
 
   useEffect(() => {
     async function fetchAllStones() {
-      const response = await fetch('/api/all-stones', { cache: 'no-store' });
+      const response = await fetch('/api/all-stones', {
+        cache: 'no-store',
+        next: { revalidate: 0 },
+      });
       const stonesData = await response.json();
       setStones(stonesData);
     }
