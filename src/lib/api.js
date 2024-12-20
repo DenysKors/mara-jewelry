@@ -341,3 +341,27 @@ export const deleteProduct = async productCode => {
     console.log(err.message);
   }
 };
+
+export const deleteArticle = async articleCode => {
+  await dbConnect();
+
+  try {
+    const article = await Article.findOne({ code: articleCode });
+
+    if (!article) return { deletedCount: 0 };
+
+    const { parts } = article;
+    const ImgIdArray = [];
+
+    parts.forEach(part => {
+      ImgIdArray.push(part.imageUrl);
+    });
+
+    await deleteImage(ImgIdArray);
+
+    const result = await Article.deleteOne({ code: articleCode });
+    return result;
+  } catch (err) {
+    console.log(err.message);
+  }
+};
