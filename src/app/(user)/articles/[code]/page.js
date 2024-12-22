@@ -1,3 +1,5 @@
+import { notFound } from 'next/navigation';
+
 import styles from './page.module.css';
 import LinkBack from '@/components/LinkBack/LinkBack';
 import CloudinaryImage from '@/components/CloudinaryImage/CloudinaryImage';
@@ -6,7 +8,14 @@ import { getArticleByCode } from '@/lib/api';
 
 export default async function ArticlePage({ params }) {
   const articleCode = Number(params.code);
-  const { code, title, parts, createdAt } = await getArticleByCode(articleCode);
+
+  const response = await getArticleByCode(articleCode);
+
+  if (!response) {
+    notFound();
+  }
+
+  const { code, title, parts, createdAt } = response;
 
   const articlePart = parts.map((part, idx) => {
     if (idx === 0) {

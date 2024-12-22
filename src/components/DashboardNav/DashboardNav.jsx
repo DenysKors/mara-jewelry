@@ -83,6 +83,25 @@ export default function DashboardNav() {
         </svg>
       </Link>
       <Link
+        title="Оновити товар"
+        className={`${
+          pathname === `/dashboard/update-product`
+            ? styles.navLink_active
+            : styles.navLink
+        }`}
+        href="/dashboard/update-product"
+      >
+        <svg
+          className={`${
+            pathname === `/dashboard/update-product`
+              ? styles.icon_active
+              : styles.icon
+          }`}
+        >
+          <use href="/icons.svg#icon-refresh"></use>
+        </svg>
+      </Link>
+      <Link
         title="Видалити"
         className={`${
           pathname === `/dashboard/delete`

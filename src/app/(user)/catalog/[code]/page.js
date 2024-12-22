@@ -1,13 +1,20 @@
-import styles from './page.module.css';
+import { notFound } from 'next/navigation';
 
-import { getProductByCode } from '@/lib/api';
+import styles from './page.module.css';
 import LinkBack from '@/components/LinkBack/LinkBack';
 import CloudinaryImage from '@/components/CloudinaryImage/CloudinaryImage';
 import ProductInteraction from '@/components/ProductInteraction/ProductInteraction';
 import ProductAccordion from '@/components/ProductAccordion/ProductAccordion';
+import { getProductByCode } from '@/lib/api';
 
 export default async function ProductPage({ params }) {
   const productCode = Number(params.code);
+  const response = await getProductByCode(productCode);
+
+  if (!response) {
+    notFound();
+  }
+
   const {
     code,
     title,
@@ -17,7 +24,7 @@ export default async function ProductPage({ params }) {
     wideImageUrl,
     price,
     sell_status,
-  } = await getProductByCode(productCode);
+  } = response;
 
   return (
     <main className={styles.container}>

@@ -19,7 +19,7 @@ export default function DeleteArticle() {
       method: 'DELETE',
       body: JSON.stringify(values.code),
     });
-    console.log(response);
+
     if (response.ok) {
       resetForm();
       toast.success('Стаття видалена');
