@@ -365,3 +365,17 @@ export const deleteArticle = async articleCode => {
     console.log(err.message);
   }
 };
+
+export const updateProduct = async productData => {
+  await dbConnect();
+
+  try {
+    const updatedProduct = await Product.updateOne(
+      { code: productData.code },
+      { price: productData.price, sell_status: productData.sell_status }
+    );
+    return updatedProduct;
+  } catch (err) {
+    console.log(err.message);
+  }
+};

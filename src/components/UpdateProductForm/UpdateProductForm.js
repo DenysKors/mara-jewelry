@@ -9,13 +9,14 @@ import styles from './UpdateProductForm.module.css';
 import { SELL_STATUS_ENUMS } from '@/constants/enums';
 
 const updateProdSchema = Yup.object().shape({
+  code: Yup.number(),
   price: Yup.number()
     .integer('Ціна повинна бути цілим числом')
     .moreThan(0, 'Ціна повинна бути більше 0')
     .required("Ціна обов'язкова"),
   sell_status: Yup.string()
     .oneOf(Object.values(SELL_STATUS_ENUMS))
-    .required("Статус обов'язкова"),
+    .required("Статус обов'язковий"),
 });
 
 export default function UpdateProductForm() {
@@ -31,6 +32,7 @@ export default function UpdateProductForm() {
       toast.success('Товар знайдено');
       const productData = await response.json();
       setProduct({
+        code,
         price: productData.price,
         sell_status: productData.sell_status,
       });
@@ -40,17 +42,17 @@ export default function UpdateProductForm() {
   };
 
   const handleSubmit = async (values, { resetForm }) => {
-    //    const response = await fetch('/api/delete-product', {
-    //      method: 'DELETE',
-    //      body: JSON.stringify(values.code),
-    //    });
-    //    console.log(response);
-    //    if (response.ok) {
-    //      resetForm();
-    //      toast.success('Товар видалений');
-    //    } else if (response.status === 404) {
-    //      toast.error('Товар не знайдено');
-    //    } else toast.error('Помилка при збереженні, повторіть знову');
+    const response = await fetch('/api/update-product', {
+      method: 'PATCH',
+      body: JSON.stringify(values),
+    });
+    console.log(response);
+    if (response.ok) {
+      resetForm();
+      setCode('');
+      setProduct(null);
+      toast.success('Товар оновлений');
+    } else toast.error('Помилка при збереженні, повторіть знову');
   };
 
   return (
@@ -63,7 +65,7 @@ export default function UpdateProductForm() {
           pattern="^[0-9]*$"
           maxLength={4}
           value={code}
-          onChange={evt => setCode(evt.target.value)}
+          onChange={evt => setCode(Number(evt.target.value))}
         />
         <button
           className={styles.searchBtn}
