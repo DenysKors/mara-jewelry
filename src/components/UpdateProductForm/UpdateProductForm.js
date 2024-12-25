@@ -24,7 +24,9 @@ export default function UpdateProductForm() {
   const [product, setProduct] = useState(null);
 
   const handleClick = async () => {
-    if (code === '') return toast.error('Вкажіть код товару');
+    if (code === '') {
+      return toast.error('Вкажіть код товару');
+    } else if (product) setProduct(null);
 
     const response = await fetch(`/api/search-product-code/${code}`);
 
@@ -37,6 +39,7 @@ export default function UpdateProductForm() {
         sell_status: productData.sell_status,
       });
     } else if (response.status === 404) {
+      setCode('');
       toast.error('Товар не знайдено');
     } else toast.error('Помилка при пошуку, повторіть знову');
   };
