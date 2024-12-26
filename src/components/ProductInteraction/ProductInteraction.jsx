@@ -12,26 +12,27 @@ export default function ProductInteraction({ sell_status, title }) {
 
   return (
     <>
-      <div className={styles.box}>
-        <button
-          className={styles.buttonBuy}
-          type="button"
-          aria-label="buy"
-          disabled={sell_status === SELL_STATUS_ENUMS.notAvailable}
-          onClick={() => setShowBasketModal(true)}
-        >
-          придбати прикрасу
-          <svg className={styles.buttonIcon}>
-            <use href="/icons.svg#icon-shopping-bag"></use>
-          </svg>
-        </button>
-        {showBasketModal && (
-          <Modal onClose={() => setShowBasketModal(false)}>
-            <h3>корзина товару</h3>
-            <span>{title}</span>
-          </Modal>
-        )}
-      </div>
+      {SELL_STATUS_ENUMS.notAvailable !== sell_status && (
+        <div className={styles.box}>
+          <button
+            className={styles.buttonBuy}
+            type="button"
+            aria-label="buy"
+            onClick={() => setShowBasketModal(true)}
+          >
+            придбати прикрасу
+            <svg className={styles.buttonIcon}>
+              <use href="/icons.svg#icon-shopping-bag"></use>
+            </svg>
+          </button>
+          {showBasketModal && (
+            <Modal onClose={() => setShowBasketModal(false)}>
+              <h3>корзина товару</h3>
+              <span>{title}</span>
+            </Modal>
+          )}
+        </div>
+      )}
       <button
         className={styles.buttonShare}
         type="button"
