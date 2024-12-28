@@ -19,8 +19,8 @@ const tenor_regular = localFont({
 
 export const metadata = {
   title: 'Mara Jewelry / Прикраси ручної роботи',
-  description:
-    'Perfect jewelry made of natural stones / Вишукані прикраси, зроблені з натурального каміння',
+  description: 'Вишукані прикраси, зроблені з натурального каміння',
+  keywords: ['Прикраси', 'Натуральне каміння', 'Mara Jewelry'],
   icons: {
     icon: [
       { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
@@ -31,6 +31,34 @@ export const metadata = {
     ],
   },
   manifest: '/site.webmanifest',
+  robots: {
+    index: false,
+    follow: true,
+    nocache: true,
+    googleBot: {
+      index: true,
+      follow: false,
+      noimageindex: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  openGraph: {
+    title: 'Mara Jewelry / Прикраси ручної роботи',
+    description: 'Вишукані прикраси, зроблені з натурального каміння',
+    url: 'https://mara-jewelry.vercel.app',
+    siteName: 'Mara Jewelry / Прикраси ручної роботи',
+    images: [
+      {
+        url: 'https://mara-jewelry.vercel.app/opengraph-image.jpg',
+        width: 124,
+        height: 124,
+      },
+    ],
+    locale: 'uk_UA',
+    type: 'website',
+  },
 };
 
 export default function RootLayout({ children }) {
