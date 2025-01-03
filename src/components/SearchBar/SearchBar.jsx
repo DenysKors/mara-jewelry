@@ -4,7 +4,7 @@ import { useRouter } from 'next/navigation';
 
 import styles from './SearchBar.module.css';
 
-import { pageData } from '@/app/pageData';
+import { userLinkMap } from '@/app/userLinkMap';
 
 export default function SearchBar() {
   const router = useRouter();
@@ -14,7 +14,7 @@ export default function SearchBar() {
     const userQuery = evt.currentTarget.elements.query.value.trim();
     if (userQuery === '' || userQuery.lenth > 30)
       return alert('Заповніть поле пошуку');
-    router.push(`${pageData[1].href}?search=${userQuery}`);
+    router.push(`${userLinkMap.catalog}?search=${userQuery}`);
     evt.currentTarget.elements.query.value = '';
   };
 

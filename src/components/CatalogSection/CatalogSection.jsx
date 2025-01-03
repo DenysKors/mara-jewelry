@@ -3,7 +3,7 @@ import styles from './CatalogSection.module.css';
 
 import LinksContainer from '../LinksContainer/LinksContainer';
 
-import { pageData } from '@/app/pageData';
+import { userLinkMap } from '@/app/userLinkMap';
 
 export default function CatalogSection() {
   return (
@@ -13,7 +13,7 @@ export default function CatalogSection() {
         <div className={styles.linkBoxTop}>
           <Link
             href={{
-              pathname: pageData[1].href,
+              pathname: userLinkMap.catalog,
             }}
             className={styles.link}
           >
@@ -28,7 +28,7 @@ export default function CatalogSection() {
       <div className={styles.linkBoxBottom}>
         <Link
           href={{
-            pathname: pageData[1].href,
+            pathname: userLinkMap.catalog,
           }}
           className={styles.link}
         >

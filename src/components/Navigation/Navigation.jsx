@@ -4,7 +4,7 @@ import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import styles from './Navigation.module.css';
 
-import { pageData } from '../../app/pageData';
+import { userLinkData } from '../../app/userLinkMap';
 
 export default function Navigation() {
   const pathname = usePathname();
@@ -12,7 +12,7 @@ export default function Navigation() {
   return (
     <nav>
       <ul className={styles.list}>
-        {pageData.map(({ title, href }) => (
+        {userLinkData.map(({ title, href }) => (
           <li key={title}>
             <Link
               className={`${

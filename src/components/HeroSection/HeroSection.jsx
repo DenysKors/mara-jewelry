@@ -3,7 +3,7 @@
 import styles from './HeroSection.module.css';
 import HeroCarousel from '../HeroCarousel/HeroCarousel';
 
-// import { pageData } from '@/app/pageData';
+// import { userLinkMap } from '@/app/pageData';
 
 export default function HeroSection() {
   return (
@@ -17,7 +17,7 @@ export default function HeroSection() {
       </p>
       {/* <Link
         href={{
-          pathname: pageData[1].href,
+          pathname: userLinkMap.catalog,
         }}
         className={styles.link}
       >

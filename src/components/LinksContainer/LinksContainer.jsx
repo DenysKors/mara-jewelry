@@ -7,14 +7,14 @@ import ChockerImage from '../ChockerImage/ChockerImage';
 import BraceletImage from '../BraceletImage/BraceletImage';
 import EarringsImage from '../EarringsImage/EarringsImage';
 
-import { pageData } from '@/app/pageData';
+import { userLinkMap } from '@/app/userLinkMap';
 
 export default function LinksContainer() {
   return (
     <div className={styles.container}>
       <Link
         href={{
-          pathname: pageData[1].href,
+          pathname: userLinkMap.catalog,
           query: { product: 'chaplet' },
         }}
         className={`${styles.chapletLink} ${styles.overlay}`}
@@ -46,7 +46,7 @@ export default function LinksContainer() {
       </Link>
       <Link
         href={{
-          pathname: pageData[1].href,
+          pathname: userLinkMap.catalog,
           query: { product: 'necklace' },
         }}
         className={`${styles.necklaceLink} ${styles.overlay}`}
@@ -78,7 +78,7 @@ export default function LinksContainer() {
       </Link>
       <Link
         href={{
-          pathname: pageData[1].href,
+          pathname: userLinkMap.catalog,
           query: { product: 'chocker' },
         }}
         className={`${styles.chockerLink} ${styles.overlay}`}
@@ -110,7 +110,7 @@ export default function LinksContainer() {
       </Link>
       <Link
         href={{
-          pathname: pageData[1].href,
+          pathname: userLinkMap.catalog,
           query: { product: 'bracelet' },
         }}
         className={`${styles.braceletLink} ${styles.overlay}`}
@@ -142,7 +142,7 @@ export default function LinksContainer() {
       </Link>
       <Link
         href={{
-          pathname: pageData[1].href,
+          pathname: userLinkMap.catalog,
           query: { product: 'earrings' },
         }}
         className={`${styles.earringsLink} ${styles.overlay}`}
