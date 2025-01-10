@@ -9,9 +9,9 @@ import { getProductByCode } from '@/lib/api';
 
 export default async function ProductPage({ params }) {
   const productCode = Number(params.code);
-  const response = await getProductByCode(productCode);
+  const product = await getProductByCode(productCode);
 
-  if (!response) {
+  if (!product) {
     notFound();
   }
 
@@ -24,7 +24,7 @@ export default async function ProductPage({ params }) {
     wideImageUrl,
     price,
     sell_status,
-  } = response;
+  } = product;
 
   return (
     <main className={styles.container}>
@@ -79,7 +79,13 @@ export default async function ProductPage({ params }) {
           <p className={styles.subTitle}>{`Код товару: ${code}`}</p>
           <p className={styles.subTitle}>{sell_status}</p>
           <span className={styles.price}>{`${price} грн.`}</span>
-          <ProductInteraction sell_status={sell_status} title={title} />
+          <ProductInteraction
+            sell_status={sell_status}
+            title={title}
+            price={price}
+            imageUrl={imagesUrl[0]}
+            code={code}
+          />
         </div>
       </div>
       <ProductAccordion />

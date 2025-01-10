@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import { Toaster } from 'react-hot-toast';
 
 import styles from './page.module.css';
 import Logo from '../../../assets/images/Logo.png';
@@ -42,17 +41,6 @@ export default function DashboardLayout({ children }) {
         </span>
         <span className={styles.dev}>Created by DenExplorer</span>
       </footer>
-      <Toaster
-        position="top-center"
-        reverseOrder={false}
-        toastOptions={{
-          duration: 4000,
-          style: {
-            background: '#333',
-            color: '#fff',
-          },
-        }}
-      />
     </>
   );
 }

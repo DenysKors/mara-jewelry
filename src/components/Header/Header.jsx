@@ -4,7 +4,7 @@ import Navigation from '../Navigation/Navigation';
 import styles from './Header.module.css';
 
 import Logo from '../../assets/images/Logo.png';
-
+import BasketIcon from '../BasketIcon/BasketIcon';
 import Link from 'next/link';
 
 export default function Header() {
@@ -18,9 +18,8 @@ export default function Header() {
           alt="Mara Jewelry Logo"
           priority
         />
-        <>
-          <Link href="/dashboard">Dashboard</Link>
-        </>
+        <BasketIcon />
+        <Link href="/dashboard">Dashboard</Link>
       </div>
       <Navigation />
     </header>

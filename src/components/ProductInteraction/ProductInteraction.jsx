@@ -1,14 +1,33 @@
 'use client';
 
+import toast from 'react-hot-toast';
 import { useState } from 'react';
 
 import styles from './ProductInteraction.module.css';
 import Modal from '../Modal/Modal';
+import ProductBasket from '../ProductBasket/ProductBasket';
+import { useBasketStore } from '@/store/basketStore';
 import { SELL_STATUS_ENUMS } from '@/constants/enums';
 
-export default function ProductInteraction({ sell_status, title }) {
+export default function ProductInteraction({ sell_status, ...product }) {
   const [showBasketModal, setShowBasketModal] = useState(false);
   const [showShareModal, setShowShareModal] = useState(false);
+
+  const products = useBasketStore(state => state.products);
+  const addProduct = useBasketStore(state => state.addProduct);
+
+  const handleBasketClick = () => {
+    const searchedProduct = products.find(item => item.code === product.code);
+    if (products.length === 0) {
+      addProduct(product);
+      setShowBasketModal(true);
+    } else if (!searchedProduct) {
+      addProduct(product);
+      setShowBasketModal(true);
+    } else {
+      return toast.error('Товар вже у кошику');
+    }
+  };
 
   return (
     <>
@@ -18,7 +37,7 @@ export default function ProductInteraction({ sell_status, title }) {
             className={styles.buttonBuy}
             type="button"
             aria-label="buy"
-            onClick={() => setShowBasketModal(true)}
+            onClick={handleBasketClick}
           >
             придбати прикрасу
             <svg className={styles.buttonIcon}>
@@ -27,8 +46,7 @@ export default function ProductInteraction({ sell_status, title }) {
           </button>
           {showBasketModal && (
             <Modal onClose={() => setShowBasketModal(false)}>
-              <h3>корзина товару</h3>
-              <span>{title}</span>
+              <ProductBasket />
             </Modal>
           )}
         </div>

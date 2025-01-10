@@ -37,6 +37,7 @@
   margin-left: 8px;
   width: 18px;
   height: 18px;
+  fill: var(--color-background);
 }
 
 .buttonShare {

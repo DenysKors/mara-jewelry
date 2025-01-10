@@ -2,6 +2,8 @@ import localFont from 'next/font/local';
 
 import './globals.css';
 
+import { Toaster } from 'react-hot-toast';
+
 const nunito_regular = localFont({
   src: '../assets/fonts/Nunito-Regular.ttf',
   variable: '--font-nunito-regular',
@@ -69,6 +71,17 @@ export default function RootLayout({ children }) {
       >
         {children}
         <div id="modal-root"></div>
+        <Toaster
+          position="top-center"
+          reverseOrder={false}
+          toastOptions={{
+            duration: 4000,
+            style: {
+              background: '#333',
+              color: '#fff',
+            },
+          }}
+        />
       </body>
     </html>
   );
