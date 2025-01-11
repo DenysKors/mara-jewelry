@@ -12,7 +12,9 @@ export default function BasketIcon() {
   const [showBasketModal, setShowBasketModal] = useState(false);
 
   const products = useBasketStore(state => state.products);
+  const totalPrice = useBasketStore(state => state.totalPrice);
   console.log(products);
+  console.log(totalPrice);
   return (
     <>
       <button
