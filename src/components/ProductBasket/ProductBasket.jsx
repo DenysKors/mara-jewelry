@@ -84,7 +84,7 @@ export default function ProductBasket({ onClose }) {
                 Контактні дані для замовлення
                 <div style={{ margin: '10px 0 10px 0' }}>
                   <label className={styles.label}>
-                    Ім'я:
+                    Ім&apos;я:
                     <input type="text" name="name" required />
                   </label>
                 </div>
