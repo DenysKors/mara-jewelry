@@ -27,7 +27,7 @@ export default function SearchBar() {
       </button>
       <input
         className={styles.input}
-        type="text"
+        type="search"
         name="query"
         placeholder="Пошук..."
         maxLength={30}

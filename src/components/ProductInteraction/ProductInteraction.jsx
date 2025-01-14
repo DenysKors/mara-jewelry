@@ -46,7 +46,7 @@ export default function ProductInteraction({ sell_status, ...product }) {
           </button>
           {showBasketModal && (
             <Modal onClose={() => setShowBasketModal(false)}>
-              <ProductBasket />
+              <ProductBasket onClose={setShowBasketModal} />
             </Modal>
           )}
         </div>

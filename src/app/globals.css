@@ -1,6 +1,10 @@
 @import url('./styles/normalize.css');
 @import url('./styles/variables.css');
 
+html {
+  scrollbar-gutter: stable;
+}
+
 body {
   font-family: var(--font-tenor-regular);
   background-color: var(--color-background, white);

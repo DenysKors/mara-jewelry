@@ -1,15 +1,39 @@
 'use client';
 
 import { CldImage } from 'next-cloudinary';
+import toast from 'react-hot-toast';
 
 import styles from './ProductBasket.module.css';
 
 import { useBasketStore } from '@/store/basketStore';
 
-export default function ProductBasket() {
+export default function ProductBasket({ onClose }) {
   const products = useBasketStore(state => state.products);
   const totalPrice = useBasketStore(state => state.totalPrice);
   const removeProduct = useBasketStore(state => state.removeProduct);
+  const reset = useBasketStore(state => state.reset);
+
+  const handleAccept = evt => {
+    evt.preventDefault();
+    const data = new FormData(evt.currentTarget);
+
+    const userOrder = {
+      name: data.get('name'),
+      phone: data.get('phone'),
+      comment: data.get('comment'),
+      products,
+      totalPrice,
+    };
+    //Need to bind telegram bot in product, so you can receive orders and check it immediately
+    alert(
+      `Замовлення: ${JSON.stringify(
+        userOrder
+      )}. TODO:підключити телеграм бота для збору заказів`
+    );
+    reset();
+    onClose(false);
+    toast.success('Замолення відправлено в обробку. Дякуємо!');
+  };
 
   return (
     <>
@@ -38,7 +62,7 @@ export default function ProductBasket() {
                 </div>
                 <div className={styles.priceBox}>
                   <button
-                    className={styles.btn}
+                    className={styles.btnRem}
                     type="button"
                     aria-label="remove"
                     onClick={() => removeProduct(product)}
@@ -52,6 +76,41 @@ export default function ProductBasket() {
           })}
         {products.length > 0 && (
           <p className={styles.totalPrice}>{`всього: ${totalPrice} грн.`}</p>
+        )}
+        {products.length > 0 && (
+          <div>
+            <form onSubmit={handleAccept}>
+              <fieldset className={styles.label}>
+                Контактні дані для замовлення
+                <div style={{ margin: '10px 0 10px 0' }}>
+                  <label className={styles.label}>
+                    Ім'я:
+                    <input type="text" name="name" required />
+                  </label>
+                </div>
+                <div style={{ margin: '10px 0 10px 0' }}>
+                  <label className={styles.label}>
+                    Номер телефону:
+                    <input type="tel" name="phone" required />
+                  </label>
+                </div>
+                <div>
+                  <label className={styles.label}>
+                    Коментар:
+                    <textarea
+                      name="comment"
+                      rows="3"
+                      maxLength={100}
+                      style={{ resize: 'none' }}
+                    ></textarea>
+                  </label>
+                </div>
+              </fieldset>
+              <button className={styles.btnAcc} type="submit">
+                Підтвердити замовлення
+              </button>
+            </form>
+          </div>
         )}
       </div>
     </>

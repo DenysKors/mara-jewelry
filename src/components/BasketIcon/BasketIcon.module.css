@@ -1,5 +1,37 @@
-.buttonIcon {
-  width: 18px;
-  height: 18px;
+.btn {
+  justify-self: start;
+  position: relative;
+  background-color: transparent;
+}
+
+.span {
+  position: absolute;
+  top: -15%;
+  left: 100%;
+  color: var(--color-error);
+}
+
+.btnIcon {
+  width: 20px;
+  height: 20px;
+  fill: var(--color-text);
+}
+
+.btnIconActive {
+  width: 20px;
+  height: 20px;
   fill: var(--color-accent);
+}
+
+@media screen and (min-width: 768px) {
+  .btnIcon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .btnIconActive {
+    width: 24px;
+    height: 24px;
+    fill: var(--color-accent);
+  }
 }
