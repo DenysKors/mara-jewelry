@@ -10,7 +10,7 @@ import Modal from '../Modal/Modal';
 import { useBasketStore } from '@/store/basketStore';
 import { SELL_STATUS_ENUMS } from '@/constants/enums';
 
-const VERCEL_URL = process.env.VERCEL_URL;
+const WEBSITE_URL = process.env.NEXT_PUBLIC_WEBSITE_URL;
 
 const ProductBasket = dynamic(() => import('../ProductBasket/ProductBasket'), {
   ssr: false,
@@ -24,7 +24,7 @@ export default function ProductInteraction({ sell_status, ...product }) {
   const addProduct = useBasketStore(state => state.addProduct);
 
   const pathname = usePathname();
-  console.log(pathname);
+  console.log(WEBSITE_URL);
 
   const handleBasketClick = () => {
     const searchedProduct = products.find(item => item.code === product.code);
@@ -77,7 +77,7 @@ export default function ProductInteraction({ sell_status, ...product }) {
           <div className={styles.container}>
             <a
               className={styles.link}
-              href={`https://www.instagram.com/?url=https://${VERCEL_URL}${pathname}`}
+              href={`https://www.instagram.com/?url=https://${WEBSITE_URL}${pathname}`}
               target="_blank"
               rel="noreferrer noopener"
               aria-label="share on instagram"
@@ -88,7 +88,7 @@ export default function ProductInteraction({ sell_status, ...product }) {
             </a>
             <a
               className={styles.link}
-              href={`https://t.me/share/url?url=https://${VERCEL_URL}${pathname}`}
+              href={`https://t.me/share/url?url=https://${WEBSITE_URL}${pathname}`}
               target="_blank"
               rel="noreferrer noopener"
               aria-label="share on telegram"
@@ -99,7 +99,7 @@ export default function ProductInteraction({ sell_status, ...product }) {
             </a>
             <a
               className={styles.link}
-              href={`https://www.facebook.com/sharer.php?u=https://${VERCEL_URL}${pathname}`}
+              href={`https://www.facebook.com/sharer.php?u=https://${WEBSITE_URL}${pathname}`}
               target="_blank"
               rel="noreferrer noopener"
               aria-label="share on facebook"
