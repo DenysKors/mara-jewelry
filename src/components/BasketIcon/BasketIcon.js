@@ -1,12 +1,16 @@
 'use client';
 
 import { useState } from 'react';
+import dynamic from 'next/dynamic';
 
-import ProductBasket from '../ProductBasket/ProductBasket';
 import Modal from '../Modal/Modal';
 import styles from './BasketIcon.module.css';
 
 import { useBasketStore } from '@/store/basketStore';
+
+const ProductBasket = dynamic(() => import('../ProductBasket/ProductBasket'), {
+  ssr: false,
+});
 
 export default function BasketIcon() {
   const [showBasketModal, setShowBasketModal] = useState(false);

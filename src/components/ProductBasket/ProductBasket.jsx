@@ -25,7 +25,7 @@ export default function ProductBasket({ onClose }) {
       totalPrice,
     };
     //Need to bind telegram bot in product, so you can receive orders and check it immediately
-    alert(
+    console.table(
       `Замовлення: ${JSON.stringify(
         userOrder
       )}. TODO:підключити телеграм бота для збору заказів`

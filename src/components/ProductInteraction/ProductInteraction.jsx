@@ -2,12 +2,19 @@
 
 import toast from 'react-hot-toast';
 import { useState } from 'react';
+import dynamic from 'next/dynamic';
+import { usePathname } from 'next/navigation';
 
 import styles from './ProductInteraction.module.css';
 import Modal from '../Modal/Modal';
-import ProductBasket from '../ProductBasket/ProductBasket';
 import { useBasketStore } from '@/store/basketStore';
 import { SELL_STATUS_ENUMS } from '@/constants/enums';
+
+const VERCEL_URL = process.env.VERCEL_URL;
+
+const ProductBasket = dynamic(() => import('../ProductBasket/ProductBasket'), {
+  ssr: false,
+});
 
 export default function ProductInteraction({ sell_status, ...product }) {
   const [showBasketModal, setShowBasketModal] = useState(false);
@@ -15,6 +22,9 @@ export default function ProductInteraction({ sell_status, ...product }) {
 
   const products = useBasketStore(state => state.products);
   const addProduct = useBasketStore(state => state.addProduct);
+
+  const pathname = usePathname();
+  console.log(pathname);
 
   const handleBasketClick = () => {
     const searchedProduct = products.find(item => item.code === product.code);
@@ -67,7 +77,7 @@ export default function ProductInteraction({ sell_status, ...product }) {
           <div className={styles.container}>
             <a
               className={styles.link}
-              href="https://www.instagram.com/?url=https://mara-jewelry.vercel.app/"
+              href={`https://www.instagram.com/?url=https://${VERCEL_URL}${pathname}`}
               target="_blank"
               rel="noreferrer noopener"
               aria-label="share on instagram"
@@ -78,7 +88,7 @@ export default function ProductInteraction({ sell_status, ...product }) {
             </a>
             <a
               className={styles.link}
-              href="https://t.me/share/url?url=https://mara-jewelry.vercel.app/"
+              href={`https://t.me/share/url?url=https://${VERCEL_URL}${pathname}`}
               target="_blank"
               rel="noreferrer noopener"
               aria-label="share on telegram"
@@ -89,7 +99,7 @@ export default function ProductInteraction({ sell_status, ...product }) {
             </a>
             <a
               className={styles.link}
-              href="https://www.facebook.com/sharer.php?u=https://mara-jewelry.vercel.app/"
+              href={`https://www.facebook.com/sharer.php?u=https://${VERCEL_URL}${pathname}`}
               target="_blank"
               rel="noreferrer noopener"
               aria-label="share on facebook"
