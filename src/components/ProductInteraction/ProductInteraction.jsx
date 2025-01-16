@@ -7,14 +7,11 @@ import { usePathname } from 'next/navigation';
 
 import styles from './ProductInteraction.module.css';
 import Modal from '../Modal/Modal';
+import ProductBasket from '../ProductBasket/ProductBasket';
 import { useBasketStore } from '@/store/basketStore';
 import { SELL_STATUS_ENUMS } from '@/constants/enums';
 
 const WEBSITE_URL = process.env.NEXT_PUBLIC_WEBSITE_URL;
-
-const ProductBasket = dynamic(() => import('../ProductBasket/ProductBasket'), {
-  ssr: false,
-});
 
 export default function ProductInteraction({ sell_status, ...product }) {
   const [showBasketModal, setShowBasketModal] = useState(false);

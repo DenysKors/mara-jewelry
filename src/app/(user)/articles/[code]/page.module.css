@@ -37,6 +37,7 @@
 
 .thumbSecond {
   flex-shrink: 0;
+  align-self: flex-end;
   width: 335px;
   height: 380px;
   border-bottom-left-radius: 100px;

@@ -7,7 +7,7 @@ import ProductsSection from '@/components/ProductsSection/ProductsSection';
 import { getAllStones } from '@/lib/api';
 
 export const metadata = {
-  title: 'Прикраси ручної роботи з натурального каміння (каталог)',
+  title: 'Прикраси ручної роботи з натуральних каменів (каталог)',
 };
 
 export default async function CatalogPage() {

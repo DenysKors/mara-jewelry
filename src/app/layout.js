@@ -48,7 +48,7 @@ export const metadata = {
   },
   openGraph: {
     title: 'Mara Jewelry / Прикраси ручної роботи',
-    description: 'Вишукані прикраси, зроблені з натурального каміння',
+    description: 'Вишукані прикраси, зроблені з натуральних каменів',
     url: 'https://mara-jewelry.vercel.app',
     siteName: 'Mara Jewelry / Прикраси ручної роботи',
     images: [

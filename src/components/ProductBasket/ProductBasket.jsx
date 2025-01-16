@@ -85,13 +85,13 @@ export default function ProductBasket({ onClose }) {
                 <div style={{ margin: '10px 0 10px 0' }}>
                   <label className={styles.label}>
                     Ім&apos;я:
-                    <input type="text" name="name" required />
+                    <input type="text" name="name" required maxLength={20} />
                   </label>
                 </div>
                 <div style={{ margin: '10px 0 10px 0' }}>
                   <label className={styles.label}>
                     Номер телефону:
-                    <input type="tel" name="phone" required />
+                    <input type="tel" name="phone" required maxLength={20} />
                   </label>
                 </div>
                 <div>

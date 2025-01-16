@@ -32,31 +32,34 @@ export default function Pagination({ totalAmount, paginationLimit, ...rest }) {
 
   return (
     <div className={styles.wrapper} {...rest}>
-      <button
-        className={styles.button}
-        type="button"
-        aria-label="prev page"
-        disabled={currentPage === 1}
-        onClick={handlePrevPageChange}
-      >
-        <svg className={`${styles.icon} ${styles.iconRotate}`}>
-          <use href="/icons.svg#icon-Vector"></use>
-        </svg>
-        назад
-      </button>
+      {currentPage !== 1 && (
+        <button
+          className={styles.button}
+          type="button"
+          aria-label="prev page"
+          onClick={handlePrevPageChange}
+        >
+          <svg className={`${styles.icon} ${styles.iconRotate}`}>
+            <use href="/icons.svg#icon-Vector"></use>
+          </svg>
+          назад
+        </button>
+      )}
       <span className={styles.span}>{`${currentPage} / ${totalPages}`}</span>
-      <button
-        className={styles.button}
-        type="button"
-        aria-label="next page"
-        disabled={currentPage === totalPages}
-        onClick={handleNextPageChange}
-      >
-        далі
-        <svg className={styles.icon}>
-          <use href="/icons.svg#icon-Vector"></use>
-        </svg>
-      </button>
+      {currentPage !== totalPages && (
+        <button
+          className={styles.button}
+          type="button"
+          aria-label="next page"
+          disabled={currentPage === totalPages}
+          onClick={handleNextPageChange}
+        >
+          далі
+          <svg className={styles.icon}>
+            <use href="/icons.svg#icon-Vector"></use>
+          </svg>
+        </button>
+      )}
     </div>
   );
 }
