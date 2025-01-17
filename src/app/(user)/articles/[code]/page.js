@@ -6,16 +6,28 @@ import CloudinaryImage from '@/components/CloudinaryImage/CloudinaryImage';
 
 import { getArticleByCode } from '@/lib/api';
 
-export default async function ArticlePage({ params }) {
+export async function generateMetadata({ params }) {
   const articleCode = Number(params.code);
+  const article = await getArticleByCode(articleCode);
 
-  const response = await getArticleByCode(articleCode);
-
-  if (!response) {
+  if (!article) {
     notFound();
   }
 
-  const { code, title, parts, createdAt } = response;
+  return {
+    title: `${article.title} / MaraJewelry`,
+  };
+}
+
+export default async function ArticlePage({ params }) {
+  const articleCode = Number(params.code);
+  const article = await getArticleByCode(articleCode);
+
+  if (!article) {
+    notFound();
+  }
+
+  const { code, title, parts, createdAt } = article;
 
   const articlePart = parts.map((part, idx) => {
     if (idx === 0) {

@@ -7,6 +7,19 @@ import ProductInteraction from '@/components/ProductInteraction/ProductInteracti
 import ProductAccordion from '@/components/ProductAccordion/ProductAccordion';
 import { getProductByCode } from '@/lib/api';
 
+export async function generateMetadata({ params }) {
+  const productCode = Number(params.code);
+  const product = await getProductByCode(productCode);
+
+  if (!product) {
+    notFound();
+  }
+
+  return {
+    title: `${product.title} / MaraJewelry`,
+  };
+}
+
 export default async function ProductPage({ params }) {
   const productCode = Number(params.code);
   const product = await getProductByCode(productCode);
