@@ -3,6 +3,7 @@
 import Link from 'next/link';
 
 import { useSearchParams } from 'next/navigation';
+import { Suspense } from 'react';
 
 import styles from './error.module.css';
 
@@ -15,6 +16,14 @@ const errorMap = {
 };
 
 export default function AuthErrorPage() {
+  return (
+    <Suspense>
+      <AuthError />
+    </Suspense>
+  );
+}
+
+function AuthError() {
   const search = useSearchParams();
   const error = search.get('error');
 
