@@ -14,7 +14,9 @@
 }
 
 .main {
-  height: 250px;
+  margin: 0 auto;
+  padding: 65px 20px 65px 20px;
+  max-width: 1440px;
 }
 
 .footer {
@@ -54,6 +56,10 @@
     height: 87px;
   }
 
+  .main {
+    padding: 65px 100px 65px 100px;
+  }
+
   .footer {
     padding: 30px;
   }
@@ -62,6 +68,10 @@
 @media screen and (min-width: 1440px) {
   .header {
     padding: 8px 200px 40px 200px;
+  }
+
+  .main {
+    padding: 80px 200px 80px 200px;
   }
 
   .footer {

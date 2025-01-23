@@ -12,6 +12,7 @@ export default function LoginLayout({ children }) {
           height={64}
           src={Logo}
           className={styles.image}
+          priority
           alt="Mara Jewelry Logo"
         />
       </header>

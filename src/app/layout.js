@@ -20,7 +20,7 @@ const tenor_regular = localFont({
 });
 
 export const metadata = {
-  title: 'Mara Jewelry / Прикраси ручної роботи',
+  title: 'MaraJewelry / Прикраси ручної роботи',
   description: 'Вишукані прикраси, зроблені з натурального каміння',
   keywords: ['Прикраси', 'Натуральне каміння', 'Mara Jewelry'],
   icons: {

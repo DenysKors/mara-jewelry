@@ -4,6 +4,7 @@ import styles from './page.module.css';
 import Logo from '../../../assets/images/Logo.png';
 
 import DashboardNav from '@/components/DashboardNav/DashboardNav';
+import { signOut } from '@/auth';
 
 export default function DashboardLayout({ children }) {
   return (
@@ -28,6 +29,14 @@ export default function DashboardLayout({ children }) {
             <use href="/icons.svg#icon-sign-out"></use>
           </svg>
         </button>
+        <form
+          action={async () => {
+            'use server';
+            await signOut({ redirectTo: '/' });
+          }}
+        >
+          <button type="submit">Sign Out</button>
+        </form>
       </header>
       <main className={styles.main}>
         <aside className={styles.sidebar}>
