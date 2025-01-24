@@ -19,23 +19,22 @@ export default function DashboardLayout({ children }) {
           />
           <strong className={styles.title}>Панель адміністратора</strong>
         </div>
-        <button
-          type="button"
-          aria-label="sing-out"
-          title="Вийти"
-          style={{ backgroundColor: 'inherit' }}
-        >
-          <svg className={styles.icon}>
-            <use href="/icons.svg#icon-sign-out"></use>
-          </svg>
-        </button>
         <form
           action={async () => {
             'use server';
             await signOut({ redirectTo: '/' });
           }}
         >
-          <button type="submit">Вийти</button>
+          <button
+            type="submit"
+            aria-label="sing-out"
+            title="Вийти"
+            style={{ backgroundColor: 'inherit' }}
+          >
+            <svg className={styles.icon}>
+              <use href="/icons.svg#icon-sign-out"></use>
+            </svg>
+          </button>
         </form>
       </header>
       <main className={styles.main}>

@@ -11,7 +11,14 @@ export default function LoginPage() {
           await signIn('google');
         }}
       >
-        <button type="submit">Signin with Google</button>
+        <button
+          className={styles.button}
+          type="submit"
+          aria-label="sing-in"
+          title="Увійти"
+        >
+          Увійти з Google
+        </button>
       </form>
     </main>
   );
