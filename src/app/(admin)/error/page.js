@@ -10,7 +10,7 @@ import styles from './error.module.css';
 const errorMap = {
   ['AccessDenied']: (
     <p>
-      Виникла проблема при автентифікації. <strong>Доступ заборонено.</strong>
+      Виникла проблема при аутентифікації. <strong>Доступ заборонено.</strong>
     </p>
   ),
 };

@@ -35,7 +35,7 @@ export default function DashboardLayout({ children }) {
             await signOut({ redirectTo: '/' });
           }}
         >
-          <button type="submit">Sign Out</button>
+          <button type="submit">Вийти</button>
         </form>
       </header>
       <main className={styles.main}>
