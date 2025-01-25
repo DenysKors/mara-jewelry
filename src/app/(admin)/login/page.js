@@ -1,4 +1,5 @@
 import { signIn } from '@/auth';
+import { redirect } from 'next/navigation';
 
 import styles from './page.module.css';
 
@@ -8,7 +9,14 @@ export default function LoginPage() {
       <form
         action={async () => {
           'use server';
-          await signIn('google');
+          try {
+            await signIn('google');
+          } catch (error) {
+            if (error) {
+              return redirect(`/error?error=AccessDenied`);
+            }
+            throw error;
+          }
         }}
       >
         <button

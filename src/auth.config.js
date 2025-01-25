@@ -27,9 +27,9 @@ export const authConfig = {
       }
       return true;
     },
-    signIn({ profile }) {
-      if (profile) return profile?.email === adminGoogleCredentials.email;
-    },
+    // signIn({ profile }) {
+    //   if (profile) return profile?.email === adminGoogleCredentials.email;
+    // },
   },
   providers: [],
 };
