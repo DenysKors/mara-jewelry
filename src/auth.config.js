@@ -1,5 +1,3 @@
-import { adminGoogleCredentials } from './constants/adminAccess';
-
 export const authConfig = {
   pages: {
     signIn: '/login',
@@ -7,29 +5,17 @@ export const authConfig = {
   },
   callbacks: {
     authorized({ auth, request: { nextUrl } }) {
-      const isLoggedIn = auth?.user;
+      const isLoggedIn = !!auth?.user;
       const isOnDashboard = nextUrl.pathname.startsWith('/dashboard');
 
       if (isOnDashboard) {
-        if (
-          isLoggedIn &&
-          isLoggedIn?.name === adminGoogleCredentials.name &&
-          isLoggedIn?.email === adminGoogleCredentials.email
-        )
-          return true;
+        if (isLoggedIn) return true;
         return false;
-      } else if (
-        isLoggedIn &&
-        isLoggedIn?.name === adminGoogleCredentials.name &&
-        isLoggedIn?.email === adminGoogleCredentials.email
-      ) {
+      } else if (isLoggedIn) {
         return Response.redirect(new URL('/dashboard', nextUrl));
       }
       return true;
     },
-    // signIn({ profile }) {
-    //   if (profile) return profile?.email === adminGoogleCredentials.email;
-    // },
   },
   providers: [],
 };

@@ -17,7 +17,7 @@
 }
 
 .input {
-  width: 95px;
+  width: 100%;
   font-family: var(--font-nunito-regular);
   font-size: var(--font-size-body);
   background-color: transparent;
@@ -42,9 +42,9 @@
     gap: 16px;
   }
 
-  .input {
+  /* .input {
     width: 160px;
-  }
+  } */
 
   .svg {
     width: 24px;
@@ -53,7 +53,7 @@
 }
 
 @media screen and (min-width: 1440px) {
-  .input {
+  /* .input {
     width: 300px;
-  }
+  } */
 }

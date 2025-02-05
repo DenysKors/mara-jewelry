@@ -1,11 +1,5 @@
 import mongoose from 'mongoose';
 
-const MONGODB_URI = process.env.MONGODB_URL;
-
-if (!MONGODB_URI) {
-  throw new Error('Define the MONGODB_URI environmental variable');
-}
-
 let cached = global.mongoose;
 
 if (!cached) {
@@ -13,6 +7,12 @@ if (!cached) {
 }
 
 async function dbConnect() {
+  const MONGODB_URI = process.env.MONGODB_URL;
+
+  if (!MONGODB_URI) {
+    throw new Error('Define the MONGODB_URI environmental variable');
+  }
+
   if (cached.conn) {
     return cached.conn;
   }
@@ -23,10 +23,17 @@ async function dbConnect() {
     };
 
     cached.promise = mongoose.connect(MONGODB_URI, opts).then(mongoose => {
+      console.log('Db connection successful');
       return mongoose;
     });
   }
-  cached.conn = await cached.promise;
+  try {
+    cached.conn = await cached.promise;
+  } catch (e) {
+    cached.promise = null;
+    throw e;
+  }
+
   return cached.conn;
 }
 

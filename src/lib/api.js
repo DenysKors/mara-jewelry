@@ -4,6 +4,7 @@ import dbConnect from './connectDB';
 import Stone from '@/modelsDB/stoneModel';
 import Product from '@/modelsDB/productModel';
 import Article from '@/modelsDB/articleModel';
+import User from '../modelsDB/userModel';
 import { uploadImage } from './cloudinaryUpload';
 import { deleteImage } from './cloudinaryDelete';
 
@@ -375,6 +376,41 @@ export const updateProduct = async productData => {
       { price: productData.price, sell_status: productData.sell_status }
     );
     return updatedProduct;
+  } catch (err) {
+    console.log(err.message);
+  }
+};
+
+// export const createUser = async (email, password, role = 'admin') => {
+//   await dbConnect();
+
+//   try {
+//     const existedUser = await User.findOne({ email });
+
+//     if (existedUser) {
+//       return null;
+//     }
+
+//     const createdUser = await User.create({
+//       email,
+//       password,
+//       role,
+//     });
+
+//     createdUser.password = undefined;
+
+//     return createdUser;
+//   } catch (err) {
+//     console.log(err.message);
+//   }
+// };
+
+export const getUser = async email => {
+  await dbConnect();
+
+  try {
+    const user = await User.findOne({ email }).select('+password');
+    return user;
   } catch (err) {
     console.log(err.message);
   }
