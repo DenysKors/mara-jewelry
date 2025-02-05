@@ -7,6 +7,12 @@ import styles from './Modal.module.css';
 
 export default function Modal({ onClose, children }) {
   useEffect(() => {
+    const handleCloseEsc = evt => {
+      if (evt.code === 'Escape') {
+        onClose();
+      }
+    };
+
     window.addEventListener('keydown', handleCloseEsc);
     document.body.style.overflow = 'hidden';
 
@@ -14,13 +20,7 @@ export default function Modal({ onClose, children }) {
       window.removeEventListener('keydown', handleCloseEsc);
       document.body.style.overflow = 'scroll';
     };
-  }, [handleCloseEsc]);
-
-  function handleCloseEsc(evt) {
-    if (evt.code === 'Escape') {
-      onClose();
-    }
-  }
+  }, []);
 
   const backdropClick = evt => {
     if (evt.currentTarget === evt.target) {

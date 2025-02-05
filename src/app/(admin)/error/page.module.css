@@ -1,10 +1,17 @@
 .box {
   height: 100vh;
+  max-width: 1440px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 2rem;
+
+  margin: 0 auto;
+  padding: 65px 20px 65px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .link {
@@ -22,4 +29,16 @@
 .link:focus {
   color: var(--color-accent);
   border-color: var(--color-accent);
+}
+
+@media screen and (min-width: 768px) {
+  .main {
+    padding: 65px 100px 65px 100px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .main {
+    padding: 80px 200px 80px 200px;
+  }
 }

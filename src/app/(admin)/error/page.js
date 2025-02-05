@@ -5,11 +5,11 @@ import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 import { Suspense } from 'react';
 
-import styles from './error.module.css';
+import styles from './page.module.css';
 
 const errorMap = {
   ['AccessDenied']: (
-    <p>
+    <p style={{ textAlign: 'center' }}>
       Виникла проблема при аутентифікації. <strong>Доступ заборонено.</strong>
     </p>
   ),

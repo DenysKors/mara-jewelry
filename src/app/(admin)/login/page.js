@@ -13,6 +13,7 @@ export default async function LoginPage() {
   return (
     <main className={styles.main}>
       <form
+        className={styles.form}
         action={async formData => {
           'use server';
           try {
@@ -24,14 +25,14 @@ export default async function LoginPage() {
           }
         }}
       >
-        <label htmlFor="email">
+        <label className={styles.label} htmlFor="email">
           Email
-          <input name="email" id="email" />
         </label>
-        <label htmlFor="password">
+        <input className={styles.input} name="email" id="email" />
+        <label className={styles.label} htmlFor="password">
           Password
-          <input name="password" id="password" />
         </label>
+        <input className={styles.input} name="password" id="password" />
         <button
           className={styles.button}
           type="submit"
