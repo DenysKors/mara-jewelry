@@ -30,6 +30,21 @@
   margin-bottom: 16px;
 }
 
+.listItem > label {
+  cursor: pointer;
+  accent-color: var(--color-accent);
+}
+
+.listItem > label:hover,
+.listItem > label:focus {
+  color: var(--color-accent);
+}
+
+.listItem > input:checked,
+.listItem > input:checked {
+  accent-color: var(--color-accent);
+}
+
 @media screen and (min-width: 768px) {
   .sidebar {
     max-width: 160px;

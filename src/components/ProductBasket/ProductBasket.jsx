@@ -37,7 +37,7 @@ export default function ProductBasket({ onClose }) {
 
   return (
     <>
-      <h3 className={styles.topic}>Кошик товару</h3>
+      <h2 className={styles.topic}>Кошик</h2>
       <div className={styles.container}>
         {products.length === 0 && (
           <p className={styles.text}>Зараз кошик пустий, наповніть його</p>
@@ -67,9 +67,11 @@ export default function ProductBasket({ onClose }) {
                     aria-label="remove"
                     onClick={() => removeProduct(product)}
                   >
-                    &#x2716;
+                    <svg className={styles.icon}>
+                      <use href="/icons.svg#icon-trash"></use>
+                    </svg>
                   </button>
-                  <span>{`${product.price}грн.`}</span>
+                  <span>{`${product.price} грн.`}</span>
                 </div>
               </div>
             );

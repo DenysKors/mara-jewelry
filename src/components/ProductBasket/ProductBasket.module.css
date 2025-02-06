@@ -1,6 +1,6 @@
 .container {
   padding: 4px;
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--color-accent);
   border-radius: 4px;
   margin-bottom: 20px;
 }
@@ -29,9 +29,10 @@
 .topic {
   margin-bottom: 20px;
   font-family: var(--font-nunito-regular);
-  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-section);
+  color: var(--color-accent);
   line-height: 1.5;
-  color: var(--color-text);
 }
 
 .title {
@@ -55,8 +56,13 @@
 }
 
 .btnRem {
-  color: var(--color-error);
   background-color: transparent;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  fill: var(--color-error);
 }
 
 .btnAcc {

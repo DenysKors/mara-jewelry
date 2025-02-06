@@ -55,9 +55,7 @@ export default function FilterSection({ stones }) {
             checked={searchParams.has('product', 'bracelet') ? true : false}
             onChange={onProductFilterChange}
           />
-          <label htmlFor="bracelet" style={{ cursor: 'pointer' }}>
-            Браслет
-          </label>
+          <label htmlFor="bracelet">Браслет</label>
         </li>
         <li className={styles.listItem}>
           <input
@@ -67,9 +65,7 @@ export default function FilterSection({ stones }) {
             checked={searchParams.has('product', 'necklace') ? true : false}
             onChange={onProductFilterChange}
           />
-          <label htmlFor="necklace" style={{ cursor: 'pointer' }}>
-            Намисто
-          </label>
+          <label htmlFor="necklace">Намисто</label>
         </li>
         <li className={styles.listItem}>
           <input
@@ -79,9 +75,7 @@ export default function FilterSection({ stones }) {
             checked={searchParams.has('product', 'earrings') ? true : false}
             onChange={onProductFilterChange}
           />
-          <label htmlFor="earrings" style={{ cursor: 'pointer' }}>
-            Сережки
-          </label>
+          <label htmlFor="earrings">Сережки</label>
         </li>
         <li className={styles.listItem}>
           <input
@@ -91,9 +85,7 @@ export default function FilterSection({ stones }) {
             checked={searchParams.has('product', 'chocker') ? true : false}
             onChange={onProductFilterChange}
           />
-          <label htmlFor="chocker" style={{ cursor: 'pointer' }}>
-            Чокер
-          </label>
+          <label htmlFor="chocker">Чокер</label>
         </li>
         <li className={styles.listItem}>
           <input
@@ -103,9 +95,7 @@ export default function FilterSection({ stones }) {
             checked={searchParams.has('product', 'chaplet') ? true : false}
             onChange={onProductFilterChange}
           />
-          <label htmlFor="chaplet" style={{ cursor: 'pointer' }}>
-            Чотки
-          </label>
+          <label htmlFor="chaplet">Чотки</label>
         </li>
       </ul>
       <legend className={styles.legend}>Вид каменю</legend>
@@ -120,9 +110,7 @@ export default function FilterSection({ stones }) {
                 checked={searchParams.has('stone', value) ? true : false}
                 onChange={onStonesFilterChange}
               />
-              <label htmlFor={value} style={{ cursor: 'pointer' }}>
-                {name}
-              </label>
+              <label htmlFor={value}>{name}</label>
             </li>
           );
         })}
